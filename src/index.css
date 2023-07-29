@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-[#000000] pt-20
+}
+
+
+/* scroll wsp-content-messages */
+
+#wsp-content-messages::-webkit-scrollbar {
+    width: 0px;
+}
