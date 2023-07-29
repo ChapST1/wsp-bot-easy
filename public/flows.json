@@ -1,0 +1,478 @@
+{
+  "allFlows": [
+    {
+      "id": 1,
+      "flowName": "Pizzeria delicioso",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "hola",
+            "response": "¡Hola! ¿En qué puedo ayudarte?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "adios",
+            "response": "¡Hasta luego! Si necesitas algo más, aquí estaré."
+          }
+        },
+        {
+          "trigger": {
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para conocerte mejor."
+          }
+        },
+        {
+          "trigger": {
+            "name": "mi nombre es {nombre}",
+            "response": "¡Hola {nombre}! Es un gusto conocerte."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Puedo ayudarte con información sobre productos y servicios. Solo pregúntame lo que necesitas saber."
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_producto {producto}",
+            "response": "El producto {producto} es excelente. ¿Hay algo específico que deseas saber sobre él?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "De nada. Siempre estoy aquí para ayudarte."
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no entiendo. ¿Podrías reformular tu pregunta?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "flowName": "Ayuda con recetas",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "recetas",
+            "response": "¡Claro! ¿Qué tipo de receta te gustaría obtener? Puedo ayudarte con recetas de postres, comidas, bebidas, etc."
+          }
+        },
+        {
+          "trigger": {
+            "name": "recetas_postres",
+            "response": "Los postres son deliciosos. ¿Te gustaría una receta de pastel de chocolate o tal vez de helado casero?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "recetas_comidas",
+            "response": "¡Las comidas son mi especialidad! ¿Prefieres una receta de pasta, pizza o ensalada?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "recetas_bebidas",
+            "response": "Una bebida refrescante siempre es bienvenida. ¿Te gustaría una receta de cóctel o batido de frutas?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que disfrutes cocinando!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre esa receta en particular. ¿Quieres preguntar sobre otra receta?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "flowName": "Ayuda con viajes",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "viajes",
+            "response": "¡Hola! ¿En qué puedo ayudarte con respecto a viajes? Puedo proporcionarte información sobre destinos, alojamientos, transporte y más."
+          }
+        },
+        {
+          "trigger": {
+            "name": "destinos",
+            "response": "¿Tienes un lugar específico en mente para viajar? Cuéntame el destino y te daré detalles interesantes."
+          }
+        },
+        {
+          "trigger": {
+            "name": "alojamientos",
+            "response": "Los alojamientos son importantes para un viaje cómodo. ¿Quieres recomendaciones de hoteles o casas de huéspedes?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "transporte",
+            "response": "El transporte es vital para moverse durante un viaje. ¿Te gustaría información sobre vuelos, trenes o autobuses?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que tengas un increíble viaje!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre eso en particular. ¿Quieres preguntar sobre otra cosa relacionada con viajes?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "flowName": "Noticias de tecnología",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "noticias_tecnologia",
+            "response": "¡Bienvenido al mundo de la tecnología! ¿Qué tipo de noticias te interesan? Puedo proporcionarte novedades sobre gadgets, aplicaciones, avances científicos y más."
+          }
+        },
+        {
+          "trigger": {
+            "name": "gadgets",
+            "response": "Los gadgets son emocionantes. ¿Te gustaría conocer las últimas tendencias en teléfonos, laptops o dispositivos inteligentes?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "aplicaciones",
+            "response": "Las aplicaciones hacen que nuestras vidas sean más fáciles. ¿Quieres estar al día con las nuevas aplicaciones para productividad, entretenimiento o salud?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "avances_cientificos",
+            "response": "La ciencia avanza rápidamente. ¿Deseas conocer los últimos descubrimientos en medicina, astronomía o inteligencia artificial?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que te mantengas actualizado con las últimas noticias tecnológicas!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, parece que eso está fuera de mi alcance. ¿Puedo ayudarte con otra noticia de tecnología?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "flowName": "Ayuda con estudios",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "estudios",
+            "response": "¡Hola estudiante! ¿En qué puedo ayudarte con tus estudios? Puedo brindarte consejos de estudio, recursos educativos y más."
+          }
+        },
+        {
+          "trigger": {
+            "name": "consejos_estudio",
+            "response": "Estudiar puede ser desafiante, pero estoy aquí para ayudarte. ¿Necesitas consejos sobre técnicas de estudio, organización o manejo del tiempo?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "recursos_educativos",
+            "response": "Los recursos educativos pueden ser de gran ayuda. ¿Quieres saber dónde encontrar libros, cursos en línea o tutoriales?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "preparacion_examenes",
+            "response": "¡Los exámenes no son un problema! ¿Necesitas sugerencias sobre cómo prepararte para exámenes importantes?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Buena suerte en tus estudios!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre eso en particular. ¿Puedo ayudarte con otra cosa relacionada con tus estudios?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "flowName": "Asistente de cocina",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "asistente_cocina",
+            "response": "¡Hola chef! ¿Cómo puedo ayudarte en la cocina? Puedo proporcionarte recetas, consejos de cocina, técnicas de cocción y más."
+          }
+        },
+        {
+          "trigger": {
+            "name": "recetas_rapidas",
+            "response": "¿Necesitas una receta rápida y deliciosa? Estoy aquí para ayudarte. ¿Prefieres algo dulce o salado?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "consejos_cocina",
+            "response": "¡Convertirte en un maestro de la cocina es posible! ¿Quieres algunos consejos para mejorar tus habilidades culinarias?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "tecnicas_coccion",
+            "response": "La cocción es un arte. ¿Te gustaría aprender sobre diferentes técnicas de cocción como asar, hervir o freír?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que prepares platos deliciosos!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre eso en particular. ¿Puedo ayudarte con otra cosa relacionada con cocina?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "flowName": "Juegos y entretenimiento",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "juegos",
+            "response": "¡Hola jugador! ¿Qué tipo de juegos o entretenimiento te interesan? Puedo hablar sobre videojuegos, películas, libros y más."
+          }
+        },
+        {
+          "trigger": {
+            "name": "videojuegos",
+            "response": "Los videojuegos son emocionantes. ¿Te gustaría conocer las últimas noticias, reseñas o recomendaciones de juegos?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "peliculas",
+            "response": "¿Te apasiona el cine? ¿Quieres saber sobre películas de acción, comedia, ciencia ficción o dramas?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "libros",
+            "response": "Los libros pueden llevarte a mundos increíbles. ¿Te gustaría conocer las últimas novedades literarias?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que disfrutes de tu tiempo de entretenimiento!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre eso en particular. ¿Puedo ayudarte con otra cosa relacionada con juegos y entretenimiento?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "flowName": "Consejos de bienestar",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "bienestar",
+            "response": "¡Hola! ¿Cómo puedo ayudarte a mejorar tu bienestar? Puedo ofrecerte consejos sobre salud, ejercicio, meditación y más."
+          }
+        },
+        {
+          "trigger": {
+            "name": "salud",
+            "response": "La salud es lo más importante. ¿Necesitas consejos sobre cómo mantener un estilo de vida saludable?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "ejercicio",
+            "response": "El ejercicio es beneficioso para cuerpo y mente. ¿Quieres algunas rutinas de ejercicios para mantenerte activo?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "meditacion",
+            "response": "La meditación puede ayudarte a reducir el estrés y encontrar calma. ¿Quieres aprender técnicas de meditación?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que te sientas mejor con estos consejos de bienestar!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre eso en particular. ¿Puedo ayudarte con otra cosa relacionada con bienestar?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "flowName": "Curiosidades del mundo",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "curiosidades",
+            "response": "¡Bienvenido al mundo de las curiosidades! ¿Te gustaría descubrir datos interesantes sobre geografía, historia o ciencia?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "geografia",
+            "response": "El mundo es asombroso. ¿Quieres conocer curiosidades sobre países, monumentos o maravillas naturales?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "historia",
+            "response": "La historia está llena de hechos fascinantes. ¿Quieres aprender sobre eventos históricos o personajes famosos?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "ciencia",
+            "response": "La ciencia es sorprendente. ¿Te gustaría descubrir curiosidades sobre el universo, la biología o la tecnología?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que disfrutes de estas curiosidades del mundo!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre eso en particular. ¿Puedo ayudarte con otra curiosidad del mundo?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "flowName": "Consejos para mascotas",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "mascotas",
+            "response": "¡Hola amante de los animales! ¿En qué puedo ayudarte con tus mascotas? Puedo ofrecerte consejos de cuidado, entrenamiento y más."
+          }
+        },
+        {
+          "trigger": {
+            "name": "cuidado_mascotas",
+            "response": "El cuidado de las mascotas es importante. ¿Necesitas consejos sobre alimentación, higiene o salud para tu mascota?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "entrenamiento_mascotas",
+            "response": "Un entrenamiento adecuado es clave para una mascota feliz. ¿Quieres sugerencias para enseñar trucos o corregir comportamientos?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "razas_mascotas",
+            "response": "Cada raza de mascota es única. ¿Te gustaría conocer más sobre diferentes razas de perros o gatos?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que tengas una relación increíble con tus adorables mascotas!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre eso en particular. ¿Puedo ayudarte con otra cosa relacionada con mascotas?"
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "flowName": "Consejos para emprendedores",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "emprendedores",
+            "response": "¡Hola emprendedor! ¿Cómo puedo ayudarte a hacer crecer tu negocio? Puedo proporcionarte consejos de negocios, marketing y más."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ideas_negocios",
+            "response": "Las ideas innovadoras son clave para el éxito empresarial. ¿Quieres inspiración para nuevos negocios o startups?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "estrategias_marketing",
+            "response": "El marketing es fundamental para llegar a más clientes. ¿Necesitas consejos sobre estrategias de marketing digital o promoción?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "crecimiento_negocio",
+            "response": "¿Quieres hacer crecer tu negocio? Estoy aquí para ayudarte con estrategias de expansión y desarrollo empresarial."
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "¡De nada! ¡Espero que tengas un exitoso camino emprendiendo!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "default",
+            "response": "Lo siento, no tengo información sobre eso en particular. ¿Puedo ayudarte con otro consejo para emprendedores?"
+          }
+        }
+      ]
+    }
+  ]
+}

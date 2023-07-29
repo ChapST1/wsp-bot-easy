@@ -12,3 +12,15 @@ body{
 #wsp-content-messages::-webkit-scrollbar {
     width: 0px;
 }
+
+#wsp-sidebar::-webkit-scrollbar{
+    width: 5px;
+}
+
+#wsp-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#wsp-sidebar::-webkit-scrollbar-thumb {
+    background: #374045;
+}

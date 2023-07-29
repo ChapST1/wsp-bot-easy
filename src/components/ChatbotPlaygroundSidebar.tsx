@@ -1,8 +1,18 @@
+import { useFlows } from '../hooks/useFlows'
+import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
 import { ConfigIcon, GroupIcon, NewChatIcon, StatesIcon } from './Icons'
+import { NavLink } from 'react-router-dom'
 
 export function ChatbotPlaygroundSidebar () {
+  const { loading, error } = useFlows()
+  const { allFlows } = useGlobalFlowStore()
+
+  if (loading) return <p>Loading...</p>
+
+  if (error) return <p>Error</p>
+
   return (
-    <div className='relative col-span-2 w-full h-full border-r-2 border-[#262f34]'>
+    <div className='col-span-2 h-full  border-r-2 border-[#262f34] pt-[60px] relative overflow-hidden'>
       <header className='w-full h-[60px] bg-[#202c33] absolute top-0 z-20 flex items-center justify-between px-3'>
         <img
           src='https://avatars.githubusercontent.com/u/117806728?v=4'
@@ -17,6 +27,34 @@ export function ChatbotPlaygroundSidebar () {
           <ConfigIcon className='fill-[#aebac1]' />
         </div>
       </header>
+
+      <div className='overflow-y-scroll absolute top-0 left-0 h-full w-full' id='wsp-sidebar'>
+        {
+        allFlows.map(({ id, flowName }) => {
+          return (
+            <NavLink
+              to={`/test/${id}`} key={id}
+              className={({ isActive, isPending }) => {
+                const customize = isPending ? 'bg-[#253239]' : isActive ? 'bg-[#2a3942]' : ''
+
+                return `w-full h-[60px]  flex items-center gap-3  px-2 hover:bg-[#202c33] ${customize}`
+              }}
+            >
+              <img
+                src={`https://robohash.org/${flowName}`}
+                alt={`imagen para ${flowName}`}
+                className='w-[50px] h-[50px] rounded-full bg-[#202c33]'
+              />
+
+              <div className='w-full h-full border-b border-[#262f34] pt-2'>
+                <p className='text-[#e9edef] text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis'>{flowName}</p>
+                <span className='block text-[#e9edef] text-xs'>Hola</span>
+              </div>
+            </NavLink>
+          )
+        })
+      }
+      </div>
     </div>
   )
 }
