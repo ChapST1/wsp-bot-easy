@@ -14,7 +14,7 @@ body{
 }
 
 #wsp-sidebar::-webkit-scrollbar{
-    width: 5px;
+    width: 0px;
 }
 
 #wsp-sidebar::-webkit-scrollbar-track {

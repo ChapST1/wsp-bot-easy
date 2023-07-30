@@ -5,6 +5,7 @@ import { formatDate } from '../utils/formatDate'
 
 import { useParams } from 'react-router-dom'
 import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
+import { ChatbotPlaygroundContentMessageHeader } from './ChatbotPlaygroundContentMessageHeader'
 
 interface createObjectProps {
   message: string
@@ -17,11 +18,11 @@ export function ChatbotPlaygroundContentMessage () {
 
   const [messages, setMessages] = useState<createObjectProps[]>([])
   const [contentMessages, setContentMessage] = useState('')
+  const [botIsTyping, setBotIsTyping] = useState(false)
 
   const { allFlows } = useGlobalFlowStore()
   const { id } = useParams()
 
-  // fallback
   const findChannel = allFlows.find((flow) => flow.id === Number(id))
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,6 +38,8 @@ export function ChatbotPlaygroundContentMessage () {
     const matchConversation = findChannel?.conversations.find(({ trigger }) => trigger.name === contentMessages.toLowerCase())
 
     if (matchConversation) {
+      setBotIsTyping(true)
+
       const createUserObject = {
         message: contentMessages,
         made: 'user',
@@ -54,6 +57,31 @@ export function ChatbotPlaygroundContentMessage () {
 
       setTimeout(() => {
         setMessages((prev) => [...prev, createBotObject])
+        setBotIsTyping(false)
+      }, 1000)
+    }
+
+    if (!matchConversation) {
+      setBotIsTyping(true)
+
+      const createUserObject = {
+        message: contentMessages,
+        made: 'user',
+        timestamp: formatDate()
+      }
+
+      const createBotObject = {
+        message: findChannel?.defaultValue ?? 'No entiendo lo que dices',
+        made: 'bot',
+        timestamp: formatDate()
+      }
+
+      setMessages((prev) => [...prev, createUserObject])
+      setContentMessage('')
+
+      setTimeout(() => {
+        setMessages((prev) => [...prev, createBotObject])
+        setBotIsTyping(false)
       }, 1000)
     }
   }
@@ -72,23 +100,11 @@ export function ChatbotPlaygroundContentMessage () {
   }, [id])
 
   return (
-    <div className=' pb-[60px] flex flex-col justify-end overflow-hidden relative col-span-5 w-full h-full after:content-[""] after:bg-[url(public/wsp-bg.png)] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-5 after:z-[-1]] after:select-none after:pointer-events-none'>
-      <header className=' w-full h-[60px] absolute  bg-[#202c33] top-0 z-20 flex items-center justify-between px-3'>
-        <div className='flex gap-2 items-center '>
-          <img
-            src={`https://robohash.org/${findChannel?.flowName}`}
-            alt='imagen del usuario'
-            className='w-[40px] h-[40px] rounded-full'
-          />
-
-          <span className='text-[#e9edef]'>{findChannel?.flowName}</span>
-        </div>
-
-        <div className='flex gap-5 items-center'>
-          <SearchIcon className='fill-[#aebac1]' />
-          <ConfigIcon className='fill-[#aebac1]' />
-        </div>
-      </header>
+    <div className=' pb-[60px] flex flex-col justify-end overflow-hidden relative col-span-5 w-full h-full after:content-[" "] after:bg-[url(/public/wsp-bg.png)] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-5 after:z-[-1]] after:select-none after:pointer-events-none'>
+      <ChatbotPlaygroundContentMessageHeader
+        botIsTyping={botIsTyping}
+        findChannel={findChannel}
+      />
 
       <div className=' w-full scroll-smooth   bg-transparent  px-5  flex flex-col  overflow-y-scroll gap-4 pt-[80px] pb-4' id='wsp-content-messages' ref={containerMessagesRef}>
         {
