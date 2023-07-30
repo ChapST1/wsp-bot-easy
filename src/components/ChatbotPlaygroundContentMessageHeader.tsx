@@ -1,12 +1,14 @@
 import { ConfigIcon, SearchIcon } from './Icons'
 import { AllFlow } from '../types/allFlows'
+import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
 
 interface ChatbotPlaygroundContentMessageHeaderProps {
   findChannel: AllFlow | undefined
-  botIsTyping: boolean
 }
 
-export function ChatbotPlaygroundContentMessageHeader ({ findChannel, botIsTyping }: ChatbotPlaygroundContentMessageHeaderProps) {
+export function ChatbotPlaygroundContentMessageHeader ({ findChannel }: ChatbotPlaygroundContentMessageHeaderProps) {
+  const { botIsTyping } = useGlobalFlowStore()
+
   return (
     <header className=' w-full h-[60px] absolute  bg-[#202c33] top-0 z-20 flex items-center justify-between px-3'>
       <div className='flex gap-2 items-center '>
