@@ -9,7 +9,7 @@ interface ChatbotPlaygroundContentMessageItemProps {
 export function ChatbotPlaygroundContentMessageItem ({ message, made, timestamp }: ChatbotPlaygroundContentMessageItemProps) {
   return (
     <div className={`flex items-center ${made === 'bot' ? 'justify-start' : 'justify-end'}`}>
-      <div className={`text-white min-w-[90px] ${made === 'bot' ? 'bg-[#1f2b32] rounded-tl-none' : 'bg-[#005c4b] rounded-tr-none'} w-[max-content] px-2 py-1 rounded-[5px] relative pb-6`}>
+      <div className={`text-white min-w-[90px] max-w-[70%] w-[max-content] ${made === 'bot' ? 'bg-[#1f2b32] rounded-tl-none' : 'bg-[#005c4b] rounded-tr-none'} w-[max-content] px-2 py-1 rounded-[5px] relative pb-6`}>
         {
           made === 'bot'
             ? (

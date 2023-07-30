@@ -13,6 +13,6 @@ export interface Conversation {
 }
 
 export interface Trigger {
-  nombre: string
-  respuesta: string
+  name: string
+  response: string
 }

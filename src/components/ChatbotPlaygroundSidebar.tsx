@@ -28,7 +28,7 @@ export function ChatbotPlaygroundSidebar () {
         </div>
       </header>
 
-      <div className='overflow-y-scroll absolute top-0 left-0 h-full w-full' id='wsp-sidebar'>
+      <div className='overflow-y-scroll absolute top-0 left-0 h-full w-full pt-[60px]' id='wsp-sidebar'>
         {
         allFlows.map(({ id, flowName }) => {
           return (

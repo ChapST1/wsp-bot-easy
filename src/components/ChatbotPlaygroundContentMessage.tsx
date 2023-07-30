@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { AddIcon, ConfigIcon, EmojiIcon, SearchIcon, SendMessageIcon, VoiceIcon } from './Icons'
 import { ChatbotPlaygroundContentMessageItem } from './ChatbotPlaygroundContentMessageItem'
 import { formatDate } from '../utils/formatDate'
@@ -13,16 +13,19 @@ interface createObjectProps {
 }
 
 export function ChatbotPlaygroundContentMessage () {
+  const containerMessagesRef = useRef<HTMLDivElement>(null)
+
   const [messages, setMessages] = useState<createObjectProps[]>([])
   const [contentMessages, setContentMessage] = useState('')
 
   const { allFlows } = useGlobalFlowStore()
   const { id } = useParams()
 
-  const findChannel = allFlows.find((flow) => flow.id === Number(id)) ?? { flowName: 'No encontrado' }
+  // fallback
+  const findChannel = allFlows.find((flow) => flow.id === Number(id))
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value
+    const value = (event.target.value).toLowerCase()
     setContentMessage(value)
   }
 
@@ -31,18 +34,45 @@ export function ChatbotPlaygroundContentMessage () {
 
     if (contentMessages.trim() === '') return
 
-    const createObject = {
-      message: contentMessages,
-      made: 'user',
-      timestamp: formatDate()
-    }
+    const matchConversation = findChannel?.conversations.find(({ trigger }) => trigger.name === contentMessages.toLowerCase())
 
-    setMessages([...messages, createObject])
-    setContentMessage('')
+    if (matchConversation) {
+      const createUserObject = {
+        message: contentMessages,
+        made: 'user',
+        timestamp: formatDate()
+      }
+
+      const createBotObject = {
+        message: matchConversation.trigger.response,
+        made: 'bot',
+        timestamp: formatDate()
+      }
+
+      setMessages((prev) => [...prev, createUserObject])
+      setContentMessage('')
+
+      setTimeout(() => {
+        setMessages((prev) => [...prev, createBotObject])
+      }, 1000)
+    }
   }
 
+  useEffect(() => {
+    if (containerMessagesRef.current !== null) {
+      const element = containerMessagesRef.current
+      const heightElement = Number(element.scrollHeight)
+
+      element.scrollTop = heightElement
+    }
+  }, [messages])
+
+  useEffect(() => {
+    setMessages([])
+  }, [id])
+
   return (
-    <div className=' flex flex-col justify-end overflow-hidden relative col-span-5 w-full h-full after:content-[""] after:bg-[url(public/wsp-bg.png)] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-5 after:z-[-1]] after:select-none after:pointer-events-none'>
+    <div className=' pb-[60px] flex flex-col justify-end overflow-hidden relative col-span-5 w-full h-full after:content-[""] after:bg-[url(public/wsp-bg.png)] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-5 after:z-[-1]] after:select-none after:pointer-events-none'>
       <header className=' w-full h-[60px] absolute  bg-[#202c33] top-0 z-20 flex items-center justify-between px-3'>
         <div className='flex gap-2 items-center '>
           <img
@@ -60,7 +90,7 @@ export function ChatbotPlaygroundContentMessage () {
         </div>
       </header>
 
-      <div className=' w-full   bg-transparent  px-5  flex flex-col  overflow-y-scroll gap-4 py-[80px]' id='wsp-content-messages'>
+      <div className=' w-full scroll-smooth   bg-transparent  px-5  flex flex-col  overflow-y-scroll gap-4 pt-[80px] pb-4' id='wsp-content-messages' ref={containerMessagesRef}>
         {
             messages.map(({ message, made, timestamp }, index) => {
               return (
