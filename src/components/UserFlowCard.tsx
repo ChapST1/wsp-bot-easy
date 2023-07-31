@@ -13,7 +13,9 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
         alt={`imagen del chatbot ${flowName}`}
         className='w-full block'
       />
-      <p className='text-white'>{flowName}</p>
+      <p className='text-white'>
+        {flowName}
+      </p>
 
       <div className='flex flex-col gap-3'>
         <Button title='Usar con mi numero de whatsapp' />
