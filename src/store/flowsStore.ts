@@ -23,11 +23,11 @@ export const useFlowsStore = create<FlowStore>((set, get) => ({
   botIsTyping: false,
   listOfCurrentMessages: [],
 
-  updateAllFlows (newFlows) {
+  updateAllFlows: (newFlows) => {
     set({ allFlows: newFlows })
   },
 
-  updateListOfCurrentMessages (newListOfCurrentMessages) {
+  updateListOfCurrentMessages: (newListOfCurrentMessages) => {
     if (newListOfCurrentMessages === null) {
       set({ listOfCurrentMessages: [] })
       return
@@ -37,7 +37,7 @@ export const useFlowsStore = create<FlowStore>((set, get) => ({
     set({ listOfCurrentMessages: [...listOfCurrentMessages, newListOfCurrentMessages] })
   },
 
-  updateBotIsTyping (newBotIsTyping) {
+  updateBotIsTyping: (newBotIsTyping) => {
     set({ botIsTyping: newBotIsTyping })
   }
 

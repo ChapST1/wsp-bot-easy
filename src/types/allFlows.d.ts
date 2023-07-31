@@ -3,7 +3,7 @@ export interface AllFlows {
 }
 
 export interface AllFlow {
-  id: number
+  id: string
   flowName: string
   defaultValue: string
   conversations: Conversation[]

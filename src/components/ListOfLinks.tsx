@@ -62,8 +62,10 @@ export function ListOfLinks () {
                     to={link.path}
                     onMouseEnter={handleEffectAwesome}
                     onMouseLeave={handleLeaveEffectAwesome}
-                    className={({ isActive }) =>
-                      isActive ? 'py-2 px-4  text-[#e6e7e8] bg-[#000] border border-white/10 rounded-lg' : ' border border-transparent duration-300  py-2 px-4 text-[#8b9095] rounded-lg hover:text-[#e6e7e8]'}
+                    className={({ isActive }) => {
+                      const isActiveStyles = isActive ? 'text-[#e6e7e8] border-white/10 rounded-lg hover:border-transparent' : ' border-transparent   hover:text-[#e6e7e8]'
+                      return `py-2 px-4   border  duration-300   text-[#8b9095] rounded-lg hover:text-[#e6e7e8] ${isActiveStyles}`
+                    }}
                   >{link.name}
                   </NavLink>
                 </li>

@@ -5,6 +5,8 @@ import { Home } from './pages/Home'
 import { Toaster } from 'sonner'
 import { ChatbotPlayground } from './pages/ChatbotPlayground'
 import { ChatbotPlaygroundContentMessage } from './components/ChatbotPlaygroundContentMessage'
+import { Templates } from './pages/Templates'
+import { TemplatesDetail } from './pages/TemplatesDetail'
 
 function App () {
   return (
@@ -15,7 +17,11 @@ function App () {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/chatbot' element={<Chatbot />} />
-          <Route path='/plantillas' element={<h1>Plantillas</h1>} />
+
+          <Route path='/plantillas' element={<Templates />}>
+            <Route path=':id' element={<TemplatesDetail />} />
+          </Route>
+
           <Route path='/test' element={<ChatbotPlayground />}>
             <Route path=':id' element={<ChatbotPlaygroundContentMessage />} />
           </Route>

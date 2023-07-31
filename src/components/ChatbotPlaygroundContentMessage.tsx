@@ -11,7 +11,7 @@ export function ChatbotPlaygroundContentMessage () {
   const { allFlows, currentMessages, updateCurrentMessages } = useGlobalFlowStore()
   const { id } = useParams()
 
-  const findChannel = allFlows.find((flow) => flow.id === Number(id))
+  const findChannel = allFlows.find((flow) => flow.id === id)
 
   useEffect(() => {
     if (containerMessagesRef.current !== null) {
@@ -24,7 +24,7 @@ export function ChatbotPlaygroundContentMessage () {
 
   useEffect(() => {
     updateCurrentMessages(null)
-  }, [id]) // eslint-disable-line
+  }, [id, updateCurrentMessages])
 
   return (
     <div className=' pb-[60px] flex flex-col justify-end overflow-hidden relative col-span-5 w-full h-full after:content-[" "] after:bg-[url(/public/wsp-bg.png)] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-5 after:z-[-1]] after:select-none after:pointer-events-none'>

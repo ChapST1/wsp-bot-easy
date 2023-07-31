@@ -1,15 +1,9 @@
-import { useFlows } from '../hooks/useFlows'
-import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
+import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
 import { ConfigIcon, GroupIcon, NewChatIcon, StatesIcon } from './Icons'
 import { NavLink } from 'react-router-dom'
 
 export function ChatbotPlaygroundSidebar () {
-  const { loading, error } = useFlows()
-  const { allFlows } = useGlobalFlowStore()
-
-  if (loading) return <p>Loading...</p>
-
-  if (error) return <p>Error</p>
+  const { userAllFlows } = useGlobalUserFlowsStore()
 
   return (
     <div className='col-span-2 h-full  border-r-2 border-[#262f34] pt-[60px] relative overflow-hidden'>
@@ -30,7 +24,7 @@ export function ChatbotPlaygroundSidebar () {
 
       <div className='overflow-y-scroll absolute top-0 left-0 h-full w-full pt-[60px]' id='wsp-sidebar'>
         {
-        allFlows.map(({ id, flowName }) => {
+        userAllFlows?.map(({ id, flowName }) => {
           return (
             <NavLink
               to={`/test/${id}`} key={id}
@@ -48,7 +42,7 @@ export function ChatbotPlaygroundSidebar () {
 
               <div className='w-full h-full border-b border-[#262f34] pt-2'>
                 <p className='text-[#e9edef] text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis'>{flowName}</p>
-                <span className='block text-[#e9edef] text-xs'>Hola</span>
+                <span className='block text-[#e9edefda] text-xs'>chatbot</span>
               </div>
             </NavLink>
           )

@@ -8,7 +8,7 @@ import { AllFlow as AllFlowTypes } from '../types/allFlows'
 export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findChannel: AllFlowTypes | undefined }) {
   const [contentMessages, setContentMessage] = useState('')
 
-  const { currentMessages, updateBotIsTyping, updateCurrentMessages } = useGlobalFlowStore()
+  const { updateBotIsTyping, updateCurrentMessages } = useGlobalFlowStore()
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = (event.target.value).toLowerCase()

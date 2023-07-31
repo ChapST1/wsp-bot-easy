@@ -24,3 +24,7 @@ body{
 #wsp-sidebar::-webkit-scrollbar-thumb {
     background: #374045;
 }
+
+#flow-details-info-container::-webkit-scrollbar{
+    width: 0px;
+}
