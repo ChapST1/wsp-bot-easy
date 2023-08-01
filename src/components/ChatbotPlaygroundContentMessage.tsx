@@ -5,13 +5,18 @@ import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
 import { ChatbotPlaygroundContentMessageHeader } from './ChatbotPlaygroundContentMessageHeader'
 import { ChatbotPlaygroundContentMessageFooter } from './ChatbotPlaygroundContentMessageFooter'
 import { ChatbotPlaygroundContentListOfMessages } from './ChatbotPlaygroundContentListOfMessages'
+import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
+import { useGlobalWspPlaygroundStore } from '../hooks/useGlobalWspPlaygroundStore'
 
 export function ChatbotPlaygroundContentMessage () {
   const containerMessagesRef = useRef<HTMLDivElement>(null)
-  const { allFlows, currentMessages, updateCurrentMessages } = useGlobalFlowStore()
+
+  const { currentMessages, updateCurrentMessages } = useGlobalWspPlaygroundStore()
+  const { userAllFlows } = useGlobalUserFlowsStore()
+
   const { id } = useParams()
 
-  const findChannel = allFlows.find((flow) => flow.id === id)
+  const findChannel = userAllFlows.find((flow) => flow.id === id)
 
   useEffect(() => {
     if (containerMessagesRef.current !== null) {

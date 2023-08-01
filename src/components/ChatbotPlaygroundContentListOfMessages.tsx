@@ -1,4 +1,4 @@
-import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
+import { useGlobalWspPlaygroundStore } from '../hooks/useGlobalWspPlaygroundStore'
 import { ChatbotPlaygroundContentMessageItem } from './ChatbotPlaygroundContentMessageItem'
 
 interface ChatbotPlaygroundContentListOfMessagesProps {
@@ -6,7 +6,7 @@ interface ChatbotPlaygroundContentListOfMessagesProps {
 }
 
 export function ChatbotPlaygroundContentListOfMessages ({ containerMessagesRef }: ChatbotPlaygroundContentListOfMessagesProps) {
-  const { currentMessages } = useGlobalFlowStore()
+  const { currentMessages } = useGlobalWspPlaygroundStore()
 
   return (
     <div className=' w-full scroll-smooth   bg-transparent  px-5  flex flex-col  overflow-y-scroll gap-4 pt-[80px] pb-4' id='wsp-content-messages' ref={containerMessagesRef}>

@@ -7,6 +7,7 @@ import { ChatbotPlayground } from './pages/ChatbotPlayground'
 import { ChatbotPlaygroundContentMessage } from './components/ChatbotPlaygroundContentMessage'
 import { Templates } from './pages/Templates'
 import { TemplatesDetail } from './pages/TemplatesDetail'
+import { ChatbotCreate } from './layouts/ChatbotCreate'
 
 function App () {
   return (
@@ -16,7 +17,9 @@ function App () {
 
         <Routes>
           <Route path='/' element={<Home />} />
+
           <Route path='/chatbot' element={<Chatbot />} />
+          <Route path='/chatbot/crear' element={<ChatbotCreate />} />
 
           <Route path='/plantillas' element={<Templates />}>
             <Route path=':id' element={<TemplatesDetail />} />

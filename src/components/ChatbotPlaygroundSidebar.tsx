@@ -34,11 +34,13 @@ export function ChatbotPlaygroundSidebar () {
                 return `w-full h-[60px]  flex items-center gap-3  px-2 hover:bg-[#202c33] ${customize}`
               }}
             >
-              <img
-                src={`https://robohash.org/${flowName}`}
-                alt={`imagen para ${flowName}`}
-                className='w-[50px] h-[50px] rounded-full bg-[#202c33]'
-              />
+              <figure className='max-w-[50px] max-h-[50px] rounded-full'>
+                <img
+                  src={`https://robohash.org/${flowName}`}
+                  alt={`imagen para ${flowName}`}
+                  className='w-full h-full rounded-full bg-[#202c33]'
+                />
+              </figure>
 
               <div className='w-full h-full border-b border-[#262f34] pt-2'>
                 <p className='text-[#e9edef] text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis'>{flowName}</p>

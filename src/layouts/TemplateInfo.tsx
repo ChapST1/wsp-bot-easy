@@ -8,10 +8,6 @@ export function TemplateInfo ({ id }: TemplateInfoProps) {
   const { allFlows } = useGlobalFlowStore()
   const findFlow = allFlows?.find(flow => flow.id === id)
 
-  console.log({
-    findFlow
-  })
-
   return (
     <div className='w-[70%] mt-5 bg-[#000] py-4 px-6 border border-[#1f2123] rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px]'>
       <h3 className='text-[#ededed] text-center text-2xl pb-3 font-bold'>{findFlow?.flowName}</h3>

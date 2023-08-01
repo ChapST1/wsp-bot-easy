@@ -13,7 +13,7 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
         alt={`imagen del chatbot ${flowName}`}
         className='w-full block'
       />
-      <p className='text-white'>
+      <p className='text-white font-semibold'>
         {flowName}
       </p>
 

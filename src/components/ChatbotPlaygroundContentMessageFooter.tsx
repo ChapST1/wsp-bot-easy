@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { AddIcon, EmojiIcon, SendMessageIcon, VoiceIcon } from './Icons'
-import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
 import { formatDate } from '../utils/formatDate'
 
 import { AllFlow as AllFlowTypes } from '../types/allFlows'
+import { useGlobalWspPlaygroundStore } from '../hooks/useGlobalWspPlaygroundStore'
 
 export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findChannel: AllFlowTypes | undefined }) {
   const [contentMessages, setContentMessage] = useState('')
 
-  const { updateBotIsTyping, updateCurrentMessages } = useGlobalFlowStore()
+  const { updateBotIsTyping, updateCurrentMessages } = useGlobalWspPlaygroundStore()
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = (event.target.value).toLowerCase()

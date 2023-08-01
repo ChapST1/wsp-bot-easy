@@ -1,11 +1,11 @@
 import { UserFlowCard } from '../components/UserFlowCard'
-import { useChatbotStore } from '../hooks/useChatbotStore'
+import { useGlobalWspPlaygroundStore } from '../hooks/useGlobalWspPlaygroundStore'
 import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
 import { ChatbotBanner } from '../layouts/ChatbotBanner'
 import { ChatbotCreate } from '../layouts/ChatbotCreate'
 
 export function Chatbot () {
-  const { isActiveCreateMode } = useChatbotStore()
+  const { isActiveCreateMode } = useGlobalWspPlaygroundStore()
   const { userAllFlows } = useGlobalUserFlowsStore()
 
   return (
