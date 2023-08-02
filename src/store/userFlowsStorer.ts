@@ -4,6 +4,7 @@ import { AllFlow as AllFlowsTypes } from '../types/allFlows'
 interface UserAllFlowsTypes {
   userAllFlows: AllFlowsTypes[]
   updateUserAllFlows: (newUserFlow: AllFlowsTypes) => void
+  deleteUserFlow: (id: string) => void
 }
 
 export const useUserFlowsStore = create<UserAllFlowsTypes>((set, get) => ({
@@ -13,6 +14,13 @@ export const useUserFlowsStore = create<UserAllFlowsTypes>((set, get) => ({
     // not repeat values
     const notRepeatFlows = Array.from(new Set([...userAllFlows, newUserFlow]))
     set({ userAllFlows: notRepeatFlows })
+  },
+
+  deleteUserFlow: (id) => {
+    const { userAllFlows } = get()
+    const filteredFlows = userAllFlows.filter(flow => flow.id !== id)
+
+    set({ userAllFlows: filteredFlows })
   }
 
 }))

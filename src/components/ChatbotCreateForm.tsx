@@ -4,9 +4,9 @@ import { toast } from 'sonner'
 import { ButtonLink } from './ButtonLink'
 import { Button } from './Button'
 import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-export function ChatbotCreateForm () {
+export function ChatbotCreateForm ({ editId }: { editId?: string }) {
   const { updateUserAllFlows, userAllFlows } = useGlobalUserFlowsStore()
 
   // form states
@@ -80,6 +80,17 @@ export function ChatbotCreateForm () {
       })
     }
   }
+
+  useEffect(() => {
+    if (editId) {
+      const flowToEdit = userAllFlows.find((flow) => flow.id === editId)
+
+      if (flowToEdit) {
+        setNameCompany(flowToEdit.flowName)
+        setDefaultTrigger(flowToEdit.defaultValue)
+      }
+    }
+  }, [editId, userAllFlows])
 
   return (
     <form className=' max-w-2xl p-5 rounded-md m-auto border border-white/10' onSubmit={handleSubmit}>

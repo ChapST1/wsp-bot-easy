@@ -21,7 +21,10 @@ function App () {
           <Route path='/chatbot' element={<Chatbot />}>
             <Route path=':id' element={<TemplatesDetail redirect='/chatbot' />} />
           </Route>
-          <Route path='/chatbot/crear' element={<ChatbotCreate />} />
+
+          <Route path='/chatbot/crear' element={<ChatbotCreate />}>
+            <Route path=':id' element={<ChatbotCreate />} />
+          </Route>
 
           <Route path='/plantillas' element={<Templates />}>
             <Route path=':id' element={<TemplatesDetail redirect='/plantillas' />} />
