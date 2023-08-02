@@ -7,11 +7,10 @@ import { useGlobalWspPlaygroundStore } from '../hooks/useGlobalWspPlaygroundStor
 
 export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findChannel: AllFlowTypes | undefined }) {
   const [contentMessages, setContentMessage] = useState('')
-
   const { updateBotIsTyping, updateCurrentMessages } = useGlobalWspPlaygroundStore()
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = (event.target.value).toLowerCase()
+    const value = (event.target.value)
     setContentMessage(value)
   }
 
@@ -20,7 +19,7 @@ export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findCh
 
     if (contentMessages.trim() === '') return
 
-    const matchConversation = findChannel?.conversations.find(({ trigger }) => trigger.name === contentMessages.toLowerCase())
+    const matchConversation = findChannel?.conversations.find(({ trigger }) => trigger.name.toLowerCase() === contentMessages.toLowerCase())
 
     if (matchConversation) {
       updateBotIsTyping(true)
