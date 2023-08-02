@@ -11,14 +11,18 @@ interface TemplatesCardProps {
 
 export function TemplatesCard ({ flowName, id }: TemplatesCardProps) {
   const { allFlows } = useGlobalFlowStore()
-  const { updateUserAllFlows } = useGlobalUserFlowsStore()
+
+  const { userAllFlows, updateUserAllFlows } = useGlobalUserFlowsStore()
 
   const handleClick = () => {
     const findFlow = allFlows.find((flow) => flow.id === id)
+    const flowExist = userAllFlows.find((flow) => flow.id === id)
 
-    if (findFlow) {
+    if (findFlow && !flowExist) {
       updateUserAllFlows(findFlow)
       toast.success('Plantilla agregada')
+    } else {
+      toast.error('La plantilla ya esta agregada')
     }
   }
 
