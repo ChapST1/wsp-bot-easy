@@ -1,24 +1,20 @@
+import { Outlet } from 'react-router-dom'
 import { UserFlowCard } from '../components/UserFlowCard'
-import { useGlobalWspPlaygroundStore } from '../hooks/useGlobalWspPlaygroundStore'
 import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
 import { ChatbotBanner } from '../layouts/ChatbotBanner'
-import { ChatbotCreate } from '../layouts/ChatbotCreate'
 
 export function Chatbot () {
-  const { isActiveCreateMode } = useGlobalWspPlaygroundStore()
   const { userAllFlows } = useGlobalUserFlowsStore()
 
   return (
     <section>
-      {
-        isActiveCreateMode ? <ChatbotCreate /> : <ChatbotBanner />
-      }
+      <ChatbotBanner />
 
       {
         userAllFlows.length > 0 && (
-          <div className='px-[20px]'>
-            <h3 className='text-white text-3xl py-2'>Tus Chatbots</h3>
-            <div className='mt-4 flex gap-4'>
+          <div className='px-[20px] flex flex-col gap-4 pt-4'>
+            <h3 className='text-white text-center text-2xl py-2'>Tus Chatbots</h3>
+            <div className='w-full justify-center flex gap-4'>
               {
               userAllFlows.map(({ flowName, id }) => {
                 return <UserFlowCard key={id} flowName={flowName} id={id} />
@@ -28,6 +24,8 @@ export function Chatbot () {
           </div>
         )
       }
+
+      <Outlet />
     </section>
   )
 }
