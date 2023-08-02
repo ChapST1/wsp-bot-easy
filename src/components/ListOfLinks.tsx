@@ -13,10 +13,6 @@ export function ListOfLinks () {
 
   const allLinks = [
     {
-      name: 'Inicio',
-      path: '/'
-    },
-    {
       name: 'Chatbot',
       path: '/chatbot'
     },

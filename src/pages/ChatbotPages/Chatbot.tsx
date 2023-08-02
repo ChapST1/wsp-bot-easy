@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import { UserFlowCard } from '../components/UserFlowCard'
-import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
-import { ChatbotBanner } from '../layouts/ChatbotBanner'
+import { UserFlowCard } from '../../components/UserFlowCard'
+import { useGlobalUserFlowsStore } from '../../hooks/useGlobalUserFlowsStore'
+import { ChatbotBanner } from '../../layouts/ChatbotBanner'
 
 export function Chatbot () {
   const { userAllFlows } = useGlobalUserFlowsStore()

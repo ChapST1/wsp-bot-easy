@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useRef } from 'react'
-import { TemplateInfo } from '../layouts/TemplateInfo'
+import { TemplateInfo } from '../../layouts/TemplateInfo'
 
 export function TemplatesDetail ({ redirect }: { redirect: string }) {
   const elementRef = useRef<HTMLDivElement>(null)

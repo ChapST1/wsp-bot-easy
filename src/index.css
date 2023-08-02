@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    @apply bg-[#000000] pt-20
+    @apply bg-[#000000]
 }
 
 

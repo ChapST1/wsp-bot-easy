@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import { TemplatesCard } from '../components/TemplatesCard'
-import { useFlows } from '../hooks/useFlows'
-import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
+import { TemplatesCard } from '../../components/TemplatesCard'
+import { useFlows } from '../../hooks/useFlows'
+import { useGlobalFlowStore } from '../../hooks/useGlobalFlowsStore'
 
 export function Templates () {
   const { allFlows } = useGlobalFlowStore()
