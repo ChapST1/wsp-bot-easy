@@ -2,14 +2,14 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useRef } from 'react'
 import { TemplateInfo } from '../layouts/TemplateInfo'
 
-export function TemplatesDetail () {
+export function TemplatesDetail ({ redirect }: { redirect: string }) {
   const elementRef = useRef<HTMLDivElement>(null)
   const { id } = useParams()
   const navigate = useNavigate()
 
   const handleCloset = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (event.target === elementRef.current) {
-      navigate('/plantillas')
+      navigate(redirect)
     }
   }
 

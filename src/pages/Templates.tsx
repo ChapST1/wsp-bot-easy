@@ -12,7 +12,7 @@ export function Templates () {
 
   return (
     <div className='px-[20px]'>
-      <h1>Plantillas</h1>
+      <h3 className='text-white text-center text-2xl pb-3'>Tienda de  Plantillas</h3>
 
       <div className='grid grid-cols-4 gap-4'>
         {
