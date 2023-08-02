@@ -10,7 +10,9 @@ export const useUserFlowsStore = create<UserAllFlowsTypes>((set, get) => ({
   userAllFlows: [],
   updateUserAllFlows: (newUserFlow: AllFlowsTypes) => {
     const { userAllFlows } = get()
-    set({ userAllFlows: [...userAllFlows, newUserFlow] })
+    // not repeat values
+    const notRepeatFlows = Array.from(new Set([...userAllFlows, newUserFlow]))
+    set({ userAllFlows: notRepeatFlows })
   }
 
 }))
