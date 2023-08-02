@@ -32,7 +32,7 @@ function App () {
           </Route>
         </Routes>
 
-        <Toaster theme='dark' />
+        <Toaster theme='dark' expand />
       </BrowserRouter>
     </>
   )
