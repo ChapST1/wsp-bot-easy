@@ -27,10 +27,6 @@ export function ListOfLinks () {
     {
       name: 'Testear Bot',
       path: '/test'
-    },
-    {
-      name: 'Repository',
-      path: '/repositorio'
     }
   ]
 
