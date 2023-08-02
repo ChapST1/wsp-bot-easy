@@ -31,16 +31,16 @@ export function ChatbotPlaygroundSidebar () {
               className={({ isActive, isPending }) => {
                 const customize = isPending ? 'bg-[#253239]' : isActive ? 'bg-[#2a3942]' : ''
 
-                return `w-full h-[60px]  flex items-center gap-3  px-2 hover:bg-[#202c33] ${customize}`
+                return `w-full h-[60px]  flex items-center justify-start gap-3  px-2 hover:bg-[#202c33] ${customize}`
               }}
             >
-              <figure className='max-w-[50px] max-h-[50px] rounded-full'>
+              <div className='w-[50px] max-w-[50px] min-w-[50px] min-h-[50px] max-h-[50px] h-[50px] flex-1 rounded-full bg-[#202c33]'>
                 <img
                   src={`https://robohash.org/${flowName}`}
                   alt={`imagen para ${flowName}`}
-                  className='w-full h-full rounded-full bg-[#202c33]'
+                  className='w-full h-full rounded-full'
                 />
-              </figure>
+              </div>
 
               <div className='w-full h-full border-b border-[#262f34] pt-2'>
                 <p className='text-[#e9edef] text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis'>{flowName}</p>
