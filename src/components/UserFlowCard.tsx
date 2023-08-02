@@ -15,8 +15,8 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
           alt={`imagen del chatbot ${flowName}`}
           className='w-full block border border-white/10 rounded-md'
         />
-        <p className='text-white font-semibold text-center w-full '>
-          {flowName.toUpperCase()}
+        <p className='text-white font-semibold text-center  text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis' title={flowName}>
+          {flowName}
         </p>
       </div>
 
