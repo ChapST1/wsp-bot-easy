@@ -18,11 +18,13 @@ function App () {
         <Routes>
           <Route path='/' element={<Home />} />
 
-          <Route path='/chatbot' element={<Chatbot />} />
+          <Route path='/chatbot' element={<Chatbot />}>
+            <Route path=':id' element={<TemplatesDetail redirect='/chatbot' />} />
+          </Route>
           <Route path='/chatbot/crear' element={<ChatbotCreate />} />
 
           <Route path='/plantillas' element={<Templates />}>
-            <Route path=':id' element={<TemplatesDetail />} />
+            <Route path=':id' element={<TemplatesDetail redirect='/plantillas' />} />
           </Route>
 
           <Route path='/test' element={<ChatbotPlayground />}>
