@@ -1,10 +1,9 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { TemplateInfo } from '../../components/Chatbot/Templates/TemplateInfo'
 import { useRef } from 'react'
 
 export function ChatbotDetailsLayout ({ redirect }: { redirect: string }) {
   const elementRef = useRef<HTMLDivElement>(null)
-  const { id } = useParams()
   const navigate = useNavigate()
 
   const handleCloset = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -15,7 +14,7 @@ export function ChatbotDetailsLayout ({ redirect }: { redirect: string }) {
 
   return (
     <div className='w-full h-screen overflow-y-scroll  fixed top-0 left-0 bg-[#000000e4] py-[70px] flex items-start justify-center backdrop-blur-sm' ref={elementRef} id='flow-details-info-container' onClick={handleCloset}>
-      <TemplateInfo id={id} />
+      <TemplateInfo />
     </div>
   )
 }

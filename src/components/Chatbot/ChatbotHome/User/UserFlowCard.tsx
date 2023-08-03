@@ -38,7 +38,7 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
         />
         <ButtonLink
           title='Editar'
-          to={`/chatbot/crear/${id}`}
+          to={`/chatbot/${id}/editar`}
         />
         <ButtonLink
           title='Inspeccionar'

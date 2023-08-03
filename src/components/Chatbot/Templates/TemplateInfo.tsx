@@ -1,13 +1,11 @@
+import { useParams } from 'react-router-dom'
 import { useGlobalFlowStore } from '../../../hooks/useGlobalFlowsStore'
 import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
 
-interface TemplateInfoProps {
-  id: string | undefined
-}
-
-export function TemplateInfo ({ id }: TemplateInfoProps) {
+export function TemplateInfo () {
   const { allFlows } = useGlobalFlowStore()
   const { userAllFlows } = useGlobalUserFlowsStore()
+  const { id } = useParams()
 
   const findFlow = [...allFlows, ...userAllFlows]?.find(flow => flow.id === id)
 

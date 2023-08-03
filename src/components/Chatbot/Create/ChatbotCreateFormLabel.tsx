@@ -3,8 +3,8 @@ interface ChatbotCreateFormLabelProps {
   labelName: string
   tagName: string
   inputType: string
-  value: string
-  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  value?: string
+  handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
   flowIsCreated?: boolean
 }
 
@@ -20,7 +20,7 @@ export function ChatbotCreateFormLabel ({ labelFor, labelName, tagName, inputTyp
         required
         autoComplete='off'
         disabled={flowIsCreated}
-        value={value}
+        defaultValue={value}
         onChange={handleChange}
 
       />

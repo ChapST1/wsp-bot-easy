@@ -17,14 +17,8 @@ body{
     width: 0px;
 }
 
-#wsp-sidebar::-webkit-scrollbar-track {
-    background: transparent;
-}
 
-#wsp-sidebar::-webkit-scrollbar-thumb {
-    background: #374045;
-}
 
-#flow-details-info-container::-webkit-scrollbar{
+/* #flow-details-info-container::-webkit-scrollbar{
     width: 0px;
-}
+} */
