@@ -1,4 +1,4 @@
-import { MessageViewed, MessageWingLeftIcon, MessageWingRightIcon } from './Icons'
+import { MessageViewed, MessageWingLeftIcon, MessageWingRightIcon } from '../../Icons'
 
 interface ChatbotPlaygroundContentMessageItemProps {
   message: string

@@ -1,6 +1,6 @@
-import { ConfigIcon, SearchIcon } from './Icons'
-import { AllFlow } from '../types/allFlows'
-import { useGlobalWspPlaygroundStore } from '../hooks/useGlobalWspPlaygroundStore'
+import { useGlobalWspPlaygroundStore } from '../../../hooks/useGlobalWspPlaygroundStore'
+import { AllFlow } from '../../../types/allFlows'
+import { ConfigIcon, SearchIcon } from '../../Icons'
 
 interface ChatbotPlaygroundContentMessageHeaderProps {
   findChannel: AllFlow | undefined

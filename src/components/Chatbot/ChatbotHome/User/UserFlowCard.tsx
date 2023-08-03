@@ -1,6 +1,6 @@
-import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
-import { Button } from './Button'
-import { ButtonLink } from './ButtonLink'
+import { useGlobalUserFlowsStore } from '../../../../hooks/useGlobalUserFlowsStore'
+import { Button } from '../../../ui/Button'
+import { ButtonLink } from '../../../ui/ButtonLink'
 
 interface UserFlowCardProps {
   flowName: string

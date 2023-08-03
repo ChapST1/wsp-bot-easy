@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { AddIcon, EmojiIcon, SendMessageIcon, VoiceIcon } from './Icons'
-import { formatDate } from '../utils/formatDate'
-
-import { AllFlow as AllFlowTypes } from '../types/allFlows'
-import { useGlobalWspPlaygroundStore } from '../hooks/useGlobalWspPlaygroundStore'
+import { AllFlow as AllFlowTypes } from '../../../types/allFlows'
+import { useGlobalWspPlaygroundStore } from '../../../hooks/useGlobalWspPlaygroundStore'
+import { AddIcon, EmojiIcon, SendMessageIcon, VoiceIcon } from '../../Icons'
+import { formatDate } from '../../../utils/formatDate'
 
 export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findChannel: AllFlowTypes | undefined }) {
   const [contentMessages, setContentMessage] = useState('')
@@ -84,7 +83,9 @@ export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findCh
       />
 
       {
-            contentMessages.length > 0 ? (<button type='submit'><SendMessageIcon className='fill-[#aebac1] scale-90' /></button>) : (<VoiceIcon className='fill-[#aebac1] scale-90' />)
+            contentMessages.length > 0
+              ? (<button type='submit'><SendMessageIcon className='fill-[#aebac1] scale-90' /></button>)
+              : (<VoiceIcon className='fill-[#aebac1] scale-90' />)
       }
     </form>
   )

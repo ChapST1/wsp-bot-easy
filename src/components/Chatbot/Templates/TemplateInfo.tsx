@@ -1,5 +1,5 @@
-import { useGlobalFlowStore } from '../hooks/useGlobalFlowsStore'
-import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
+import { useGlobalFlowStore } from '../../../hooks/useGlobalFlowsStore'
+import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
 
 interface TemplateInfoProps {
   id: string | undefined

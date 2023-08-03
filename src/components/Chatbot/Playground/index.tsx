@@ -1,6 +1,5 @@
-import { ChatbotPlaygroundSidebar } from '../components/ChatbotPlaygroundSidebar'
-
 import { Outlet } from 'react-router-dom'
+import { ChatbotPlaygroundSidebar } from './ChatbotPlaygroundSidebar'
 
 export function Whatsapp () {
   return (

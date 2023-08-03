@@ -1,5 +1,5 @@
-import { ButtonLink } from './ButtonLink'
-import { RobotIcon } from './Icons'
+import { RobotIcon } from '../../Icons'
+import { ButtonLink } from '../../ui/ButtonLink'
 
 export function ErrorNoFlows () {
   return (

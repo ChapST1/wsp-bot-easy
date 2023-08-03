@@ -1,10 +1,10 @@
-import { ChatbotCreateFormLabel } from './ChatbotCreateFormLabel'
-import { ChatbotCreateFormToggle } from './ChatbotCreateFormToggle'
 import { toast } from 'sonner'
-import { ButtonLink } from './ButtonLink'
-import { Button } from './Button'
-import { useGlobalUserFlowsStore } from '../hooks/useGlobalUserFlowsStore'
+import { Button } from '../../ui/Button'
+import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
 import { useState, useEffect } from 'react'
+import { ChatbotCreateFormToggle } from './ChatbotCreateFormToggle'
+import { ButtonLink } from '../../ui/ButtonLink'
+import { ChatbotCreateFormLabel } from './ChatbotCreateFormLabel'
 
 export function ChatbotCreateForm ({ editId }: { editId?: string }) {
   const { updateUserAllFlows, userAllFlows } = useGlobalUserFlowsStore()

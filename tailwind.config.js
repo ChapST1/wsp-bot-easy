@@ -27,7 +27,7 @@ export default {
       },
       animation: {
         gradient: 'animatedgradient 6s ease infinite alternate',
-        "background-shine": "background-shine 2s linear infinite"
+        "background-shine": "background-shine 500ms linear"
       },
     },
   },

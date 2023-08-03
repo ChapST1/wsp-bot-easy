@@ -1,4 +1,4 @@
-import { RobotIcon } from './Icons'
+import { RobotIcon } from '../../Icons'
 import { Navigation } from './Navigation'
 
 export function Header () {
