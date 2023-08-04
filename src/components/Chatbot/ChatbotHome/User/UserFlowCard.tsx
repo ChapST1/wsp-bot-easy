@@ -15,25 +15,25 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
   }
 
   return (
-    <div key={id} className='w-[400px] p-4 gap-4  border border-white/10 rounded-md  grid grid-cols-8'>
-      <div className='col-span-2  flex flex-col justify-start gap-3 items-end '>
+    <div className='w-[280px] p-4 gap-4  border border-white/10 rounded-md'>
+      <div className='flex flex-col justify-center gap-3 items-center '>
         <img
           src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${flowName}&radius=15`}
           alt={`imagen del chatbot ${flowName}`}
-          className='w-full block border border-white/10 rounded-md'
+          className='w-[60%] block border border-white/10 rounded-md'
         />
         <p className='text-white font-semibold text-center  text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis' title={flowName}>
           {flowName}
         </p>
       </div>
 
-      <div className=' col-span-6 grid grid-cols-2 gap-3'>
+      <div className=' mt-3 col-span-6 grid grid-cols-2 gap-3'>
         <Button
           title='Usar con whatsapp'
           style={{ gridColumn: 'span 2' }}
         />
         <ButtonLink
-          title='Testear Bot'
+          title='Testear'
           to={`/test/${id}`}
         />
         <ButtonLink
