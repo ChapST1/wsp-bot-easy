@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    color-scheme: dark;   
+}
+
 body{
     @apply bg-[#000000]
 }
-
 
 /* scroll wsp-content-messages */
 
