@@ -9,7 +9,7 @@ export function ChatbotPlaygroundSidebarScreenOptions () {
   }
 
   return (
-    <div className=' w-[40px] h-[40px] absolute bottom-2 right-2' onClick={handleClick}>
+    <div className=' scale-75' onClick={handleClick}>
       {
         isActiveFullScreen
           ? (<DisableFullScreenIcon className='fill-white duration-300 stroke-[#aebac1] hover:stroke-[#e9ebed] w-8  cursor-pointer' />)

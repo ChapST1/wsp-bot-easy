@@ -10,7 +10,7 @@ export function TemplateInfo () {
   const findFlow = [...allFlows, ...userAllFlows]?.find(flow => flow.id === id)
 
   return (
-    <div className='w-[70%] mt-5 bg-[#000] py-4 px-6 border border-[#1f2123] rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px]'>
+    <div className='w-[90%] mt-5 bg-[#000] py-4 px-6 border border-[#1f2123] rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px]'>
       <h3 className='text-[#ededed] text-center text-2xl pb-3 font-bold'>{findFlow?.flowName}</h3>
 
       <div>

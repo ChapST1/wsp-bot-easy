@@ -10,7 +10,7 @@ export function ChatbotPlaygroundLayout () {
   return (
     <>
       <h3 className='text-white text-center text-2xl py-4 pb-7'>Testea tu bot</h3>
-      <div className={`${isActiveFullScreen ? 'fixed w-full h-screen top-0 left-0 z-50 ' : 'w-[70%] h-[70vh] rounded-lg border-[10px] border-[#eff7ff9d]'} m-auto  flex items-center justify-center`}>
+      <div className={`${isActiveFullScreen && userAllFlows.length > 0 ? 'fixed md:w-full md:h-screen top-0 left-0 z-50 ' : '  w-[90%] md:w-[70%] md:h-[70vh] rounded-lg md:border-[10px] border-[#eff7ff9d]'} m-auto  flex items-center justify-center`}>
         {userAllFlows.length > 0 && <Whatsapp />}
         {userAllFlows.length === 0 && <ErrorNoFlows />}
       </div>

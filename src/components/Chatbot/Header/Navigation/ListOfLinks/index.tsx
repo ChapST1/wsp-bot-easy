@@ -21,7 +21,7 @@ export function ListOfLinks () {
       path: '/plantillas'
     },
     {
-      name: 'Testear Bot',
+      name: 'Testear',
       path: '/test'
     }
   ]

@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
 import { ConfigIcon, GroupIcon, NewChatIcon, StatesIcon } from '../../Icons'
-import { ChatbotPlaygroundSidebarScreenOptions } from './ChatbotPlaygroundSidebarScreenOptions'
 
 export function ChatbotPlaygroundSidebar () {
   const { userAllFlows } = useGlobalUserFlowsStore()
@@ -52,8 +51,6 @@ export function ChatbotPlaygroundSidebar () {
         })
       }
       </div>
-
-      <ChatbotPlaygroundSidebarScreenOptions />
     </div>
   )
 }

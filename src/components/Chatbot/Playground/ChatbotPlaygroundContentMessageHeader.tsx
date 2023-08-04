@@ -1,6 +1,7 @@
 import { useGlobalWspPlaygroundStore } from '../../../hooks/useGlobalWspPlaygroundStore'
 import { AllFlow } from '../../../types/allFlows'
 import { ConfigIcon, SearchIcon } from '../../Icons'
+import { ChatbotPlaygroundSidebarScreenOptions } from './ChatbotPlaygroundSidebarScreenOptions'
 
 interface ChatbotPlaygroundContentMessageHeaderProps {
   findChannel: AllFlow | undefined
@@ -25,6 +26,7 @@ export function ChatbotPlaygroundContentMessageHeader ({ findChannel }: ChatbotP
       </div>
 
       <div className='flex gap-5 items-center'>
+        <ChatbotPlaygroundSidebarScreenOptions />
         <SearchIcon className='fill-[#aebac1]' />
         <ConfigIcon className='fill-[#aebac1]' />
       </div>
