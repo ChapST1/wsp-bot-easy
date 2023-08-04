@@ -11,7 +11,7 @@ export function ChatbotEditForm () {
   const { conversations, defaultValue, flowName } = userAllFlows.find(flow => flow.id === id) as AllFlow
 
   return (
-    <form className='py-6'>
+    <form className='py-6 bg-[black]'>
       <h2 className='text-2xl text-center text-white pb-6'>Editar 👉 {flowName}</h2>
 
       <ChatbotCreateFormLabel
