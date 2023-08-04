@@ -18,7 +18,7 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
     <div key={id} className='w-[400px] p-4 gap-4  border border-white/10 rounded-md  grid grid-cols-8'>
       <div className='col-span-2  flex flex-col justify-start gap-3 items-end '>
         <img
-          src={`https://robohash.org/${flowName}`}
+          src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${flowName}&radius=15`}
           alt={`imagen del chatbot ${flowName}`}
           className='w-full block border border-white/10 rounded-md'
         />

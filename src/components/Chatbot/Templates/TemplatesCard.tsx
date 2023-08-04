@@ -27,17 +27,23 @@ export function TemplatesCard ({ flowName, id }: TemplatesCardProps) {
   }
 
   return (
-    <div key={id} className='py-4 flex flex-col items-center justify-center border border-[#1f2123] rounded-md'>
-      <img
-        src={`https://robohash.org/${flowName}`}
-        alt={flowName}
-      />
-      <h2 className=' text-white/70 py-2'>{flowName}</h2>
-
-      <div className='flex gap-3'>
-        <Button title='Usar plantilla' onClick={handleClick} />
-        <ButtonLink title='Inspeccionar' to={`/plantillas/${id}`} />
+    <>
+      <div>
+        <div className='bg-[linear-gradient(-45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-transparent relative max-w-md overflow-hidden rounded-xl border border-[#1f2123] bg-[length:250%_250%,100%_100%] bg-[position:200%,0,0,0] bg-no-repeat px-4 py-9 shadow-2xl hover:transition-[background-position_0s_ease] hover:bg-[position:-300%_0,0_0] hover:duration-[2s] flex flex-col items-center justify-center gap-3'>
+          <img
+          // src={`https://api.dicebear.com/6.x/adventurer-neutral/svg?seed=${flowName}`}
+            src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${flowName}&radius=15`}
+            alt={flowName}
+            className='w-20 block m-auto'
+          />
+          <h2 className=' text-white/90  text-center'>{flowName}</h2>
+        </div>
+        <div className='flex  gap-3 my-4'>
+          <Button title='Utilizar' onClick={handleClick} style={{ flex: 1 }} />
+          <ButtonLink title='Inspeccionar' to={`/plantillas/${id}`} style={{ flex: 1 }} />
+        </div>
       </div>
-    </div>
+
+    </>
   )
 }

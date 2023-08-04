@@ -36,7 +36,7 @@ export function ChatbotPlaygroundSidebar () {
             >
               <div className='w-[50px] max-w-[50px] min-w-[50px] min-h-[50px] max-h-[50px] h-[50px] flex-1 rounded-full bg-[#202c33]'>
                 <img
-                  src={`https://robohash.org/${flowName}`}
+                  src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${flowName}&radius=15`}
                   alt={`imagen para ${flowName}`}
                   className='w-full h-full rounded-full'
                 />

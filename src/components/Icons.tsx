@@ -164,3 +164,15 @@ export function MessageViewed (props: React.SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function SettingsIcon (props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg width={24} height={24} {...props}>
+      <rect width={24} height={24} rx={3} />
+      <path
+        fill='#eee'
+        d='M12 15.5c.825 0 1.5.675 1.5 1.5s-.675 1.5-1.5 1.5-1.5-.675-1.5-1.5.675-1.5 1.5-1.5zm0-2c-.825 0-1.5-.675-1.5-1.5s.675-1.5 1.5-1.5 1.5.675 1.5 1.5-.675 1.5-1.5 1.5zm0-5c-.825 0-1.5-.675-1.5-1.5s.675-1.5 1.5-1.5 1.5.675 1.5 1.5-.675 1.5-1.5 1.5z'
+      />
+    </svg>
+  )
+}

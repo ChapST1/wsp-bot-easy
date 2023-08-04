@@ -7,11 +7,13 @@ import { ChatbotPlaygroundContentMessage } from '../../components/Chatbot/Playgr
 import { Header } from '../../components/Chatbot/Header'
 import { ChatbotCreate } from './ChatbotCreate'
 import { ChatbotEdit } from './ChatbotEdit'
+import { ImageBlurHero } from '../../components/ui/ImageBlurHero'
 
 export function ChatBotPages () {
   return (
     <main className='pt-[80px]'>
       <Header />
+      <ImageBlurHero />
 
       <Routes>
         <Route path='/chatbot' element={<Chatbot />}>

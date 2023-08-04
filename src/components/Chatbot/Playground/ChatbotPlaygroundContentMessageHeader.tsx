@@ -13,7 +13,7 @@ export function ChatbotPlaygroundContentMessageHeader ({ findChannel }: ChatbotP
     <header className=' w-full h-[60px] absolute  bg-[#202c33] top-0 z-20 flex items-center justify-between px-3'>
       <div className='flex gap-2 items-center '>
         <img
-          src={`https://robohash.org/${findChannel?.flowName ?? 'default'}`}
+          src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${findChannel?.flowName ?? 'default'}&radius=15`}
           alt='imagen del usuario'
           className='w-[40px] h-[40px] rounded-full'
         />
