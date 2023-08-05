@@ -30,7 +30,7 @@ export function LoginTutorial ({ updateShowLoginTutorial }: LoginTutorialProps) 
         <div className='flex flex-col justify-center items-center gap-4'>
           <span>👇👇</span>
           <img
-            src='public/images/login-tutorial.gif'
+            src='images/login-tutorial.gif'
             alt='tutorial'
             className='w-[550px] rounded-md'
           />

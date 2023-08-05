@@ -7,7 +7,6 @@ export function ChatbotTemplatesLayout () {
   const { allFlows } = useGlobalFlowStore()
   const { loading, error } = useFlows()
 
-  if (loading) return <h1>Cargando...</h1>
   if (error) return <h1>Error</h1>
 
   return (
@@ -18,7 +17,12 @@ export function ChatbotTemplatesLayout () {
         {
             allFlows.map(({ flowName, id }) => {
               return (
-                <TemplatesCard key={id} flowName={flowName} id={id} />
+                <TemplatesCard
+                  key={id}
+                  flowName={flowName}
+                  id={id}
+                  isLoading={loading}
+                />
               )
             })
         }

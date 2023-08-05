@@ -8,6 +8,7 @@ interface FlowStore {
 
 export const useFlowsStore = create<FlowStore>((set) => ({
   allFlows: [],
+
   updateAllFlows: (newFlows) => {
     set({ allFlows: newFlows })
   }

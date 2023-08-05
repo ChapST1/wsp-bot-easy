@@ -5,6 +5,7 @@ interface UserAllFlowsTypes {
   userAllFlows: AllFlowsTypes[]
   updateUserAllFlows: (newUserFlow: AllFlowsTypes) => void
   deleteUserFlow: (id: string) => void
+  editUserFlow: (id: string, newUserFlow: AllFlowsTypes) => void
 }
 
 export const useUserFlowsStore = create<UserAllFlowsTypes>((set, get) => ({
@@ -21,6 +22,14 @@ export const useUserFlowsStore = create<UserAllFlowsTypes>((set, get) => ({
     const filteredFlows = userAllFlows.filter(flow => flow.id !== id)
 
     set({ userAllFlows: filteredFlows })
+  },
+
+  editUserFlow: (id, newUserFlow) => {
+    const { userAllFlows } = get()
+    const filteredFlows = userAllFlows.filter(flow => flow.id !== id)
+    const newFlows = [...filteredFlows, newUserFlow]
+
+    set({ userAllFlows: newFlows })
   }
 
 }))
