@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
-import { useGlobalFlowStore } from '../../../hooks/useGlobalFlowsStore'
-import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
+import { useGlobalFlowStore } from '@hooks/useGlobalFlowsStore'
+import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
 
 export function TemplateInfo () {
   const { allFlows } = useGlobalFlowStore()

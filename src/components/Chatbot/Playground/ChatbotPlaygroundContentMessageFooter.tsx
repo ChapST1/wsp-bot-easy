@@ -1,8 +1,9 @@
-import { useState } from 'react'
 import { AllFlow as AllFlowTypes } from '../../../types/allFlows'
-import { useGlobalWspPlaygroundStore } from '../../../hooks/useGlobalWspPlaygroundStore'
-import { AddIcon, EmojiIcon, SendMessageIcon, VoiceIcon } from '../../Icons'
-import { formatDate } from '../../../utils/formatDate'
+
+import { useState } from 'react'
+import { useGlobalWspPlaygroundStore } from '@hooks/useGlobalWspPlaygroundStore'
+import { AddIcon, EmojiIcon, SendMessageIcon, VoiceIcon } from '@components/Icons'
+import { formatDate } from '@utils/formatDate'
 
 export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findChannel: AllFlowTypes | undefined }) {
   const [contentMessages, setContentMessage] = useState('')

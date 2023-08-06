@@ -1,20 +1,28 @@
-import { useParams } from 'react-router-dom'
-import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
 import { AllFlow } from '../../../types/allFlows'
-import { ButtonLink } from '../../ui/ButtonLink'
-import { Button } from '../../ui/Button'
-import { ChatbotEditFormItem } from './ChatbotEditFormItem'
+
+import { useParams } from 'react-router-dom'
+
+import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { ButtonLink } from '@components/ui/ButtonLink'
+import { Button } from '@components/ui/Button'
+import { ChatbotEditFormItem } from '@components/Chatbot/Edit/ChatbotEditFormItem'
 
 export function ChatbotEditForm () {
   const { userAllFlows } = useGlobalUserFlowsStore()
   const { id } = useParams()
-
-  const { conversations, defaultValue, flowName } = userAllFlows.find(flow => flow.id === id) as AllFlow ?? ''
+  const findFlow = userAllFlows.find(flow => flow.id === id) as AllFlow ?? ''
+  const { conversations, defaultValue, flowName } = findFlow
 
   if (!conversations && !defaultValue && !flowName) return (<p>No se encontro la id</p>)
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    console.log({ findFlow })
+  }
+
   return (
-    <form className='py-6 bg-[black] md:w-[600px]'>
+    <form className='py-6 bg-[black] md:w-[600px]' onSubmit={handleSubmit}>
       <h2 className='text-2xl text-center text-white pb-6'>Editar 👉 {flowName}</h2>
 
       <label htmlFor='' className=' block px-2  w-full py-1 text-[#eff7ff9d]'>
@@ -63,11 +71,11 @@ export function ChatbotEditForm () {
 
       <div className='flex justify-between items-center my-5'>
         <div className='flex gap-4'>
-          <Button title='Guardar' />
+          <Button title='Guardar' type='submit' />
           <ButtonLink title='Salir' to='/chatbot' />
         </div>
 
-        <Button title='Agregar' />
+        <Button title='Agregar' type='button' />
       </div>
     </form>
   )

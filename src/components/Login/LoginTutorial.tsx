@@ -1,7 +1,7 @@
 import { useRef } from 'react'
-import { LoginSteps } from './LoginSteps'
-import { ImageBlurHero } from '../ui/ImageBlurHero'
-import { Button } from '../ui/Button'
+import { LoginSteps } from '@components/Login/LoginSteps'
+import { ImageBlurHero } from '@components/ui/ImageBlurHero'
+import { Button } from '@components/ui/Button'
 
 interface LoginTutorialProps {
   updateShowLoginTutorial: (value: boolean) => void

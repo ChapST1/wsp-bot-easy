@@ -1,5 +1,5 @@
-import { useGlobalWspPlaygroundStore } from '../../../hooks/useGlobalWspPlaygroundStore'
-import { ChatbotPlaygroundContentMessageItem } from './ChatbotPlaygroundContentMessageItem'
+import { useGlobalWspPlaygroundStore } from '@hooks/useGlobalWspPlaygroundStore'
+import { ChatbotPlaygroundContentMessageItem } from '@components/Chatbot/Playground/ChatbotPlaygroundContentMessageItem'
 
 interface ChatbotPlaygroundContentListOfMessagesProps {
   containerMessagesRef: React.RefObject<HTMLDivElement>

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { ChatbotEditForm } from '../../components/Chatbot/Edit/ChatbotEditForm'
+import { ChatbotEditForm } from '@components/Chatbot/Edit/ChatbotEditForm'
 
 export function ChatbotEditLayout () {
   useEffect(() => {

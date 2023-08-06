@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { RobotIcon } from '../components/Icons'
-import { ImageBlurHero } from '../components/ui/ImageBlurHero'
+import { RobotIcon } from '@components/Icons'
+import { ImageBlurHero } from '@components/ui/ImageBlurHero'
 
 export function HomeLayout () {
   return (

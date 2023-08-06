@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { TemplateInfo } from '../../components/Chatbot/Templates/TemplateInfo'
+import { TemplateInfo } from '@components/Chatbot/Templates/TemplateInfo'
 import { useEffect, useRef } from 'react'
 
 export function ChatbotDetailsLayout ({ redirect }: { redirect: string }) {

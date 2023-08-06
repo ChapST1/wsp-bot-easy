@@ -1,4 +1,4 @@
-import { LoginBanner } from '../components/Login/LoginBanner'
+import { LoginBanner } from '@components/Login/LoginBanner'
 
 export function LoginLayout () {
   return (

@@ -1,5 +1,6 @@
-import { create } from 'zustand'
 import { AllFlow as AllFlowsTypes } from '../types/allFlows'
+
+import { create } from 'zustand'
 
 interface UserAllFlowsTypes {
   userAllFlows: AllFlowsTypes[]

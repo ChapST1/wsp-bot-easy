@@ -1,4 +1,4 @@
-import { useWspPlaygroundStore } from '../store/wspPlaygroundStore'
+import { useWspPlaygroundStore } from '@store/wspPlaygroundStore'
 
 export function useGlobalWspPlaygroundStore () {
   const botIsTyping = useWspPlaygroundStore((state) => state.botIsTyping)

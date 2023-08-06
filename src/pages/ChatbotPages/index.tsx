@@ -1,13 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
-import { Chatbot } from './Chatbot'
-import { TemplatesDetail } from './TemplatesDetail'
-import { Templates } from './Templates'
-import { ChatbotPlayground } from './ChatbotPlayground'
-import { ChatbotPlaygroundContentMessage } from '../../components/Chatbot/Playground/ChatbotPlaygroundContentMessage'
-import { Header } from '../../components/Chatbot/Header'
-import { ChatbotCreate } from './ChatbotCreate'
-import { ChatbotEdit } from './ChatbotEdit'
-import { ImageBlurHero } from '../../components/ui/ImageBlurHero'
+
+import { ChatbotPlaygroundContentMessage } from '@components/Chatbot/Playground/ChatbotPlaygroundContentMessage'
+import { ImageBlurHero } from '@components/ui/ImageBlurHero'
+import { Header } from '@components/Chatbot/Header'
+
+import { Chatbot } from '@pages/ChatbotPages/Chatbot'
+import { Templates } from '@pages/ChatbotPages/Templates'
+import { ChatbotEdit } from '@pages/ChatbotPages/ChatbotEdit'
+import { ChatbotCreate } from '@pages/ChatbotPages/ChatbotCreate'
+import { ChatbotPlayground } from '@pages/ChatbotPages/ChatbotPlayground'
+import { TemplatesDetail } from '@pages/ChatbotPages/TemplatesDetail'
 
 export function ChatBotPages () {
   return (

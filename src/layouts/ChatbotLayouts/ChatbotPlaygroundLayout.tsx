@@ -1,7 +1,7 @@
-import { Whatsapp } from '../../components/Chatbot/Playground'
-import { ErrorNoFlows } from '../../components/Chatbot/Playground/ErrorNoFlows'
-import { useGlobalUserFlowsStore } from '../../hooks/useGlobalUserFlowsStore'
-import { useGlobalWspPlaygroundStore } from '../../hooks/useGlobalWspPlaygroundStore'
+import { Whatsapp } from '@components/Chatbot/Playground'
+import { ErrorNoFlows } from '@components/Chatbot/Playground/ErrorNoFlows'
+import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { useGlobalWspPlaygroundStore } from '@hooks/useGlobalWspPlaygroundStore'
 
 export function ChatbotPlaygroundLayout () {
   const { userAllFlows } = useGlobalUserFlowsStore()

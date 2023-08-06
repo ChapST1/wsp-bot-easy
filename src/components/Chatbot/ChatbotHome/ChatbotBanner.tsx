@@ -1,5 +1,5 @@
-import { RobotIcon } from '../../Icons'
-import { ButtonLink } from '../../ui/ButtonLink'
+import { RobotIcon } from '@components/Icons'
+import { ButtonLink } from '@components/ui/ButtonLink'
 
 export function ChatbotBanner () {
   return (

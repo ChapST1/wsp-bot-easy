@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home } from './pages/Home'
+import { Home } from '@pages/Home'
 import { Toaster } from 'sonner'
-import { ChatBotPages } from './pages/ChatbotPages'
-import { Login } from './pages/Login'
+import { ChatBotPages } from '@pages/ChatbotPages'
+import { Login } from '@pages/Login'
 
 function App () {
   return (

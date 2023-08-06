@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { ChatbotCreateForm } from '../../components/Chatbot/Create/ChatbotCreateForm'
+import { ChatbotCreateForm } from '@components/Chatbot/Create/ChatbotCreateForm'
 
 export function ChatbotCreateLayout () {
   const { id } = useParams()

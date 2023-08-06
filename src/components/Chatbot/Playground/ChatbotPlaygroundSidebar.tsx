@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
-import { ConfigIcon, GroupIcon, NewChatIcon, StatesIcon } from '../../Icons'
+import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { ConfigIcon, GroupIcon, NewChatIcon, StatesIcon } from '@components/Icons'
 
 export function ChatbotPlaygroundSidebar () {
   const { userAllFlows } = useGlobalUserFlowsStore()

@@ -1,4 +1,4 @@
-import { ListOfLinks } from './ListOfLinks'
+import { ListOfLinks } from '@components/Chatbot/Header/Navigation/ListOfLinks'
 
 export function Navigation () {
   return (

@@ -1,7 +1,7 @@
-import { Button } from '../ui/Button'
-import { LightEffect } from '../ui/LightEffect'
+import { Button } from '@components/ui/Button'
+import { LightEffect } from '@components/ui/LightEffect'
 import { useState } from 'react'
-import { LoginTutorial } from './LoginTutorial'
+import { LoginTutorial } from '@components/Login/LoginTutorial'
 
 export function LoginBanner () {
   const [openTutorial, setOpenTutorial] = useState(false)

@@ -1,5 +1,6 @@
 import { AllFlow } from '../../../../types/allFlows'
-import { UserFlowCard } from './UserFlowCard'
+
+import { UserFlowCard } from '@components/Chatbot/ChatbotHome/User/UserFlowCard'
 
 export function UserFlowsList ({ userAllFlows }: { userAllFlows: AllFlow[] }) {
   return (

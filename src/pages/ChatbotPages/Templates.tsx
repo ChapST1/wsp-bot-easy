@@ -1,4 +1,4 @@
-import { ChatbotTemplatesLayout } from '../../layouts/ChatbotLayouts/ChatbotTemplatesLayout'
+import { ChatbotTemplatesLayout } from '@layouts/ChatbotLayouts/ChatbotTemplatesLayout'
 
 export function Templates () {
   return <ChatbotTemplatesLayout />

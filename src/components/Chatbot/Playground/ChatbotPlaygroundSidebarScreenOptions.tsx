@@ -1,5 +1,5 @@
-import { useGlobalWspPlaygroundStore } from '../../../hooks/useGlobalWspPlaygroundStore'
-import { DisableFullScreenIcon, EnableFullScreenIcon } from '../../Icons'
+import { useGlobalWspPlaygroundStore } from '@hooks/useGlobalWspPlaygroundStore'
+import { DisableFullScreenIcon, EnableFullScreenIcon } from '@components/Icons'
 
 export function ChatbotPlaygroundSidebarScreenOptions () {
   const { isActiveFullScreen, updateIsActiveFullScreen } = useGlobalWspPlaygroundStore()

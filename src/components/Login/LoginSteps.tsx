@@ -1,4 +1,4 @@
-import { SettingsIcon } from '../Icons'
+import { SettingsIcon } from '@components/Icons'
 
 export function LoginSteps () {
   return (

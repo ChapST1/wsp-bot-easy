@@ -1,5 +1,5 @@
-import { RobotIcon } from '../../Icons'
-import { Navigation } from './Navigation'
+import { RobotIcon } from '@components/Icons'
+import { Navigation } from '@components/Chatbot/Header/Navigation'
 
 export function Header () {
   return (

@@ -1,4 +1,4 @@
-import { LoginLayout } from '../layouts/LoginLayout'
+import { LoginLayout } from '@layouts/LoginLayout'
 
 export function Login () {
   return <LoginLayout />

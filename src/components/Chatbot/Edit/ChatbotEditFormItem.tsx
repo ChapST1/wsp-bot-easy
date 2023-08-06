@@ -1,7 +1,8 @@
-import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
 import { AllFlow, Conversation, Trigger } from '../../../types/allFlows'
-import { Button } from '../../ui/Button'
+
 import { toast } from 'sonner'
+import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { Button } from '@components/ui/Button'
 
 interface ChatbotEditFormItemProps {
   flowNmame?: string

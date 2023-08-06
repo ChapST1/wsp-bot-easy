@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
 
 import { useParams } from 'react-router-dom'
-import { ChatbotPlaygroundContentMessageHeader } from './ChatbotPlaygroundContentMessageHeader'
-import { ChatbotPlaygroundContentMessageFooter } from './ChatbotPlaygroundContentMessageFooter'
-import { ChatbotPlaygroundContentListOfMessages } from './ChatbotPlaygroundContentListOfMessages'
-import { useGlobalWspPlaygroundStore } from '../../../hooks/useGlobalWspPlaygroundStore'
-import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
+import { ChatbotPlaygroundContentMessageHeader } from '@components/Chatbot/Playground/ChatbotPlaygroundContentMessageHeader'
+import { ChatbotPlaygroundContentMessageFooter } from '@components/Chatbot/Playground/ChatbotPlaygroundContentMessageFooter'
+import { ChatbotPlaygroundContentListOfMessages } from '@components/Chatbot/Playground/ChatbotPlaygroundContentListOfMessages'
+import { useGlobalWspPlaygroundStore } from '@hooks/useGlobalWspPlaygroundStore'
+import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
 
 export function ChatbotPlaygroundContentMessage () {
   const containerMessagesRef = useRef<HTMLDivElement>(null)

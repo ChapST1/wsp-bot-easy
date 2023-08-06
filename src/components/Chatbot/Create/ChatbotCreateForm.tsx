@@ -1,10 +1,10 @@
 import { toast } from 'sonner'
-import { Button } from '../../ui/Button'
-import { useGlobalUserFlowsStore } from '../../../hooks/useGlobalUserFlowsStore'
+import { Button } from '@components/ui/Button'
+import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
 import { useState, useEffect } from 'react'
-import { ChatbotCreateFormToggle } from './ChatbotCreateFormToggle'
-import { ButtonLink } from '../../ui/ButtonLink'
-import { ChatbotCreateFormLabel } from './ChatbotCreateFormLabel'
+import { ChatbotCreateFormToggle } from '@components/Chatbot/Create/ChatbotCreateFormToggle'
+import { ButtonLink } from '@components/ui/ButtonLink'
+import { ChatbotCreateFormLabel } from '@components/Chatbot/Create/ChatbotCreateFormLabel'
 
 export function ChatbotCreateForm ({ editId }: { editId?: string }) {
   const { updateUserAllFlows, userAllFlows } = useGlobalUserFlowsStore()
