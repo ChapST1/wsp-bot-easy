@@ -10,6 +10,7 @@ import { ChatbotEdit } from '@pages/ChatbotPages/ChatbotEdit'
 import { ChatbotCreate } from '@pages/ChatbotPages/ChatbotCreate'
 import { ChatbotPlayground } from '@pages/ChatbotPages/ChatbotPlayground'
 import { TemplatesDetail } from '@pages/ChatbotPages/TemplatesDetail'
+import { ChatbotUserFlowDetails } from './ChatbotUserFlowDetails'
 
 export function ChatBotPages () {
   return (
@@ -19,14 +20,14 @@ export function ChatBotPages () {
 
       <Routes>
         <Route path='/chatbot' element={<Chatbot />}>
-          <Route path=':id' element={<TemplatesDetail redirect='/chatbot' />} />
+          <Route path=':id' element={<ChatbotUserFlowDetails />} />
           <Route path=':id/editar' element={<ChatbotEdit />} />
         </Route>
         <Route path='/chatbot/crear' element={<ChatbotCreate />}>
           <Route path=':id' element={<ChatbotCreate />} />
         </Route>
         <Route path='/plantillas' element={<Templates />}>
-          <Route path=':id' element={<TemplatesDetail redirect='/plantillas' />} />
+          <Route path=':id' element={<TemplatesDetail />} />
         </Route>
         <Route path='/test' element={<ChatbotPlayground />}>
           <Route path=':id' element={<ChatbotPlaygroundContentMessage />} />
