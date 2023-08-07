@@ -53,12 +53,20 @@ export function ChatbotEditFormItem ({ trigger, currentFlowId, currentFlowConver
         />
       </label>
 
-      <Button
-        title='Eliminar esta conversación'
-        style={{ margin: '0 auto', display: 'block' }}
-        onClick={handleDelete}
-        type='button'
-      />
+      <div className='flex gap-3 justify-between items-center'>
+        <Button
+          title='Guardar cambios'
+          onClick={handleDelete}
+          type='button'
+        />
+
+        <Button
+          title='Eliminar esta conversación'
+          onClick={handleDelete}
+          type='button'
+        />
+
+      </div>
     </div>
   )
 }
