@@ -1,13 +1,9 @@
 import { useParams } from 'react-router-dom'
-import { useGlobalFlowStore } from '@hooks/useGlobalFlowsStore'
-import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { AllFlow } from '@/types/allFlows'
 
-export function TemplateInfo () {
-  const { allFlows } = useGlobalFlowStore()
-  const { userAllFlows } = useGlobalUserFlowsStore()
+export function TemplateInfo ({ arrayFlows }: { arrayFlows: AllFlow[] }) {
   const { id } = useParams()
-
-  const findFlow = [...allFlows, ...userAllFlows]?.find(flow => flow.id === id)
+  const findFlow = arrayFlows?.find(flow => flow.id === id)
 
   return (
     <div className='w-[90%] mt-5 bg-[#000] py-4 px-6 border border-[#1f2123] rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px]'>
