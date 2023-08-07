@@ -20,7 +20,7 @@ export function ChatbotCreateFormLabel ({ labelFor, labelName, tagName, inputTyp
         required
         autoComplete='off'
         disabled={flowIsCreated}
-        defaultValue={value}
+        value={value}
         onChange={handleChange}
 
       />
