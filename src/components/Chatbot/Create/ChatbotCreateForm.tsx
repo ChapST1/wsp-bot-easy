@@ -7,7 +7,7 @@ import { ButtonLink } from '@components/ui/ButtonLink'
 import { ChatbotCreateFormLabel } from '@components/Chatbot/Create/ChatbotCreateFormLabel'
 
 export function ChatbotCreateForm ({ editId }: { editId?: string }) {
-  const { updateUserAllFlows, userAllFlows } = useGlobalUserFlowsStore()
+  const { addNewUserFlow, userAllFlows } = useGlobalUserFlowsStore()
 
   // form states
   const [isCreateFlow, setIsCreateFlow] = useState(false)
@@ -28,8 +28,10 @@ export function ChatbotCreateForm ({ editId }: { editId?: string }) {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
+    // revisar si el flujo ya existe en userAllFlows
     const flowIsInUsersAllFlows = userAllFlows.find((flow) => flow.flowName === nameCompany)
 
+    // aqui se crea el flujo que se va a guardar en userAllFlows
     const createFlow = {
       id: crypto.randomUUID(),
       defaultValue: defaultTrigger,
@@ -45,22 +47,26 @@ export function ChatbotCreateForm ({ editId }: { editId?: string }) {
       ]
     }
 
+    // si el flujo no existe en userAllFlows se crea toda la estructura o propiedades
     if (!flowIsInUsersAllFlows) {
-      updateUserAllFlows(createFlow)
+      addNewUserFlow(createFlow)
       toast.message('Guardado con exito!!', {
         description: 'Recuerda que puedes seguir agregando mas acciones y respuesta a tu bot'
       })
 
-      // reset inputs
+      // resetear los estados
       setIsCreateFlow(true)
       setAction('')
       setTrigger('')
       return
     }
 
+    // si el flujo ya existe en userAllFlows solo modificamos las propiedades de -> accion y respuesta
     if (flowIsInUsersAllFlows) {
+      // obtenemos las conversaciones del flujo que ya existente
       const { conversations } = flowIsInUsersAllFlows
 
+      // creamos la nueva conversacion
       const newConversation = {
         name: action,
         trigger: {
@@ -68,10 +74,16 @@ export function ChatbotCreateForm ({ editId }: { editId?: string }) {
           response: trigger
         }
       }
+      // agregamos la nueva conversacion a las conversaciones que ya existen
       conversations.push(newConversation)
 
+      // actualizamos el flujo que ya existia con las nuevas conversaciones
       flowIsInUsersAllFlows.conversations = conversations
-      updateUserAllFlows(flowIsInUsersAllFlows)
+
+      // actualizamos el flujo que ya existia con las nuevas conversaciones
+      addNewUserFlow(flowIsInUsersAllFlows)
+
+      // resetear los estados
       setAction('')
       setTrigger('')
 
@@ -80,17 +92,6 @@ export function ChatbotCreateForm ({ editId }: { editId?: string }) {
       })
     }
   }
-
-  useEffect(() => {
-    if (editId) {
-      const flowToEdit = userAllFlows.find((flow) => flow.id === editId)
-
-      if (flowToEdit) {
-        setNameCompany(flowToEdit.flowName)
-        setDefaultTrigger(flowToEdit.defaultValue)
-      }
-    }
-  }, [editId, userAllFlows])
 
   return (
     <form className=' max-w-2xl p-5 rounded-md m-auto border border-white/10' onSubmit={handleSubmit}>

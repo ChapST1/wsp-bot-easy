@@ -4,14 +4,14 @@ import { create } from 'zustand'
 
 interface UserAllFlowsTypes {
   userAllFlows: AllFlowsTypes[]
-  updateUserAllFlows: (newUserFlow: AllFlowsTypes) => void
+  addNewUserFlow: (newUserFlow: AllFlowsTypes) => void
   deleteUserFlow: (id: string) => void
   editUserFlow: (id: string, newUserFlow: AllFlowsTypes) => void
 }
 
 export const useUserFlowsStore = create<UserAllFlowsTypes>((set, get) => ({
   userAllFlows: [],
-  updateUserAllFlows: (newUserFlow: AllFlowsTypes) => {
+  addNewUserFlow: (newUserFlow: AllFlowsTypes) => {
     const { userAllFlows } = get()
     // not repeat values
     const notRepeatFlows = Array.from(new Set([...userAllFlows, newUserFlow]))
