@@ -1,0 +1,231 @@
+{
+  "allFlows": [
+    {
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "Pizzeria delicioso",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_producto {producto}, gracias",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "hola",
+            "response": "¡Hola! ¿En qué puedo ayudarte?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "adios",
+            "response": "¡Hasta luego! Si necesitas algo más, aquí estaré."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Puedo ayudarte con información sobre productos y servicios. Solo pregúntame lo que necesitas saber."
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "De nada. Siempre estoy aquí para ayudarte."
+          }
+        }
+      ]
+    },
+    {
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "Tienda de moda elegante",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_producto {producto}, gracias",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "hola",
+            "response": "¡Hola! ¿En qué puedo ayudarte con tu estilo?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "adios",
+            "response": "¡Hasta luego! Si necesitas asesoramiento de moda, no dudes en regresar."
+          }
+        },
+        {
+          "trigger": {
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para ofrecerte las mejores sugerencias de moda."
+          }
+        },
+        {
+          "trigger": {
+            "name": "mi nombre es {nombre}",
+            "response": "¡Hola {nombre}! Estoy aquí para ayudarte a lucir increíble."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Puedo proporcionarte información sobre nuestra variedad de prendas y estilos. Solo pregúntame lo que deseas saber."
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_producto {producto}",
+            "response": "La prenda {producto} es realmente elegante. ¿Hay algo en particular que quieras saber sobre ella?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "De nada. ¡Espero verte luciendo genial con nuestras prendas!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "ElectroTech Store",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_producto {producto}, gracias",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "hola",
+            "response": "¡Hola! ¿En qué puedo asesorarte sobre la última tecnología?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "adios",
+            "response": "¡Hasta luego! Si necesitas más detalles sobre productos electrónicos, aquí estaré."
+          }
+        },
+        {
+          "trigger": {
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para brindarte recomendaciones personalizadas de electrónicos."
+          }
+        },
+        {
+          "trigger": {
+            "name": "mi nombre es {nombre}",
+            "response": "¡Hola {nombre}! Bienvenido a ElectroTech Store, donde la innovación te espera."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Puedo proporcionarte información sobre los productos electrónicos más populares. Solo pregúntame lo que necesitas saber."
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_producto {producto}",
+            "response": "El producto {producto} es una elección fantástica. ¿Hay algún detalle específico que quieras conocer?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "No hay de qué. ¡Esperamos que encuentres la tecnología perfecta para ti!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "Librería Encantada",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_libro {libro}, gracias",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "hola",
+            "response": "¡Bienvenido a la Librería Encantada! ¿En qué puedo ayudarte a descubrir nuevas historias?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "adios",
+            "response": "¡Hasta pronto! Siempre estaré aquí para guiarte en tu búsqueda de libros mágicos."
+          }
+        },
+        {
+          "trigger": {
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para conocer tus gustos literarios."
+          }
+        },
+        {
+          "trigger": {
+            "name": "mi nombre es {nombre}",
+            "response": "¡Saludos, {nombre}! Tu viaje literario está a punto de comenzar."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Estoy aquí para recomendarte libros fascinantes. ¡Solo pregúntame y te sorprenderás!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_libro {libro}",
+            "response": "El libro {libro} es una joya literaria. ¿Quieres saber más detalles?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "No menciones, {nombre}. ¡Que disfrutes de tus aventuras entre páginas!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "Jardín Floreciente",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_planta {planta}, gracias",
+      "conversations": [
+        {
+          "trigger": {
+            "name": "hola",
+            "response": "¡Bienvenido al Jardín Floreciente! ¿En qué puedo ayudarte a cultivar belleza natural?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "adios",
+            "response": "¡Hasta luego! Siempre aquí para ayudarte a hacer florecer tu jardín."
+          }
+        },
+        {
+          "trigger": {
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para personalizar tus consejos de jardinería."
+          }
+        },
+        {
+          "trigger": {
+            "name": "mi nombre es {nombre}",
+            "response": "¡Saludos, {nombre}! Juntos haremos que tu jardín florezca."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Puedo ofrecerte información sobre plantas y cuidados de jardinería. ¡Pregunta lo que quieras saber!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_planta {planta}",
+            "response": "La planta {planta} es verdaderamente especial. ¿Necesitas detalles específicos?"
+          }
+        },
+        {
+          "trigger": {
+            "name": "gracias",
+            "response": "No hay de qué, {nombre}. ¡Que tu jardín florezca en abundancia!"
+          }
+        }
+      ]
+    }
+  ]
+}
