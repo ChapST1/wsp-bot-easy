@@ -19,26 +19,8 @@
         },
         {
           "trigger": {
-            "name": "nombre",
-            "response": "Por favor, dime tu nombre para conocerte mejor."
-          }
-        },
-        {
-          "trigger": {
-            "name": "mi nombre es {nombre}",
-            "response": "¡Hola {nombre}! Es un gusto conocerte."
-          }
-        },
-        {
-          "trigger": {
             "name": "ayuda",
             "response": "Puedo ayudarte con información sobre productos y servicios. Solo pregúntame lo que necesitas saber."
-          }
-        },
-        {
-          "trigger": {
-            "name": "informacion_producto {producto}",
-            "response": "El producto {producto} es excelente. ¿Hay algo específico que deseas saber sobre él?"
           }
         },
         {
@@ -50,262 +32,197 @@
       ]
     },
     {
-      "id": "4067256e-4ae2-450d-ab95-a0daf0b3e437",
-      "flowName": "Ayuda con recetas",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 recetas, recetas_postres, recetas_comidas, recetas_bebidas",
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "Tienda de moda elegante",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_producto {producto}, gracias",
       "conversations": [
         {
           "trigger": {
-            "name": "recetas",
-            "response": "¡Claro! ¿Qué tipo de receta te gustaría obtener? Puedo ayudarte con recetas de postres, comidas, bebidas, etc."
+            "name": "hola",
+            "response": "¡Hola! ¿En qué puedo ayudarte con tu estilo?"
           }
         },
         {
           "trigger": {
-            "name": "recetas_postres",
-            "response": "Los postres son deliciosos. ¿Te gustaría una receta de pastel de chocolate o tal vez de helado casero?"
+            "name": "adios",
+            "response": "¡Hasta luego! Si necesitas asesoramiento de moda, no dudes en regresar."
           }
         },
         {
           "trigger": {
-            "name": "recetas_comidas",
-            "response": "¡Las comidas son mi especialidad! ¿Prefieres una receta de pasta, pizza o ensalada?"
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para ofrecerte las mejores sugerencias de moda."
           }
         },
         {
           "trigger": {
-            "name": "recetas_bebidas",
-            "response": "Una bebida refrescante siempre es bienvenida. ¿Te gustaría una receta de cóctel o batido de frutas?"
+            "name": "mi nombre es {nombre}",
+            "response": "¡Hola {nombre}! Estoy aquí para ayudarte a lucir increíble."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Puedo proporcionarte información sobre nuestra variedad de prendas y estilos. Solo pregúntame lo que deseas saber."
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_producto {producto}",
+            "response": "La prenda {producto} es realmente elegante. ¿Hay algo en particular que quieras saber sobre ella?"
           }
         },
         {
           "trigger": {
             "name": "gracias",
-            "response": "¡De nada! ¡Espero que disfrutes cocinando!"
+            "response": "De nada. ¡Espero verte luciendo genial con nuestras prendas!"
           }
         }
       ]
     },
     {
-      "id": "7fcf3d78-4a9a-4fe4-ba55-5c0b056da432",
-      "flowName": "Consulta de Clima",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 clima, pronostico {ciudad}",
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "ElectroTech Store",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_producto {producto}, gracias",
       "conversations": [
         {
           "trigger": {
-            "name": "clima",
-            "response": "¡Claro! ¿En qué ciudad te gustaría saber el clima?"
+            "name": "hola",
+            "response": "¡Hola! ¿En qué puedo asesorarte sobre la última tecnología?"
           }
         },
         {
           "trigger": {
-            "name": "pronostico {ciudad}",
-            "response": "El pronóstico para {ciudad} es soleado con una temperatura de 30°C. ¡Disfruta del buen clima!"
+            "name": "adios",
+            "response": "¡Hasta luego! Si necesitas más detalles sobre productos electrónicos, aquí estaré."
+          }
+        },
+        {
+          "trigger": {
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para brindarte recomendaciones personalizadas de electrónicos."
+          }
+        },
+        {
+          "trigger": {
+            "name": "mi nombre es {nombre}",
+            "response": "¡Hola {nombre}! Bienvenido a ElectroTech Store, donde la innovación te espera."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Puedo proporcionarte información sobre los productos electrónicos más populares. Solo pregúntame lo que necesitas saber."
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_producto {producto}",
+            "response": "El producto {producto} es una elección fantástica. ¿Hay algún detalle específico que quieras conocer?"
           }
         },
         {
           "trigger": {
             "name": "gracias",
-            "response": "¡De nada! Siempre estoy aquí para ayudarte con el pronóstico del clima."
+            "response": "No hay de qué. ¡Esperamos que encuentres la tecnología perfecta para ti!"
           }
         }
       ]
     },
     {
-      "id": "e83dfe46-98fb-40cd-aeca-7ad78b37eabc",
-      "flowName": "Información Turística",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 lugares_turisticos, actividades {ciudad}",
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "Librería Encantada",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_libro {libro}, gracias",
       "conversations": [
         {
           "trigger": {
-            "name": "lugares_turisticos",
-            "response": "¡Por supuesto! ¿Cuál es el destino turístico que te interesa? Puedo proporcionarte información sobre lugares famosos, museos, playas y más."
+            "name": "hola",
+            "response": "¡Bienvenido a la Librería Encantada! ¿En qué puedo ayudarte a descubrir nuevas historias?"
           }
         },
         {
           "trigger": {
-            "name": "actividades {ciudad}",
-            "response": "En {ciudad} hay muchas actividades emocionantes para disfrutar, como paseos en bote, senderismo y tours culturales. ¡No te aburrirás!"
+            "name": "adios",
+            "response": "¡Hasta pronto! Siempre estaré aquí para guiarte en tu búsqueda de libros mágicos."
+          }
+        },
+        {
+          "trigger": {
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para conocer tus gustos literarios."
+          }
+        },
+        {
+          "trigger": {
+            "name": "mi nombre es {nombre}",
+            "response": "¡Saludos, {nombre}! Tu viaje literario está a punto de comenzar."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Estoy aquí para recomendarte libros fascinantes. ¡Solo pregúntame y te sorprenderás!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_libro {libro}",
+            "response": "El libro {libro} es una joya literaria. ¿Quieres saber más detalles?"
           }
         },
         {
           "trigger": {
             "name": "gracias",
-            "response": "¡De nada! Espero que disfrutes de tu viaje y tengas una experiencia turística inolvidable."
+            "response": "No menciones, {nombre}. ¡Que disfrutes de tus aventuras entre páginas!"
           }
         }
       ]
     },
     {
-      "id": "25a6de5b-68fc-49d0-85af-1d2c65f3d86c",
-      "flowName": "Salud y Bienestar",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 consejos_salud, ejercicio, alimentacion_sana",
+      "id": "f429d2b7-39a3-42b6-97c9-26109d724bbe",
+      "flowName": "Jardín Floreciente",
+      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 hola, adios, nombre, ayuda, informacion_planta {planta}, gracias",
       "conversations": [
         {
           "trigger": {
-            "name": "consejos_salud",
-            "response": "La salud es lo más importante. Te puedo dar consejos sobre cómo mantener un estilo de vida saludable y prevenir enfermedades."
+            "name": "hola",
+            "response": "¡Bienvenido al Jardín Floreciente! ¿En qué puedo ayudarte a cultivar belleza natural?"
           }
         },
         {
           "trigger": {
-            "name": "ejercicio",
-            "response": "El ejercicio regular es fundamental para mantenerse en forma. Te recomiendo hacer al menos 30 minutos de actividad física todos los días."
+            "name": "adios",
+            "response": "¡Hasta luego! Siempre aquí para ayudarte a hacer florecer tu jardín."
           }
         },
         {
           "trigger": {
-            "name": "alimentacion_sana",
-            "response": "Una alimentación equilibrada es esencial para tener buena salud. Trata de incluir frutas, verduras, proteínas magras y granos enteros en tu dieta."
+            "name": "nombre",
+            "response": "Por favor, dime tu nombre para personalizar tus consejos de jardinería."
+          }
+        },
+        {
+          "trigger": {
+            "name": "mi nombre es {nombre}",
+            "response": "¡Saludos, {nombre}! Juntos haremos que tu jardín florezca."
+          }
+        },
+        {
+          "trigger": {
+            "name": "ayuda",
+            "response": "Puedo ofrecerte información sobre plantas y cuidados de jardinería. ¡Pregunta lo que quieras saber!"
+          }
+        },
+        {
+          "trigger": {
+            "name": "informacion_planta {planta}",
+            "response": "La planta {planta} es verdaderamente especial. ¿Necesitas detalles específicos?"
           }
         },
         {
           "trigger": {
             "name": "gracias",
-            "response": "¡De nada! Cuídate y no olvides que siempre es importante priorizar tu bienestar."
-          }
-        }
-      ]
-    },
-    {
-      "id": "85a0a63a-08df-4b2b-9a6d-8f22d2281f16",
-      "flowName": "Gestión de Tareas",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 agregar_tarea {tarea}, lista_tareas, eliminar_tarea {tarea}",
-      "conversations": [
-        {
-          "trigger": {
-            "name": "agregar_tarea {tarea}",
-            "response": "Tarea '{tarea}' agregada correctamente a tu lista de pendientes. ¡No te olvides de completarla a tiempo!"
-          }
-        },
-        {
-          "trigger": {
-            "name": "lista_tareas",
-            "response": "Aquí tienes tu lista de tareas pendientes: [TAREA 1], [TAREA 2], [TAREA 3], ..."
-          }
-        },
-        {
-          "trigger": {
-            "name": "eliminar_tarea {tarea}",
-            "response": "La tarea '{tarea}' ha sido eliminada de tu lista. ¡Buen trabajo!"
-          }
-        },
-        {
-          "trigger": {
-            "name": "gracias",
-            "response": "¡De nada! Espero que logres completar todas tus tareas con éxito."
-          }
-        }
-      ]
-    },
-    {
-      "id": "b2455c1e-1eb0-4b7a-b957-05cf2f26e0bc",
-      "flowName": "Películas y Series",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 peliculas, series, genero {genero}",
-      "conversations": [
-        {
-          "trigger": {
-            "name": "peliculas",
-            "response": "¡Me encanta el cine! ¿Buscas recomendaciones de películas? ¡Puedo sugerirte las mejores películas del momento!"
-          }
-        },
-        {
-          "trigger": {
-            "name": "series",
-            "response": "Las series también son geniales. ¿Quieres saber cuáles son las más populares o necesitas una recomendación en particular?"
-          }
-        },
-        {
-          "trigger": {
-            "name": "genero {genero}",
-            "response": "El género '{genero}' es muy interesante. Puedo sugerirte películas o series que se ajusten a ese estilo. ¡Solo dime qué buscas!"
-          }
-        },
-        {
-          "trigger": {
-            "name": "gracias",
-            "response": "¡De nada! Espero que disfrutes de las películas y series que elijas ver."
-          }
-        }
-      ]
-    },
-    {
-      "id": "172af775-8fc5-4b78-9b96-040bc864e6c9",
-      "flowName": "Soporte Técnico",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 problemas_tecnicos, configuracion {dispositivo}",
-      "conversations": [
-        {
-          "trigger": {
-            "name": "problemas_tecnicos",
-            "response": "Lamento que estés experimentando problemas técnicos. Estoy aquí para ayudarte a solucionar cualquier inconveniente que tengas."
-          }
-        },
-        {
-          "trigger": {
-            "name": "configuracion {dispositivo}",
-            "response": "¿Necesitas ayuda con la configuración de tu {dispositivo}? ¡No te preocupes! Te guiaré paso a paso para que todo funcione correctamente."
-          }
-        },
-        {
-          "trigger": {
-            "name": "gracias",
-            "response": "¡De nada! Espero haber resuelto tus problemas técnicos satisfactoriamente."
-          }
-        }
-      ]
-    },
-    {
-      "id": "fb39da4b-42d5-4b25-a7da-ebc238dfaf77",
-      "flowName": "Aprendizaje de Idiomas",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 aprender_idioma {idioma}, vocabulario {idioma}",
-      "conversations": [
-        {
-          "trigger": {
-            "name": "aprender_idioma {idioma}",
-            "response": "¡Genial! Aprender un nuevo idioma es emocionante. ¿Cómo puedo ayudarte a empezar con el estudio del {idioma}?"
-          }
-        },
-        {
-          "trigger": {
-            "name": "vocabulario {idioma}",
-            "response": "Ampliar tu vocabulario es una excelente manera de mejorar en {idioma}. ¿Te gustaría que te enseñe algunas palabras y frases útiles?"
-          }
-        },
-        {
-          "trigger": {
-            "name": "gracias",
-            "response": "¡De nada! Estoy aquí para ayudarte en tu camino hacia el dominio del idioma {idioma}."
-          }
-        }
-      ]
-    },
-    {
-      "id": "c39f2e80-209f-4116-8e82-bb5e566f1f0b",
-      "flowName": "Asesoramiento Financiero",
-      "defaultValue": " Lo siento 🥲, Estoy programado para responder estas preguntas 👉 presupuesto, ahorros, inversiones",
-      "conversations": [
-        {
-          "trigger": {
-            "name": "presupuesto",
-            "response": "Un presupuesto bien planificado es esencial para una buena gestión financiera. ¿Necesitas ayuda para crear uno?"
-          }
-        },
-        {
-          "trigger": {
-            "name": "ahorros",
-            "response": "¡Ahorrar dinero te ayudará a alcanzar tus metas financieras! ¿Quieres conocer estrategias para ahorrar de manera efectiva?"
-          }
-        },
-        {
-          "trigger": {
-            "name": "inversiones",
-            "response": "Las inversiones inteligentes pueden hacer crecer tu dinero. ¿Te gustaría saber más sobre opciones de inversión?"
-          }
-        },
-        {
-          "trigger": {
-            "name": "gracias",
-            "response": "¡De nada! Espero que puedas tomar decisiones financieras sólidas y alcanzar la estabilidad económica."
+            "response": "No hay de qué, {nombre}. ¡Que tu jardín florezca en abundancia!"
           }
         }
       ]
