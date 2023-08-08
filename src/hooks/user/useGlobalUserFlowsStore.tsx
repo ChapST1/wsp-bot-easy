@@ -1,4 +1,4 @@
-import { useUserFlowsStore } from '@store/userFlowsStorer'
+import { useUserFlowsStore } from '@/store/user/userFlowsStorer'
 
 export function useGlobalUserFlowsStore () {
   const userAllFlows = useUserFlowsStore((state) => state.userAllFlows)

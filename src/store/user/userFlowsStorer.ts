@@ -1,4 +1,4 @@
-import { AllFlow as AllFlowsTypes } from '../types/allFlows'
+import { AllFlow as AllFlowsTypes } from '../../types/allFlows'
 
 import { create } from 'zustand'
 
@@ -27,8 +27,10 @@ export const useUserFlowsStore = create<UserAllFlowsTypes>((set, get) => ({
 
   editUserFlow: (id, newUserFlow) => {
     const { userAllFlows } = get()
+    const findIndexById = userAllFlows.findIndex(flow => flow.id === id)
     const filteredFlows = userAllFlows.filter(flow => flow.id !== id)
-    const newFlows = [...filteredFlows, newUserFlow]
+    const newFlows = [...filteredFlows]
+    newFlows.splice(findIndexById, 0, newUserFlow)
 
     set({ userAllFlows: newFlows })
   }

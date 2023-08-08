@@ -1,4 +1,4 @@
-import { AllFlow as AllFlowTypes } from '../types/allFlows'
+import { AllFlow as AllFlowTypes } from '../../types/allFlows'
 
 import { create } from 'zustand'
 
