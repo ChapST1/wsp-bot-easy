@@ -13,7 +13,7 @@ export function ChatbotTemplatesLayout () {
     <div className='px-[20px]'>
       <h3 className='text-white text-center text-2xl py-4 pb-7'>Tienda de  Plantillas</h3>
 
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
+      <div className='grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))]  gap-7'>
         {
             allFlows.map(({ flowName, id }) => {
               return (

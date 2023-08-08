@@ -18,7 +18,7 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
   }
 
   return (
-    <div className='w-[280px] p-4 gap-4  border border-white/10 rounded-md'>
+    <div className=' md:w-full p-4 gap-4  border border-white/10 rounded-md'>
       <div className='flex flex-col justify-center gap-3 items-center '>
         <img
           src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${flowName}&radius=15`}
