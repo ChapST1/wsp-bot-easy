@@ -14,7 +14,7 @@ function App () {
           <Route path='/*' element={<ChatBotPages />} />
         </Routes>
 
-        <Toaster theme='dark' expand />
+        <Toaster theme='dark' />
       </BrowserRouter>
 
     </>
