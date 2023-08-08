@@ -1,6 +1,7 @@
 import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { Button } from '@components/ui/Button'
 import { ButtonLink } from '@components/ui/ButtonLink'
+import { toast } from 'sonner'
 
 interface UserFlowCardProps {
   flowName: string
@@ -12,6 +13,8 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
 
   const handleDelete = () => {
     deleteFromUserFlows(id)
+
+    toast.success('Chatbot eliminado de tus flujos')
   }
 
   return (
