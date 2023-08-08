@@ -6,7 +6,7 @@ interface UserAllFlowsTypes {
   userAllFlows: AllFlowsTypes[]
   addNewUserFlow: (newUserFlow: AllFlowsTypes) => void
   deleteUserFlow: (id: string) => void
-  editUserFlow: (id: string, newUserFlow: AllFlowsTypes) => void
+  editUserFlow: (id: string | undefined, newUserFlow: AllFlowsTypes) => void
 }
 
 export const useUserFlowsStore = create<UserAllFlowsTypes>((set, get) => ({
