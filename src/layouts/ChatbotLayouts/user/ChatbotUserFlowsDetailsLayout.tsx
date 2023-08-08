@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { TemplateInfo } from '@components/Chatbot/Templates/TemplateInfo'
 import { useEffect, useRef } from 'react'
-import { useGlobalUserFlowsStore } from '@/hooks/useGlobalUserFlowsStore'
+import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 
 export function ChatbotUserFlowsDetailsLayout () {
   const { userAllFlows } = useGlobalUserFlowsStore()

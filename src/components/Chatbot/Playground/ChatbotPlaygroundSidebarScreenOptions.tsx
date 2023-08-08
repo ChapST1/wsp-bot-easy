@@ -1,4 +1,4 @@
-import { useGlobalWspPlaygroundStore } from '@hooks/useGlobalWspPlaygroundStore'
+import { useGlobalWspPlaygroundStore } from '@/hooks/wspPlayground/useGlobalWspPlaygroundStore'
 import { DisableFullScreenIcon, EnableFullScreenIcon } from '@components/Icons'
 
 export function ChatbotPlaygroundSidebarScreenOptions () {

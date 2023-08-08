@@ -1,5 +1,5 @@
 
-import { useFlowEditById } from '@/hooks/useFlowEditById'
+import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
 import { ChatboEditFormConversations } from './ChatbotEditFormConversations'
 import { ChatbotEditFormInitialsInputs } from './ChatbotEditFormInitialsInputs'
 import { ChatbotEditFormHeader } from './ChatbotEditFormHeader'

@@ -1,4 +1,4 @@
-import { useGlobalWspPlaygroundStore } from '@hooks/useGlobalWspPlaygroundStore'
+import { useGlobalWspPlaygroundStore } from '@/hooks/wspPlayground/useGlobalWspPlaygroundStore'
 import { ChatbotPlaygroundContentMessageItem } from '@components/Chatbot/Playground/ChatbotPlaygroundContentMessageItem'
 
 interface ChatbotPlaygroundContentListOfMessagesProps {

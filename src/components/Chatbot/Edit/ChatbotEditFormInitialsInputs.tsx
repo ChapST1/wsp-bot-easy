@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/Button'
-import { useFlowEditById } from '@/hooks/useFlowEditById'
-import { useGlobalUserFlowsStore } from '@/hooks/useGlobalUserFlowsStore'
+import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
+import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { toast } from 'sonner'
 
 export function ChatbotEditFormInitialsInputs () {

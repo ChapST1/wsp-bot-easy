@@ -4,13 +4,13 @@ import { ChatbotPlaygroundContentMessage } from '@components/Chatbot/Playground/
 import { ImageBlurHero } from '@components/ui/ImageBlurHero'
 import { Header } from '@components/Chatbot/Header'
 
-import { Chatbot } from '@pages/ChatbotPages/Chatbot'
-import { Templates } from '@pages/ChatbotPages/Templates'
-import { ChatbotEdit } from '@pages/ChatbotPages/ChatbotEdit'
-import { ChatbotCreate } from '@pages/ChatbotPages/ChatbotCreate'
-import { ChatbotPlayground } from '@pages/ChatbotPages/ChatbotPlayground'
-import { TemplatesDetail } from '@pages/ChatbotPages/TemplatesDetail'
-import { ChatbotUserFlowDetails } from './ChatbotUserFlowDetails'
+import { Chatbot } from '@/pages/ChatbotPages/home/Chatbot'
+import { Templates } from '@/pages/ChatbotPages/templates/Templates'
+import { ChatbotEdit } from '@/pages/ChatbotPages/edit/ChatbotEdit'
+import { ChatbotCreate } from '@/pages/ChatbotPages/create/ChatbotCreate'
+import { ChatbotPlayground } from '@/pages/ChatbotPages/playground/ChatbotPlayground'
+import { TemplatesDetail } from '@/pages/ChatbotPages/templates/TemplatesDetail'
+import { ChatbotUserFlowDetails } from './user/ChatbotUserFlowDetails'
 
 export function ChatBotPages () {
   return (

@@ -1,4 +1,4 @@
-import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { Button } from '@components/ui/Button'
 import { ButtonLink } from '@components/ui/ButtonLink'
 

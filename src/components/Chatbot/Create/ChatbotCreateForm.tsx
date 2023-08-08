@@ -1,6 +1,6 @@
 import { toast } from 'sonner'
 import { Button } from '@components/ui/Button'
-import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { useState, useEffect } from 'react'
 import { ChatbotCreateFormToggle } from '@components/Chatbot/Create/ChatbotCreateFormToggle'
 import { ButtonLink } from '@components/ui/ButtonLink'

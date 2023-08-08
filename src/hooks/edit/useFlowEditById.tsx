@@ -1,5 +1,5 @@
 import { AllFlow } from '@/types/allFlows'
-import { useGlobalUserFlowsStore } from './useGlobalUserFlowsStore'
+import { useGlobalUserFlowsStore } from '../user/useGlobalUserFlowsStore'
 import { useParams } from 'react-router-dom'
 
 export function useFlowEditById () {

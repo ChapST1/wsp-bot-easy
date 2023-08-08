@@ -1,7 +1,7 @@
 import { ChatbotEditFormListOfConversations } from './ChatbotEditFormListOfConversations'
 import { Button } from '@/components/ui/Button'
-import { useFlowEditById } from '@/hooks/useFlowEditById'
-import { useGlobalUserFlowsStore } from '@/hooks/useGlobalUserFlowsStore'
+import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
+import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { AllFlow } from '@/types/allFlows'
 import { toast } from 'sonner'
 

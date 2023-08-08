@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { TemplatesCard } from '@components/Chatbot/Templates/TemplatesCard'
-import { useFlows } from '@hooks/useFlows'
-import { useGlobalFlowStore } from '@hooks/useGlobalFlowsStore'
+import { useFlows } from '@/hooks/templates/useFlows'
+import { useGlobalFlowStore } from '@/hooks/templates/useGlobalFlowsStore'
 
 export function ChatbotTemplatesLayout () {
   const { allFlows } = useGlobalFlowStore()

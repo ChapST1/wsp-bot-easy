@@ -1,6 +1,6 @@
 import { getFlows } from '@services/getFlows'
 import { useState, useEffect } from 'react'
-import { useGlobalFlowStore } from '@hooks/useGlobalFlowsStore'
+import { useGlobalFlowStore } from '@/hooks/templates/useGlobalFlowsStore'
 
 export function useFlows () {
   const { updateAllFlows } = useGlobalFlowStore()

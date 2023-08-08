@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { ConfigIcon, GroupIcon, NewChatIcon, StatesIcon } from '@components/Icons'
 
 export function ChatbotPlaygroundSidebar () {

@@ -1,9 +1,9 @@
 import { AllFlow, Conversation, Trigger } from '../../../types/allFlows'
 
 import { toast } from 'sonner'
-import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { Button } from '@components/ui/Button'
-import { useFlowEditById } from '@/hooks/useFlowEditById'
+import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
 
 interface ChatbotEditFormItemProps {
   trigger: Trigger

@@ -1,6 +1,6 @@
 import { EditIcon } from '@/components/Icons'
 import { ButtonLink } from '@/components/ui/ButtonLink'
-import { useFlowEditById } from '@/hooks/useFlowEditById'
+import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
 
 export function ChatbotEditFormHeader () {
   const { flowName } = useFlowEditById()

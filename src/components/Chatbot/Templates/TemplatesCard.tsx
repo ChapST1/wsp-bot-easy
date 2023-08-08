@@ -1,7 +1,7 @@
 import { toast } from 'sonner'
-import { useGlobalUserFlowsStore } from '@hooks/useGlobalUserFlowsStore'
+import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { Button } from '@components/ui/Button'
-import { useGlobalFlowStore } from '@hooks/useGlobalFlowsStore'
+import { useGlobalFlowStore } from '@/hooks/templates/useGlobalFlowsStore'
 import { ButtonLink } from '@components/ui/ButtonLink'
 
 interface TemplatesCardProps {

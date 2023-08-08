@@ -1,6 +1,6 @@
 import { AllFlow } from '../../../types/allFlows'
 
-import { useGlobalWspPlaygroundStore } from '@hooks/useGlobalWspPlaygroundStore'
+import { useGlobalWspPlaygroundStore } from '@/hooks/wspPlayground/useGlobalWspPlaygroundStore'
 import { ConfigIcon, SearchIcon } from '@components/Icons'
 import { ChatbotPlaygroundSidebarScreenOptions } from '@components/Chatbot/Playground/ChatbotPlaygroundSidebarScreenOptions'
 
