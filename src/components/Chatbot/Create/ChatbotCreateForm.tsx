@@ -1,12 +1,11 @@
 import { toast } from 'sonner'
 import { Button } from '@components/ui/Button'
 import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
-import { useState, useEffect } from 'react'
-import { ChatbotCreateFormToggle } from '@components/Chatbot/Create/ChatbotCreateFormToggle'
+import { useState } from 'react'
 import { ButtonLink } from '@components/ui/ButtonLink'
 import { ChatbotCreateFormLabel } from '@components/Chatbot/Create/ChatbotCreateFormLabel'
 
-export function ChatbotCreateForm ({ editId }: { editId?: string }) {
+export function ChatbotCreateForm () {
   const { addNewUserFlow, userAllFlows } = useGlobalUserFlowsStore()
 
   // form states

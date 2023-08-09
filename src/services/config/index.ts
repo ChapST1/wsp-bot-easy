@@ -1,1 +1,1 @@
-export const API_URL = 'public/templates/flows.json'
+export const API_URL = '/templates/flows.json'
