@@ -106,7 +106,7 @@ export function ChatbotCreateForm ({ editId }: { editId?: string }) {
         handleChange={handleChange}
         flowIsCreated={isCreateFlow}
       />
-
+      {/*
       <ChatbotCreateFormToggle
         labelName='Quiero que cualquier palabra active inicialize al bot'
         tagName='randomKeyword'
@@ -115,7 +115,7 @@ export function ChatbotCreateForm ({ editId }: { editId?: string }) {
       <ChatbotCreateFormToggle
         labelName='Quiero que el chatbot sea sencible a mayusculas'
         tagName='caseSensitive'
-      />
+      /> */}
 
       <span className='block my-7 h-[2px] bg-white/5 w-[90%] m-auto' /> {/* this is a divider */}
 
