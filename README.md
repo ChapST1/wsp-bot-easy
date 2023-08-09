@@ -2,7 +2,6 @@
 
 # Wsp chatbot easy  (๑¯◡¯๑)
 
-## Diseño👇 🖼️
 
 ![homepage](public/designScreenshots/home/1.png)
 
@@ -11,6 +10,14 @@
 ![Alt text](public/designScreenshots/chatbot/templates/1.png)
 
 ![Alt text](public/designScreenshots/chatbot/playground/1.png)
+
+## Tabla de  contenidos
+
+- [Plantillas](#)
+- [Uso](#)
+- [Instalación](#)
+- [Herramientas utilizadas](#)
+
 
 ## Usar plantillas👇
 ![screenshot](public/designScreenshots/chatbot/templates/2.png)
