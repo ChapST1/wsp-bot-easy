@@ -30,12 +30,14 @@
 ![screenshot](public/designScreenshots/chatbot/home/2.png)
 
 ### Opciones al crear un flujo
+
+#### **Usar con whatsapp**
+> proximamente... 🥲
+
 #### **Inspeccionar Flujo creado**
 
 ![screenshot](public/designScreenshots/chatbot/home/3.png)
 
-#### **Usar con whatsapp**
-> proximamente... 🥲
 
 #### **Testear flujo**
 ![screenshot](public/designScreenshots/chatbot/playground/2.png)
@@ -103,3 +105,4 @@ git clone https://github.com/ChapST1/wsp-bot-easy.git
 - [Tailwind CSS → ](https://tailwindcss.com/)
 - [Zustand → ](https://zustand-demo.pmnd.rs/)
 - [Sonner → ](https://sonner.emilkowal.ski/)
+
