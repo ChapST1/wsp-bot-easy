@@ -13,18 +13,13 @@
 
 ## Tabla de  contenidos
 
+- [Tutorial de uso](#tutorial-de-uso👇)
 - [Plantillas](#usar-plantillas)
-- [Uso](#)
-- [Instalación](#)
+- [Instalación](#instalacion)
 - [Herramientas utilizadas](#)
 
 
-## Usar plantillas👇
-![screenshot](public/designScreenshots/chatbot/templates/2.png)
-
-![screenshot](public/designScreenshots/chatbot/templates/3.png)
-
-## Uso👇
+## Tutorial de uso.👇
 
 ### Crear Flujo de conversación
 
@@ -68,3 +63,36 @@
 
 ###### **Eliminar conversaciones**
 ![Alt text](public/designScreenshots/chatbot/edit/6.png)
+
+## Usar plantillas👇
+![screenshot](public/designScreenshots/chatbot/templates/2.png)
+
+![screenshot](public/designScreenshots/chatbot/templates/3.png)
+
+## Instalacion
+
+### Requisitos:
+* Tener instalado [Node JS → ](https://nodejs.org/es)
+* Tener instalado [GIT → ](https://git-scm.com/)
+
+### Instalacion:
+* Clonar el repositorio en su maquina.
+```shell
+git clone https://github.com/ChapST1/wsp-bot-easy.git
+```
+* Entrar a la carpeta clonada y abrir la terminal.
+```shell
+ cd wsp-bot-ease
+```
+* Ejecutar el siguiente comando de node para instalar las dependencias que necesita el proyecto 👇.
+```shell
+ npm install
+ ```
+* Por ultimo escribes el siguiente comando para correr el proyecto 👇.
+```shell
+ npm run dev
+ ```
+* Ahora tienes que abrir tu navegador e ir a la siguiente URL 👇.
+```js
+ http://localhost:5173/
+ ```
