@@ -13,7 +13,7 @@
 
 ## Tabla de  contenidos
 
-- [Plantillas](#)
+- [Plantillas](#usar-plantillas)
 - [Uso](#)
 - [Instalación](#)
 - [Herramientas utilizadas](#)
