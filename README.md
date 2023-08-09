@@ -1,6 +1,6 @@
 <p align="center"><img  src="./public/images/logo.png" /></p>
 
-# Wsp chatbot easy  (๑¯◡¯๑)
+# Wsp chatbot easy  ʅ(‾◡◝)ʃ
 
 
 ![homepage](public/designScreenshots/home/1.png)
