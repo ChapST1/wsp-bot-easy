@@ -16,7 +16,7 @@
 - [Tutorial de uso](#tutorial-de-uso👇)
 - [Plantillas](#usar-plantillas)
 - [Instalación](#instalacion)
-- [Herramientas utilizadas](#)
+- [Herramientas utilizadas](#herramientas-utilizadas)
 
 
 ## Tutorial de uso.👇
@@ -51,7 +51,7 @@
 
 ![screenshot](public/designScreenshots/chatbot/edit/2.png)
 
-###### **Modificar el nombre del flujo y el mensaje predeterminado**
+###### **Modificar la acción y la respuesta del bot**
 
 ![Alt text](public/designScreenshots/chatbot/edit/3.png)
 
@@ -96,3 +96,10 @@ git clone https://github.com/ChapST1/wsp-bot-easy.git
 ```js
  http://localhost:5173/
  ```
+
+## Herramientas utilizadas
+- [React JS → ](https://react.dev/)
+- [React router dom → ](https://reactrouter.com/en/main)
+- [Tailwind CSS → ](https://tailwindcss.com/)
+- [Zustand → ](https://zustand-demo.pmnd.rs/)
+- [Sonner → ](https://sonner.emilkowal.ski/)
