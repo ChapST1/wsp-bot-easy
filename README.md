@@ -1,4 +1,4 @@
-<p align="center"><img src="./public/images/logo.png" /></p>
+<p align="center"><img style="width: 400px" src="./public/images/logo.png" /></p>
 
 # Wsp chatbot easy  (๑¯◡¯๑)
 
