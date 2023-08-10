@@ -1,6 +1,7 @@
 <p align="center"><img  src="./public/images/logo.png" /></p>
 
 # ( Wsp chatbot easy )  ლ(╹◡╹ლ)
+> En desarrollo 🥲
 
 
 ![homepage](public/designScreenshots/home/1.png)
@@ -20,6 +21,13 @@
 
 
 ## Tutorial de uso.👇
+
+### Inicia sesión con WhatsApp
+> proximamente... 🥲
+
+![screenshot](public/designScreenshots/login/1.png)
+
+
 
 ### Crear Flujo de conversación
 
