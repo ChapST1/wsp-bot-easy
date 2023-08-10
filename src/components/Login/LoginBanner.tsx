@@ -12,7 +12,7 @@ export function LoginBanner () {
         <img
           src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QR-code-obituary.svg/220px-QR-code-obituary.svg.png'
           alt=''
-          className='w-[300px]'
+          className='w-[300px] rounded-md'
         />
       </div>
 
