@@ -86,11 +86,11 @@
 * Tener instalado [GIT → ](https://git-scm.com/)
 
 ### Instalacion:
-* Clonar el repositorio en su maquina.
+* Clonar el repositorio en su maquina 👇.
 ```shell
 git clone https://github.com/ChapST1/wsp-bot-easy.git
 ```
-* Entrar a la carpeta clonada y abrir la terminal.
+* Entrar a la carpeta clonada y abrir la terminal 👇.
 ```shell
  cd wsp-bot-ease
 ```
