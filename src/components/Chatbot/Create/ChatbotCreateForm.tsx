@@ -94,7 +94,7 @@ export function ChatbotCreateForm () {
 
   return (
     <form className=' max-w-2xl p-5 rounded-md m-auto border border-white/10' onSubmit={handleSubmit}>
-      <h2 className='text-center text-2xl pb-4'>Configura tu bot</h2>
+      <h2 className='text-center text-2xl pb-4 text-[eaeaea]'>Configura tu bot</h2>
 
       <ChatbotCreateFormLabel
         labelFor='flowName'
@@ -105,6 +105,7 @@ export function ChatbotCreateForm () {
         handleChange={handleChange}
         flowIsCreated={isCreateFlow}
       />
+
       {/*
       <ChatbotCreateFormToggle
         labelName='Quiero que cualquier palabra active inicialize al bot'
@@ -134,7 +135,7 @@ export function ChatbotCreateForm () {
         <textarea
           name='trigger'
           id=''
-          className='w-full h-72  text-[#e6e7e8] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-white/10  resize-none'
+          className='w-full h-72  text-[#eaeaea] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-white/10  resize-none'
           value={trigger}
           onChange={handleChange}
         />
@@ -146,7 +147,7 @@ export function ChatbotCreateForm () {
           name='defaultTrigger'
           id='defaultTrigger'
           disabled={isCreateFlow}
-          className='w-full h-72  text-[#e6e7e8] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-white/10  resize-none'
+          className='w-full h-72  text-[#eaeaea] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-white/10  resize-none'
           value={defaultTrigger}
           onChange={handleChange}
         />

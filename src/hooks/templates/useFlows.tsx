@@ -13,7 +13,11 @@ export function useFlows () {
     getFlows()
       .then((res) => updateAllFlows(res))
       .catch(() => setError(true))
-      .finally(() => setLoading(false))
+      .finally(() => {
+        setTimeout(() => {
+          setLoading(false)
+        }, 2000)
+      })
   }, []) // eslint-disable-line
 
   return {

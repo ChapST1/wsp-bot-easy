@@ -43,7 +43,7 @@ export function ListOfLinks () {
   return (
     <ul className='w-full h-full flex items-center gap-2 '>
       <span
-        className='w-[var(--width)] h-[var(--height)] left-[var(--left)] top-[var(--top)] scale-[var(--scale)] border absolute bg-[#000] border-white/10 rounded-lg duration-300 -z-10 ease-in-out'
+        className=' w-[var(--width)] h-[var(--height)] left-[var(--left)] top-[var(--top)] scale-[var(--scale)] absolute bg-[#fff]  rounded-full duration-300 -z-10 ease-in-out'
         ref={effectAwesomeRefElement}
       />
       {
@@ -55,8 +55,8 @@ export function ListOfLinks () {
                     onMouseEnter={handleEffectAwesome}
                     onMouseLeave={handleLeaveEffectAwesome}
                     className={({ isActive }) => {
-                      const isActiveStyles = isActive ? 'text-[#e6e7e8] border-white/10 rounded-lg hover:border-transparent bg-transparent' : ' border-transparent   hover:text-[#e6e7e8]'
-                      return `py-2 px-4   border  duration-300   text-[#8b9095] rounded-lg hover:text-[#e6e7e8] hover:bg-transparent ${isActiveStyles}`
+                      const isActiveStyles = isActive ? 'text-[#000000] bg-[white]' : 'bg-[transparent] text-[#93989d] hover:text-[#000]'
+                      return `py-2 px-4 rounded-full duration-300  ${isActiveStyles}`
                     }}
                   >{link.name}
                   </NavLink>

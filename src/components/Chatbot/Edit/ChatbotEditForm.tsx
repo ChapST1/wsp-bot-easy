@@ -3,10 +3,11 @@ import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
 import { ChatboEditFormConversations } from './ChatbotEditFormConversations'
 import { ChatbotEditFormInitialsInputs } from './ChatbotEditFormInitialsInputs'
 import { ChatbotEditFormHeader } from './ChatbotEditFormHeader'
+import { Error } from '@/components/ui/Error'
 
 export function ChatbotEditForm () {
   const { conversations, defaultValue, flowName } = useFlowEditById()
-  if (!conversations && !defaultValue && !flowName) return (<p>No se encontro la id</p>)
+  if (!conversations && !defaultValue && !flowName) return (<Error />)
 
   /* 👆 eliminar cuando se guarder el stado en local storage con zustand */
 
