@@ -1,4 +1,5 @@
 import { ErrorIcon } from '../Icons'
+import { ButtonLink } from './ButtonLink'
 
 export function Error () {
   return (
@@ -8,6 +9,8 @@ export function Error () {
       <h3 className='text-2xl text-[#eaeaea]'>
         Oops! Algo salió mal
       </h3>
+
+      <ButtonLink to='/chatbot' title='Ir al inicio' style={{ margin: '20px 0' }} />
     </div>
   )
 }
