@@ -1,4 +1,5 @@
 import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
+import { API_DICEABEAR_URL } from '@/services/config'
 import { Button } from '@components/ui/Button'
 import { ButtonLink } from '@components/ui/ButtonLink'
 import { toast } from 'sonner'
@@ -21,9 +22,9 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
     <div className=' md:w-full p-4 gap-4  border border-white/10 rounded-md'>
       <div className='flex flex-col justify-center gap-3 items-center '>
         <img
-          src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${flowName}&radius=15`}
+          src={`${API_DICEABEAR_URL}=${flowName}`}
           alt={`imagen del chatbot ${flowName}`}
-          className='w-[60%] block border border-white/10 rounded-md'
+          className='w-[60%] block border border-white/10 rounded-lg'
         />
         <p className='text-white font-semibold text-center  text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis' title={flowName}>
           {flowName}
