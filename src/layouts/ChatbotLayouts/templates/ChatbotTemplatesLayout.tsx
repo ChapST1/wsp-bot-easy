@@ -1,14 +1,12 @@
 import { Outlet } from 'react-router-dom'
 import { TemplatesCard } from '@components/Chatbot/Templates/TemplatesCard'
-import { useFlows } from '@/hooks/templates/useFlows'
 import { useGlobalFlowStore } from '@/hooks/templates/useGlobalFlowsStore'
 import { Error } from '@/components/ui/Error'
 
 export function ChatbotTemplatesLayout () {
   const { allFlows } = useGlobalFlowStore()
-  const { loading, error } = useFlows()
 
-  if (error) return <Error />
+  if (allFlows.length === 0) return <Error />
 
   return (
     <div className='px-[20px]'>
@@ -22,7 +20,6 @@ export function ChatbotTemplatesLayout () {
                   key={id}
                   flowName={flowName}
                   id={id}
-                  isLoading={loading}
                 />
               )
             })

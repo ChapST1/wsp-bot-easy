@@ -1,4 +1,5 @@
 import { AllFlow as AllFlowTypes } from '../../types/allFlows'
+import { allFlows } from '@public/templates/flows.json'
 
 import { create } from 'zustand'
 
@@ -8,7 +9,7 @@ interface FlowStore {
 }
 
 export const useFlowsStore = create<FlowStore>((set) => ({
-  allFlows: [],
+  allFlows,
   updateAllFlows: (newFlows) => {
     set({ allFlows: newFlows })
   }
