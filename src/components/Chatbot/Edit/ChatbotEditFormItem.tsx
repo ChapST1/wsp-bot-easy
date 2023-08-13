@@ -33,13 +33,11 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
     const { actionInput, triggerInput } = Object.fromEntries(new FormData(e.currentTarget))
 
     if (actionInput.toString().trim() === '' || triggerInput.toString().trim() === '') return
 
     const findIndex = conversations.findIndex(({ trigger }) => trigger.name === name && trigger.response === response)
-
     const filterConversations = conversations.filter(({ trigger }) => trigger.name !== name && trigger.response !== response)
 
     const newConversation = {
@@ -70,7 +68,7 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
           Palabra clave
           <input
             type='text'
-            className=' text-[#eaeaea] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-white/10'
+            className='text-[#eaeaea] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-white/10'
             name='actionInput'
             defaultValue={name}
           />
