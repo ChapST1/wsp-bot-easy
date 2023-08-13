@@ -1,3 +1,10 @@
+/*
+  * La finalidad de este store es almacenar los siguientes datos:
+  * botIsTyping => para saber si el bot esta escribiendo (respondiendo) o no
+  * isActiveFullScreen => para saber si el componente Chatbot/playground esta en modo pantalla completa o no
+  * listOfCurrentMessages => para almacenar los mensajes que se van enviando y recibiendo
+*/
+
 import { create } from 'zustand'
 
 interface useWspPlaygroundStoreTypes {
