@@ -36,6 +36,10 @@ export const useWspPlaygroundStore = create<useWspPlaygroundStoreTypes>((set, ge
   },
 
   updateListOfCurrentMessages: (newListOfCurrentMessages) => {
+    // esta condición es porque en el archivo ChatbotPlaygroundContentMessage hay un useEffect que cuando cambiamos
+    // de "sala" -> para abrir otra conversacion, se ejecuta el useEffect y se actualiza el store con un null para que los mensajes
+    // se reinicien a 0 = mensajes vacios = []
+
     if (newListOfCurrentMessages === null) {
       set({ listOfCurrentMessages: [] })
       return
