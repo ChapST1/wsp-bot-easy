@@ -3,7 +3,7 @@ import { LoginSteps } from './LoginSteps'
 
 export function LoginBanner () {
   return (
-    <div className='w-full  bg-[#000] md:rounded-md p-8 md:p-14 md:pt-20 border border-white/10 border-b-0 relative'>
+    <div className='w-full  bg-[#000] md:rounded-md p-8 md:p-14 md:pt-20 border border-white/10 border-b-0 relative overflow-hidden'>
       <LightEffect />
       <h3 className='text-[#eaeaea] text-2xl text-center md:text-start md:text-3xl '>Inicia sesión con WhatsApp</h3>
 

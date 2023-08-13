@@ -7,7 +7,7 @@ export function TemplateInfo ({ arrayFlows }: { arrayFlows: AllFlow[] }) {
   const { conversations, flowName, defaultValue } = arrayFlows?.find(flow => flow.id === id) as AllFlow
 
   return (
-    <div className='w-[90%] mt-5 bg-[#000] py-4 px-6 border border-[#1f2123] rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px]'>
+    <div className='w-[90%] mt-5 bg-[#000] py-4 px-6 border border-[#1f2123] rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px] relative overflow-hidden pt-12 '>
       <LightEffect />
       <h3 className='text-[#ededed] text-center text-2xl pb-3 font-bold'>{flowName}</h3>
 
