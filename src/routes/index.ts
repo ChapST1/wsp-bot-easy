@@ -1,3 +1,7 @@
+/*
+  * En este archivo tenemos todas las rutas de la aplicacion
+*/
+
 // initials routes
 export const ROUTE_HOME_PAGE = '/'
 export const ROUTE_LOGIN_PAGE = '/login'

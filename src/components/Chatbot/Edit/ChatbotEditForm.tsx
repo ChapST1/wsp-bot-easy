@@ -8,7 +8,6 @@ import { Error } from '@/components/ui/Error'
 export function ChatbotEditForm () {
   const { conversations, defaultValue, flowName } = useFlowEditById()
   if (!conversations && !defaultValue && !flowName) return (<Error />)
-
   /* 👆 eliminar cuando se guarder el stado en local storage con zustand */
 
   return (

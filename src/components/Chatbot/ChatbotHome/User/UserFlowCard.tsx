@@ -14,7 +14,6 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
 
   const handleDelete = () => {
     deleteFromUserFlows(id)
-
     toast.success('Chatbot eliminado de tus flujos')
   }
 

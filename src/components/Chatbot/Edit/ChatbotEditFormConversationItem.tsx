@@ -12,13 +12,14 @@ interface ChatbotEditFormItemProps {
 export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
   const { editFromUserFlows } = useGlobalUserFlowsStore()
   const { conversations, id, flowName, defaultValue } = useFlowEditById()
-
   const { name, response } = trigger
 
   const handleDelete = () => {
+    // primero se filtra la conversación que se quiere eliminar de un flujo con el nombre y la respuesta
     const filterConversations = conversations
       .filter(conversation => conversation.trigger.name !== name && conversation.trigger.response !== response)
 
+    // luego se crea un nuevo objeto con el resto de las conversaciones
     const newFlow = {
       id,
       flowName,
@@ -26,20 +27,29 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
       conversations: filterConversations
     }
 
+    // se edita el flujo con el nuevo objeto en el store
     editFromUserFlows(id as string, newFlow as AllFlow)
 
+    // se muestra un toast de éxito
     toast.success('Se elimino la conversación')
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    // con esto se obtienen los valores de los inputs del formulario
     const { actionInput, triggerInput } = Object.fromEntries(new FormData(e.currentTarget))
 
+    // verificamos que los valores no esten vacios, si lo estan hacemos un return para que no se ejecute el resto de la función
     if (actionInput.toString().trim() === '' || triggerInput.toString().trim() === '') return
 
+    // se busca el indice de la conversación que se quiere editar
     const findIndex = conversations.findIndex(({ trigger }) => trigger.name === name && trigger.response === response)
+
+    // se filtra la conversación que se quiere editar
     const filterConversations = conversations.filter(({ trigger }) => trigger.name !== name && trigger.response !== response)
 
+    // se crea un nuevo objeto con la conversación editada
     const newConversation = {
       trigger: {
         name: actionInput,
@@ -47,9 +57,11 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
       }
     }
 
+    // se crea un nuevo array con la conversación editada en el indice que se obtuvo anteriormente
     const newData = [...filterConversations]
     newData.splice(findIndex, 0, newConversation as Conversation)
 
+    // se crea un nuevo objeto con el flujo editado
     const newFlow = {
       id,
       flowName,
@@ -57,7 +69,10 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
       conversations: newData
     }
 
+    // se edita el flujo con el nuevo objeto en el store
     editFromUserFlows(id, newFlow as AllFlow)
+
+    // se muestra un toast de éxito
     toast.success('Se edito la conversación')
   }
 

@@ -1,5 +1,5 @@
 import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
-import { ChatbotEditFormItem } from './ChatbotEditFormItem'
+import { ChatbotEditFormItem } from './ChatbotEditFormConversationItem'
 
 export function ChatbotEditFormListOfConversations () {
   const { conversations } = useFlowEditById()

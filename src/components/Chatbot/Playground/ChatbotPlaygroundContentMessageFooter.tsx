@@ -17,34 +17,46 @@ export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findCh
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
+    // verificamos que el valor del input no este vacio, si lo esta hacemos un return para que no se ejecute el resto de la función
     if (contentMessages.trim() === '') return
 
+    // se busca la conversación que coincida con el valor del input en el array de conversaciones del flujo
     const matchConversation = findChannel?.conversations.find(({ trigger }) => trigger.name.toLowerCase() === contentMessages.toLowerCase())
 
+    // si se encuentra una conversación que coincida con el valor del input se ejecuta el código de abajo
     if (matchConversation) {
+      // se actualiza el estado de botIsTyping a true
       updateBotIsTyping(true)
 
+      // se crea un objeto con los valores del mensaje del usuario
       const createUserObject = {
         message: contentMessages,
         made: 'user',
         timestamp: formatDate()
       }
 
+      // se crea un objeto con los valores de la respuesta del bot
       const createBotObject = {
         message: matchConversation.trigger.response,
         made: 'bot',
         timestamp: formatDate()
       }
 
+      // se actualiza el estado de currentMessages con el objeto del usuario
       updateCurrentMessages(createUserObject)
+
+      // se limpia el valor del input
       setContentMessage('')
 
+      // se ejecuta un setTimeout para simular que el bot esta escribiendo
       setTimeout(() => {
+        // se actualiza el estado de currentMessages de la store de wspPlaygroundStore con el objeto del bot
         updateCurrentMessages(createBotObject)
         updateBotIsTyping(false)
       }, 1000)
     }
 
+    // si no se encuentra una conversación que coincida con el valor del input se ejecuta el código de abajo
     if (!matchConversation) {
       updateBotIsTyping(true)
 
@@ -54,6 +66,8 @@ export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findCh
         timestamp: formatDate()
       }
 
+      // se crea un objeto con los valores de la respuesta del bot cuando no se encuentra una conversación que coincida con el valor del input
+      // usamos el valor de defaultValue
       const createBotObject = {
         message: findChannel?.defaultValue ?? 'No entiendo lo que dices',
         made: 'bot',
