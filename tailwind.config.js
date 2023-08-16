@@ -77,7 +77,7 @@ export default {
         "whatsapp-bg-dark": "#111b21",
 
         // sidebar
-        "sidebar-bg-dark": "#111b21",
+        "sidebar-bg-dark": "#202c33",
         "sidebar-header-dark": "#202c33",
         "sidebar-header-icons-color-dark": "#aebac1",
         "sidebar-chat-active-dark": "#2a3942",
