@@ -12,7 +12,7 @@ export function ChatbotPlaygroundContentMessageHeader ({ findChannel }: ChatbotP
   const { botIsTyping } = useGlobalWspPlaygroundStore()
 
   return (
-    <header className=' w-full h-[60px] absolute  dark:bg-[#202c33] top-0 z-20 flex items-center justify-between px-3'>
+    <header className=' w-full h-[60px] absolute  bg-content-header-bg dark:bg-content-header-bg-dark top-0 z-20 flex items-center justify-between px-3'>
       <div className='flex gap-2 items-center '>
         <img
           src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${findChannel?.flowName ?? 'default'}&radius=15`}
@@ -28,8 +28,8 @@ export function ChatbotPlaygroundContentMessageHeader ({ findChannel }: ChatbotP
 
       <div className='flex gap-5 items-center'>
         <ChatbotPlaygroundSidebarScreenOptions />
-        <SearchIcon className='dark:fill-[#aebac1]' />
-        <ConfigIcon className='dark:fill-[#aebac1]' />
+        <SearchIcon className='fill-content-footer-icons-color dark:fill-content-footer-icons-color-dark' />
+        <ConfigIcon className='fill-content-footer-icons-color dark:fill-content-footer-icons-color-dark' />
       </div>
     </header>
   )

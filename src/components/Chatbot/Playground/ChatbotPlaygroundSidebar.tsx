@@ -7,18 +7,18 @@ export function ChatbotPlaygroundSidebar () {
 
   return (
     <div className='col-span-2 h-full  border-r-2 dark:border-[#262f34] pt-[60px] relative overflow-hidden'>
-      <header className='w-full h-[60px] dark:bg-[#202c33] absolute top-0 z-20 flex items-center justify-between px-3'>
+      <header className='w-full h-[60px] bg-sidebar-header dark:bg-sidebar-bg-dark absolute top-0 z-20 flex items-center justify-between px-3'>
         <img
           src='https://avatars.githubusercontent.com/u/117806728?v=4'
           alt='imagen del usuario'
           className='w-[40px] h-[40px] rounded-full'
         />
 
-        <div className='flex gap-5 items-center'>
-          <GroupIcon className='dark:fill-[#aebac1]' />
-          <StatesIcon className='dark:fill-[#3ccab7] dark:stroke-[#aebac1]' />
-          <NewChatIcon className='dark:fill-[#aebac1]' />
-          <ConfigIcon className='dark:fill-[#aebac1]' />
+        <div className='flex gap-3 items-center'>
+          <GroupIcon className=' fill-sidebar-header-icons-color dark:fill-sidebar-header-icons-color-dark' />
+          <StatesIcon className=' fill-sidebar-header-icons-color dark:fill-sidebar-header-icons-color-dark  dark:stroke-[#aebac1]' />
+          <NewChatIcon className=' fill-sidebar-header-icons-color dark:fill-sidebar-header-icons-color-dark' />
+          <ConfigIcon className=' fill-sidebar-header-icons-color dark:fill-sidebar-header-icons-color-dark' />
         </div>
       </header>
 
@@ -29,9 +29,9 @@ export function ChatbotPlaygroundSidebar () {
             <NavLink
               to={`/test/${id}`} key={id}
               className={({ isActive, isPending }) => {
-                const customize = isPending ? 'dark:bg-[#253239]' : isActive ? 'dark:bg-[#2a3942]' : ''
+                const customize = isPending ? ' bg-sidebar-chat-active  dark:bg-sidebar-chat-active-dark' : isActive ? 'bg-sidebar-chat-active  dark:bg-sidebar-chat-active-dark' : ''
 
-                return `w-full h-[60px]  flex items-center justify-start gap-3  px-2 dark:hover:bg-[#202c33] ${customize}`
+                return `w-full h-[60px]  flex items-center justify-start gap-3  px-2 hover:bg-sidebar-chat-hover dark:hover:bg-sidebar-chat-hover-dark ${customize}`
               }}
             >
               <div className='w-[50px] max-w-[50px] min-w-[50px] min-h-[50px] max-h-[50px] h-[50px] flex-1 rounded-full dark:bg-[#202c33]'>

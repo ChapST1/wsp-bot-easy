@@ -10,15 +10,15 @@ export function ChatbotPlaygroundContentMessageItem ({ message, made, timestamp 
   const formatMessage = message.split('\n')
 
   return (
-    <div className={`flex items-center ${made === 'bot' ? 'justify-start' : 'justify-end'}`}>
-      <div className={`text-primary dark:text-primary-dark min-w-[90px] max-w-[70%] w-[max-content] ${made === 'bot' ? 'dark:bg-[#1f2b32] rounded-tl-none' : 'dark:bg-[#005c4b] rounded-tr-none'} w-[max-content] px-2 py-1 rounded-[5px] relative pb-6`}>
+    <div className={`flex items-center ${made === 'bot' ? 'justify-start' : 'justify-end'} z-10`}>
+      <div className={`text-primary dark:text-primary-dark min-w-[90px] max-w-[70%] w-[max-content] ${made === 'bot' ? ' bg-content-message-bot-bg dark:bg-content-message-bot-bg-dark rounded-tl-none' : ' bg-content-message-user-bg dark:bg-content-message-user-bg-dark rounded-tr-none'} w-[max-content] px-2 py-1 rounded-[5px] relative pb-6`}>
         {
           made === 'bot'
             ? (
-              <MessageWingLeftIcon className='absolute  top-0 stroke-[transparent] fill-[#1f2b32] left-[-7px]' />
+              <MessageWingLeftIcon className='absolute  top-0 stroke-[transparent] fill-content-message-bot-bg dark:fill-content-message-bot-bg-dark left-[-7px]' />
               )
             : (
-              <MessageWingRightIcon className='absolute  top-0 stroke-[transparent] fill-[#005c4b] right-[-7px]' />
+              <MessageWingRightIcon className='absolute  top-0 stroke-[transparent] fill-content-message-user-bg dark:fill-content-message-user-bg-dark right-[-7px]' />
 
               )
         }
@@ -29,7 +29,7 @@ export function ChatbotPlaygroundContentMessageItem ({ message, made, timestamp 
           })}
         </div>
         <div className='flex items-center gap-1  absolute bottom-[5px] right-2'>
-          <span className='text-[11px] text-[#ffffff99]'>{timestamp}</span>
+          <span className='text-[11px]  text-[#4d4d4d] dark:text-[#ffffff99] '>{timestamp}</span>
           <MessageViewed className='fill-[#53bdeb]' />
         </div>
       </div>

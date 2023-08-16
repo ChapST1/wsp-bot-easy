@@ -85,22 +85,22 @@ export function ChatbotPlaygroundContentMessageFooter ({ findChannel }: { findCh
   }
 
   return (
-    <form className='w-full absolute bottom-0 left-0 h-[60px]  z-20 dark:bg-[#202c33] flex items-center gap-2 px-3' onSubmit={handleSubmit}>
-      <EmojiIcon className='dark:fill-[#aebac1] scale-90' />
-      <AddIcon className='dark:fill-[#aebac1] scale-90' />
+    <form className='w-full absolute bottom-0 left-0 h-[60px]  z-20 bg-content-footer-bg dark:bg-content-footer-bg-dark flex items-center gap-2 px-3' onSubmit={handleSubmit}>
+      <EmojiIcon className='  fill-content-footer-icons-color  dark:fill-content-footer-icons-color-dark scale-90' />
+      <AddIcon className='  fill-content-footer-icons-color  dark:fill-content-footer-icons-color-dark scale-90' />
 
       <input
         type='text'
         placeholder='Escribe un mensaje aqui'
-        className=' grow-[1] dark:bg-[#2a3942] h-[60%] rounded-lg px-3 outline-none text-[#e9edef]'
+        className=' grow-[1] bg-content-footer-input-bg dark:bg-content-footer-input-bg-dark h-[60%] rounded-lg px-3 outline-none text-primary dark:text-primary-dark'
         onChange={handleChange}
         value={contentMessages}
       />
 
       {
             contentMessages.length > 0
-              ? (<button type='submit'><SendMessageIcon className='dark:fill-[#aebac1] scale-90' /></button>)
-              : (<VoiceIcon className='dark:fill-[#aebac1] scale-90' />)
+              ? (<button type='submit'><SendMessageIcon className=' fill-content-footer-icons-color dark:fill-content-footer-icons-color-dark scale-90' /></button>)
+              : (<VoiceIcon className=' fill-content-footer-icons-color dark:fill-content-footer-icons-color-dark scale-90' />)
       }
     </form>
   )

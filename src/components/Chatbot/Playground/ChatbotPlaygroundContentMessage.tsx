@@ -31,7 +31,7 @@ export function ChatbotPlaygroundContentMessage () {
   }, [id, updateCurrentMessages])
 
   return (
-    <div className=' pb-[60px] flex flex-col justify-end overflow-hidden relative col-span-5 w-full h-full after:content-[" "] after:bg-[url(/public/wsp-bg.png)] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-5 after:z-[-1]] after:select-none after:pointer-events-none'>
+    <div className=' bg-content-message-container-bg dark:bg-content-message-container-bg-dark pb-[60px] flex flex-col justify-end overflow-hidden relative col-span-5 w-full h-full after:content-[" "] after:bg-[url(/public/wsp-bg.png)] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-[0.4] dark:after:opacity-[0.11] after:z-[-1]] after:select-none after:pointer-events-none'>
       <ChatbotPlaygroundContentMessageHeader
         findChannel={findChannel}
       />
