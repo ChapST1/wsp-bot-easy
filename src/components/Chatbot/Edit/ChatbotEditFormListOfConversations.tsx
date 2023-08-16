@@ -19,7 +19,7 @@ export function ChatbotEditFormListOfConversations () {
             )
           })
         )
-      : (<p className='text-[#eaeaea] text-center'>Sin Conversaciones 🥲</p>)
+      : (<p className='text-primary dark:text-primary-dark text-center'>Sin Conversaciones 🥲</p>)
 }
     </div>
   )

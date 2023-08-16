@@ -92,16 +92,16 @@ export function ChatbotCreateForm () {
   }
 
   return (
-    <form className=' max-w-2xl p-5 rounded-md m-auto border border-white/10' onSubmit={handleSubmit}>
-      <h2 className='text-center text-2xl pb-4 text-[eaeaea]'>Configura tu bot</h2>
+    <form className=' max-w-2xl p-5 rounded-md m-auto border border-border-color dark:border-border-color-dark' onSubmit={handleSubmit}>
+      <h2 className='text-center text-2xl pb-4 text-primary dark:text-primary-dark'>Configura tu bot</h2>
 
-      <label htmlFor='flowName' className='w-full py-1 text-[#93989d]'>
+      <label htmlFor='flowName' className='w-full py-1 text-secondary dark:text-secondary-dark'>
         Nombre de tu negocio 👇
         <input
           type='text'
           id='flowName'
           name='nameCompany'
-          className=' text-[#eaeaea] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-white/10'
+          className=' text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark/50 bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-border-color/50 dark:focus-visible:border-border-color-dark'
           required
           autoComplete='off'
           disabled={isCreateFlow}
@@ -110,13 +110,13 @@ export function ChatbotCreateForm () {
         />
       </label>
 
-      <label htmlFor='defaultTrigger' className='w-full py-1 text-[#eff7ff9d]'>
+      <label htmlFor='defaultTrigger' className='w-full py-1 text-secondary dark:text-secondary-dark'>
         <span>Mensaje por defecto 👇</span>
         <textarea
           name='defaultTrigger'
           id='defaultTrigger'
           disabled={isCreateFlow}
-          className='w-full h-72  text-[#eaeaea] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-white/10  resize-none'
+          className='w-full h-72  text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-border-color/50 dark:focus-visible:border-border-color-dark resize-none'
           value={defaultTrigger}
           onChange={handleChange}
         />
@@ -124,13 +124,13 @@ export function ChatbotCreateForm () {
 
       <span className='block my-7 h-[2px] bg-white/5 w-[90%] m-auto' /> {/* this is a divider */}
 
-      <label htmlFor='flowAction' className='w-full py-1 text-[#93989d]'>
+      <label htmlFor='flowAction' className='w-full py-1 text-secondary dark:text-secondary-dark'>
         Palabra Clave 👇
         <input
           type='text'
           id='flowAction'
           name='action'
-          className=' text-[#eaeaea] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-white/10'
+          className=' text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-border-color/50 dark:focus-visible:border-border-color-dark'
           required
           autoComplete='off'
           value={action}
@@ -138,14 +138,14 @@ export function ChatbotCreateForm () {
         />
       </label>
 
-      <label htmlFor='flowTrigger' className='w-full py-1 text-[#eff7ff9d]'>
+      <label htmlFor='flowTrigger' className='w-full py-1 text-secondary dark:text-secondary-dark'>
         <span>Respuesta del bot a
           <span className={`${action.length === 0 ? 'invisible' : 'visible font-bold'}`}> 👉 {action}</span>
         </span>
         <textarea
           name='trigger'
           id=''
-          className='w-full h-72  text-[#eaeaea] py-5 my-3 border-white/5 bg-neutral-950 text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-white/10  resize-none'
+          className='w-full h-72  text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-border-color/50 dark:focus-visible:border-border-color-dark  resize-none'
           value={trigger}
           onChange={handleChange}
         />

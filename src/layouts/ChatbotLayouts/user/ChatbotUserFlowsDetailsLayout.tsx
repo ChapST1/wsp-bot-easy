@@ -24,7 +24,7 @@ export function ChatbotUserFlowsDetailsLayout () {
   }, [])
 
   return (
-    <div className='w-full h-screen overflow-y-scroll  fixed top-0 left-0 bg-[#000000e4] py-[70px] flex items-start justify-center backdrop-blur-sm' ref={elementRef} id='flow-details-info-container' onClick={handleCloset}>
+    <div className='w-full h-screen overflow-y-scroll  fixed top-0 left-0 bg-bg/75 dark:bg-bg-dark/75 py-[70px] flex items-start justify-center backdrop-blur-sm' ref={elementRef} id='flow-details-info-container' onClick={handleCloset}>
       <TemplateInfo arrayFlows={userAllFlows} />
     </div>
   )

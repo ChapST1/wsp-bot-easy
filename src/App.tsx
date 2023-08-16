@@ -15,7 +15,6 @@ function App () {
           <Route path={ROUTE_LOGIN_PAGE} element={<Login />} />
           <Route path='/*' element={<ChatBotPages />} />
         </Routes>
-
         <Toaster theme='dark' />
       </BrowserRouter>
 

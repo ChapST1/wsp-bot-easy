@@ -5,7 +5,7 @@ export function LoginBanner () {
   return (
     <div className='w-full  bg-[#000] md:rounded-md p-8 md:p-14 md:pt-20 border border-white/10 border-b-0 relative overflow-hidden'>
       <LightEffect />
-      <h3 className='text-[#eaeaea] text-2xl text-center md:text-start md:text-3xl '>Inicia sesión con WhatsApp</h3>
+      <h3 className='text-primary dark:text-primary-dark text-2xl text-center md:text-start md:text-3xl '>Inicia sesión con WhatsApp</h3>
 
       <div className='flex  flex-wrap justify-center items-start  md:justify-between md:items-center'>
         <LoginSteps />
@@ -16,7 +16,7 @@ export function LoginBanner () {
         />
       </div>
 
-      <h2 className='text-[#eaeaea] text-2xl text-center py-7'>Tutorial</h2>
+      <h2 className='text-primary dark:text-primary-dark text-2xl text-center py-7'>Tutorial</h2>
       <img
         src='images/login-tutorial.gif'
         alt='tutorial'

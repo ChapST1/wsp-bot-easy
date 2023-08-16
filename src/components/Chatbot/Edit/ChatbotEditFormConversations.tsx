@@ -31,13 +31,13 @@ export function ChatboEditFormConversations () {
 
   return (
     <div className='relative'>
-      <p className='text-center text-[#eaeaea]'>Conversaciones</p>
+      <p className='text-center text-primary dark:text-primary-dark'>Conversaciones</p>
 
       <div className='flex flex-col gap-5 [&>*:nth-child(1)]:mt-7'>
         <ChatbotEditFormListOfConversations />
       </div>
 
-      <div className=' my-5 bg-[#000000c2] backdrop-blur-md py-3  rounded-md sticky bottom-0  flex gap-2 items-center justify-center'>
+      <div className=' my-5 bg-bg/75 dark:bg-bg-dark/75 backdrop-blur-md py-3  rounded-md sticky bottom-0  flex gap-2 items-center justify-center'>
         <Button
           title='Agregar una conversacion'
           type='button'

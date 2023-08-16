@@ -7,35 +7,35 @@ export function TemplateInfo ({ arrayFlows }: { arrayFlows: AllFlow[] }) {
   const { conversations, flowName, defaultValue } = arrayFlows?.find(flow => flow.id === id) as AllFlow
 
   return (
-    <div className='w-[90%] mt-5 bg-[#000] py-4 px-6 border border-[#1f2123] rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px] relative overflow-hidden pt-12 '>
+    <div className='w-[90%] mt-5 bg-bg dark:bg-bg-dark py-4 px-6 border border-border-color dark:border-border-color-dark rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px] relative overflow-hidden pt-12 '>
       <LightEffect />
-      <h3 className='text-[#ededed] text-center text-2xl pb-3 font-bold'>{flowName}</h3>
+      <h3 className='text-primary dark:text-primary-dark text-center text-2xl pb-3 font-bold'>{flowName}</h3>
 
       <div>
-        <p className='py-5 text-[#ededed] font-semibold '>Mesaje predeterminado 👇</p>
-        <p className='py-4 px-4 border border-white/5 text-[#c1c1c1]'>{defaultValue}</p>
+        <p className='py-5 text-primary dark:text-primary-dark/90 font-semibold '>Mesaje predeterminado 👇</p>
+        <p className='py-4 px-4 border border-border-color dark:border-border-color-dark/50 text-secondary dark:text-secondary-dark'>{defaultValue}</p>
       </div>
 
       <div className=''>
-        <h3 className='text-[#ededed] font-semibold py-2 mt-5'>Conversaciones 👇</h3>
+        <h3 className='text-primary dark:text-primary-dark/90 font-semibold py-2 mt-5'>Conversaciones 👇</h3>
         <div className='px-4'>
           {
             conversations.length > 0
               ? (
                   conversations.map(({ trigger }, index) => {
                     return (
-                      <div key={index} className='border border-white/5 p-3 my-5 rounded-md'>
-                        <p className='py-2 text-[#d4d4d4] font-semibold'>
+                      <div key={index} className='border border-border-color dark:border-border-color-dark/50 p-3 my-5 rounded-md'>
+                        <p className='py-2 text-primary dark:text-primary-dark/80 font-semibold'>
                           Palabra Clave
-                          <span className='border border-white/5 px-2 py-2 mx-2 rounded-sm text-[#c1c1c1] bg-neutral-900'>{trigger.name}</span>
+                          <span className='border border-border-color dark:border-border-color-dark/50 px-2 py-2 mx-2 rounded-sm text-secondary dark:text-secondary-dark bg-gray-100 dark:bg-neutral-900'>{trigger.name}</span>
                         </p>
-                        <p className='py-4 text-[#d4d4d4] font-semibold'>Repuesta del bot</p>
-                        <p className='py-4 px-4 border border-white/5 text-[#c1c1c1] bg-neutral-900 rounded-sm'>{trigger.response}</p>
+                        <p className='py-4 text-primary dark:text-primary-dark/80 font-semibold'>Repuesta del bot</p>
+                        <p className='py-4 px-4 border border-border-color dark:border-border-color-dark/20 text-secondary dark:text-secondary-dark rounded-sm bg-gray-100 dark:bg-neutral-900'>{trigger.response}</p>
                       </div>
                     )
                   })
                 )
-              : (<p className='text-white text-center'>Sin Conversaciones 🥲</p>)
+              : (<p className='text-primary dark:text-primary-dark text-center'>Sin Conversaciones 🥲</p>)
         }
         </div>
       </div>

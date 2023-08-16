@@ -10,7 +10,7 @@ export function ChatbotTemplatesLayout () {
 
   return (
     <div className='px-[20px]'>
-      <h3 className='text-[#eaeaea] text-center text-2xl py-4 pb-7'>Tienda de  Plantillas</h3>
+      <h3 className='text-primary dark:text-primary-dark text-center text-2xl py-4 pb-7'>Tienda de  Plantillas</h3>
 
       <div className='grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))]  gap-7'>
         {

@@ -18,14 +18,14 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
   }
 
   return (
-    <div className=' md:w-full p-4 gap-4  border border-white/10 rounded-md'>
+    <div className=' md:w-full p-4 gap-4  border border-border-color dark:border-border-color-dark rounded-md'>
       <div className='flex flex-col justify-center gap-3 items-center '>
         <img
           src={`${API_DICEABEAR_URL}=${flowName}`}
           alt={`imagen del chatbot ${flowName}`}
           className='w-[60%] block border border-white/10 rounded-lg'
         />
-        <p className='text-white font-semibold text-center  text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis' title={flowName}>
+        <p className='text-primary dark:text-primary-dark font-semibold text-center  text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis' title={flowName}>
           {flowName}
         </p>
       </div>

@@ -14,7 +14,7 @@ export function ChatbotEditForm () {
     <div>
       <ChatbotEditFormHeader />
       <ChatbotEditFormInitialsInputs />
-      <span className='block my-7 h-[2px] bg-white/5 w-[90%] m-auto' /> {/* this is a divider */}
+      <span className='block my-7 h-[2px] bg-black/5 dark:bg-white/5 w-[90%] m-auto' /> {/* this is a divider */}
       <ChatboEditFormConversations />
     </div>
   )

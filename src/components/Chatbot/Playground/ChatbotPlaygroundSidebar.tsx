@@ -6,8 +6,8 @@ export function ChatbotPlaygroundSidebar () {
   const { userAllFlows } = useGlobalUserFlowsStore()
 
   return (
-    <div className='col-span-2 h-full  border-r-2 border-[#262f34] pt-[60px] relative overflow-hidden'>
-      <header className='w-full h-[60px] bg-[#202c33] absolute top-0 z-20 flex items-center justify-between px-3'>
+    <div className='col-span-2 h-full  border-r-2 dark:border-[#262f34] pt-[60px] relative overflow-hidden'>
+      <header className='w-full h-[60px] dark:bg-[#202c33] absolute top-0 z-20 flex items-center justify-between px-3'>
         <img
           src='https://avatars.githubusercontent.com/u/117806728?v=4'
           alt='imagen del usuario'
@@ -15,10 +15,10 @@ export function ChatbotPlaygroundSidebar () {
         />
 
         <div className='flex gap-5 items-center'>
-          <GroupIcon className='fill-[#aebac1]' />
-          <StatesIcon className='fill-[#3ccab7] stroke-[#aebac1]' />
-          <NewChatIcon className='fill-[#aebac1]' />
-          <ConfigIcon className='fill-[#aebac1]' />
+          <GroupIcon className='dark:fill-[#aebac1]' />
+          <StatesIcon className='dark:fill-[#3ccab7] dark:stroke-[#aebac1]' />
+          <NewChatIcon className='dark:fill-[#aebac1]' />
+          <ConfigIcon className='dark:fill-[#aebac1]' />
         </div>
       </header>
 
@@ -29,12 +29,12 @@ export function ChatbotPlaygroundSidebar () {
             <NavLink
               to={`/test/${id}`} key={id}
               className={({ isActive, isPending }) => {
-                const customize = isPending ? 'bg-[#253239]' : isActive ? 'bg-[#2a3942]' : ''
+                const customize = isPending ? 'dark:bg-[#253239]' : isActive ? 'dark:bg-[#2a3942]' : ''
 
-                return `w-full h-[60px]  flex items-center justify-start gap-3  px-2 hover:bg-[#202c33] ${customize}`
+                return `w-full h-[60px]  flex items-center justify-start gap-3  px-2 dark:hover:bg-[#202c33] ${customize}`
               }}
             >
-              <div className='w-[50px] max-w-[50px] min-w-[50px] min-h-[50px] max-h-[50px] h-[50px] flex-1 rounded-full bg-[#202c33]'>
+              <div className='w-[50px] max-w-[50px] min-w-[50px] min-h-[50px] max-h-[50px] h-[50px] flex-1 rounded-full dark:bg-[#202c33]'>
                 <img
                   src={`https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${flowName}&radius=15`}
                   alt={`imagen para ${flowName}`}
@@ -42,9 +42,9 @@ export function ChatbotPlaygroundSidebar () {
                 />
               </div>
 
-              <div className='w-full h-full border-b border-[#262f34] pt-2'>
-                <p className='text-[#e9edef] text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis'>{flowName}</p>
-                <span className='block text-[#e9edefda] text-xs'>chatbot</span>
+              <div className='w-full h-full border-b dark:border-[#262f34] pt-2'>
+                <p className='dark:text-[#e9edef] text-sm w-[90%] overflow-hidden whitespace-nowrap text-ellipsis'>{flowName}</p>
+                <span className='block dark:text-[#e9edefda] text-xs'>chatbot</span>
               </div>
             </NavLink>
           )

@@ -43,7 +43,7 @@ export function ListOfLinks () {
   return (
     <ul className='w-full h-full flex items-center gap-2 '>
       <span
-        className=' w-[var(--width)] h-[var(--height)] left-[var(--left)] top-[var(--top)] scale-[var(--scale)] absolute bg-[#fff]  rounded-full duration-300 -z-10 ease-in-out'
+        className=' w-[var(--width)] h-[var(--height)] left-[var(--left)] top-[var(--top)] scale-[var(--scale)] absolute bg-navigation-effect dark:bg-navigation-effect-dark  rounded-full duration-300 -z-10 ease-in-out'
         ref={effectAwesomeRefElement}
       />
       {
@@ -55,7 +55,7 @@ export function ListOfLinks () {
                     onMouseEnter={handleEffectAwesome}
                     onMouseLeave={handleLeaveEffectAwesome}
                     className={({ isActive }) => {
-                      const isActiveStyles = isActive ? 'text-[#000000] bg-[white]' : 'bg-[transparent] text-[#93989d] hover:text-[#000]'
+                      const isActiveStyles = isActive ? 'text-navigation-link-hover dark:text-navigation-link-hover-dark bg-navigation-effect dark:bg-navigation-effect-dark' : 'bg-[transparent] text-secondary dark:text-secondary-dark hover:text-navigation-link-hover dark:hover:text-navigation-link-hover-dark'
                       return `py-2 px-4 rounded-full duration-300  ${isActiveStyles}`
                     }}
                   >{link.name}
