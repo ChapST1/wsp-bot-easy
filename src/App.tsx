@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from '@pages/Home'
-import { Toaster } from 'sonner'
 import { ChatBotPages } from '@pages/ChatbotPages'
 import { Login } from '@pages/Login'
 
 import { ROUTE_HOME_PAGE, ROUTE_LOGIN_PAGE } from './routes'
+import { Toast } from './components/ui/Toast'
 
 function App () {
   return (
@@ -15,7 +15,8 @@ function App () {
           <Route path={ROUTE_LOGIN_PAGE} element={<Login />} />
           <Route path='/*' element={<ChatBotPages />} />
         </Routes>
-        <Toaster theme='dark' />
+
+        <Toast />
       </BrowserRouter>
 
     </>
