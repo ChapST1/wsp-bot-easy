@@ -1,3 +1,5 @@
+import { FormatMessage } from '@/components/ui/FormatMessage'
+import { formatMessage } from '@/utilities/formatMessages'
 import { MessageViewed, MessageWingLeftIcon, MessageWingRightIcon } from '@components/Icons'
 
 interface ChatbotPlaygroundContentMessageItemProps {
@@ -7,8 +9,6 @@ interface ChatbotPlaygroundContentMessageItemProps {
 }
 
 export function ChatbotPlaygroundContentMessageItem ({ message, made, timestamp }: ChatbotPlaygroundContentMessageItemProps) {
-  const formatMessage = message.split('\n')
-
   return (
     <div className={`flex items-center ${made === 'bot' ? 'justify-start' : 'justify-end'} z-10`}>
       <div className={`text-primary dark:text-primary-dark min-w-[90px] max-w-[70%] w-[max-content] ${made === 'bot' ? ' bg-content-message-bot-bg dark:bg-content-message-bot-bg-dark rounded-tl-none' : ' bg-content-message-user-bg dark:bg-content-message-user-bg-dark rounded-tr-none'} w-[max-content] px-2 py-1 rounded-[5px] relative pb-6`}>
@@ -24,9 +24,7 @@ export function ChatbotPlaygroundContentMessageItem ({ message, made, timestamp 
         }
 
         <div>
-          {formatMessage.map((text, index) => {
-            return <p key={index}>{text}</p>
-          })}
+          <FormatMessage message={message} />
         </div>
         <div className='flex items-center gap-1  absolute bottom-[5px] right-2'>
           <span className='text-[11px]  text-[#4d4d4d] dark:text-[#ffffff99] '>{timestamp}</span>

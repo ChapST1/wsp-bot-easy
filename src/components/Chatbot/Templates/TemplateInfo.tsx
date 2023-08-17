@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { AllFlow } from '@/types/allFlows'
 import { LightEffect } from '@/components/ui/LightEffect'
 import { Title } from '@/components/ui/Title'
+import { FormatMessage } from '@/components/ui/FormatMessage'
 
 export function TemplateInfo ({ arrayFlows }: { arrayFlows: AllFlow[] }) {
   const { id } = useParams()
@@ -10,11 +11,13 @@ export function TemplateInfo ({ arrayFlows }: { arrayFlows: AllFlow[] }) {
   return (
     <div className='w-[90%] mt-5 bg-bg dark:bg-bg-dark py-4 px-6 border border-border-color dark:border-border-color-dark rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px] relative overflow-hidden pt-12 '>
       <LightEffect />
-      <Title>{flowName}</Title>
+      <Title position='center'>{flowName}</Title>
 
       <div>
         <p className='py-5 text-primary dark:text-primary-dark/90 font-semibold '>Mesaje predeterminado 👇</p>
-        <p className='py-4 px-4 border border-border-color dark:border-border-color-dark/50 text-secondary dark:text-secondary-dark'>{defaultValue}</p>
+        <div className='py-4 px-4 border border-border-color dark:border-border-color-dark/50 text-secondary dark:text-secondary-dark'>
+          <FormatMessage message={defaultValue} />
+        </div>
       </div>
 
       <div className=''>
