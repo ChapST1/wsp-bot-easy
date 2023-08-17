@@ -120,6 +120,7 @@ export function ChatbotCreateForm () {
         <TextArea
           name='defaultTrigger'
           id='defaultTrigger'
+          required
           disabled={isCreateFlow}
           value={defaultTrigger}
           onChange={handleChange}
@@ -150,6 +151,7 @@ export function ChatbotCreateForm () {
         <TextArea
           name='trigger'
           id='flowTrigger'
+          required
           value={trigger}
           onChange={handleChange}
         />
