@@ -3,81 +3,11 @@
 # ( Wsp chatbot easy )  ლ(╹◡╹ლ)
 > En desarrollo 🥲
 
+![screenshot](public/designScreenshots/69shots_so.png)
 
-![homepage](public/designScreenshots/home/1.png)
-
-![Alt text](public/designScreenshots/chatbot/home/1.png)
-
-![Alt text](public/designScreenshots/chatbot/templates/1.png)
-
-![Alt text](public/designScreenshots/chatbot/playground/1.png)
-
-## Tabla de  contenidos
-
-- [Tutorial de uso](#tutorial-de-uso👇)
-- [Plantillas](#usar-plantillas)
-- [Instalación](#instalacion)
-- [Herramientas utilizadas](#herramientas-utilizadas)
+![screenshot](public/designScreenshots/548shots_so.png)
 
 
-## Tutorial de uso.👇
-
-### Inicia sesión con WhatsApp
-> proximamente... 🥲
-
-![screenshot](public/designScreenshots/login/1.png)
-
-
-
-### Crear Flujo de conversación
-
-![screenshot](public/designScreenshots/chatbot/create/1.png)
-
-![screenshot](public/designScreenshots/chatbot/create/2.png)
-
-![screenshot](public/designScreenshots/chatbot/home/2.png)
-
-### Opciones al crear un flujo
-
-#### **Usar con whatsapp**
-> proximamente... 🥲
-
-#### **Inspeccionar Flujo creado**
-
-![screenshot](public/designScreenshots/chatbot/home/3.png)
-
-
-#### **Testear flujo**
-![screenshot](public/designScreenshots/chatbot/playground/2.png)
-
-![screenshot](public/designScreenshots/chatbot/playground/3.png)
-
-#### **Editar flujo**
-##### Opciones al editar un flujo
-
-###### **Modificar el nombre del flujo y el mensaje predeterminado**
-
-![screenshot](public/designScreenshots/chatbot/edit/1.png)
-
-![screenshot](public/designScreenshots/chatbot/edit/2.png)
-
-###### **Modificar la acción y la respuesta del bot**
-
-![Alt text](public/designScreenshots/chatbot/edit/3.png)
-
-![Alt text](public/designScreenshots/chatbot/edit/4.png)
-
-> Resultado 👇.
-
-![Alt text](public/designScreenshots/chatbot/edit/5.png)
-
-###### **Eliminar conversaciones**
-![Alt text](public/designScreenshots/chatbot/edit/6.png)
-
-## Usar plantillas👇
-![screenshot](public/designScreenshots/chatbot/templates/2.png)
-
-![screenshot](public/designScreenshots/chatbot/templates/3.png)
 
 ## Instalacion
 
