@@ -5,7 +5,7 @@ export function ChatbotEditFormListOfConversations () {
   const { conversations } = useFlowEditById()
 
   return (
-    <div className='flex flex-col gap-5 [&>*:nth-child(1)]:mt-7'>
+    <div className='flex flex-col gap-5 '>
 
       {
     conversations.length > 0

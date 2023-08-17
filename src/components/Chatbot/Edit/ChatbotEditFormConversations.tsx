@@ -31,9 +31,7 @@ export function ChatboEditFormConversations () {
 
   return (
     <div className='relative'>
-      <p className='text-center text-primary dark:text-primary-dark'>Conversaciones</p>
-
-      <div className='flex flex-col gap-5 [&>*:nth-child(1)]:mt-7'>
+      <div className='flex flex-col gap-5'>
         <ChatbotEditFormListOfConversations />
       </div>
 
