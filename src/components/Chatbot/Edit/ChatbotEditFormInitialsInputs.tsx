@@ -13,6 +13,7 @@ export function ChatbotEditFormInitialsInputs () {
 
   const handleSave = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
     const { flowNameInput, defaultMessageInput } = Object.fromEntries(new FormData(e.currentTarget))
 
     const newFlow = {
