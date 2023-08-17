@@ -3,6 +3,10 @@ import { Button } from '@components/ui/Button'
 import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { useState } from 'react'
 import { ButtonLink } from '@components/ui/ButtonLink'
+import { Label } from '@/components/ui/Label'
+import { Input } from '@/components/ui/Input'
+import { TextArea } from '@/components/ui/TextArea'
+import { Form } from '@/components/ui/Form'
 
 export function ChatbotCreateForm () {
   const { addNewUserFlow, userAllFlows } = useGlobalUserFlowsStore()
@@ -92,70 +96,70 @@ export function ChatbotCreateForm () {
   }
 
   return (
-    <form className=' max-w-2xl p-5 rounded-md m-auto border border-border-color dark:border-border-color-dark' onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <h2 className='text-center text-2xl pb-4 text-primary dark:text-primary-dark'>Configura tu bot</h2>
 
-      <label htmlFor='flowName' className='w-full py-1 text-secondary dark:text-secondary-dark'>
+      <Label htmlFor='flowName'>
         Nombre de tu negocio 👇
-        <input
+
+        <Input
           type='text'
           id='flowName'
           name='nameCompany'
-          className=' text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark/50 bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-border-color/50 dark:focus-visible:border-border-color-dark'
           required
           autoComplete='off'
           disabled={isCreateFlow}
           value={nameCompany}
           onChange={handleChange}
         />
-      </label>
+      </Label>
 
-      <label htmlFor='defaultTrigger' className='w-full py-1 text-secondary dark:text-secondary-dark'>
-        <span>Mensaje por defecto 👇</span>
-        <textarea
+      <Label htmlFor='defaultTrigger'>
+        Mensaje por defecto 👇
+
+        <TextArea
           name='defaultTrigger'
           id='defaultTrigger'
           disabled={isCreateFlow}
-          className='w-full h-72  text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-border-color/50 dark:focus-visible:border-border-color-dark resize-none'
           value={defaultTrigger}
           onChange={handleChange}
         />
-      </label>
+      </Label>
 
       <span className='block my-7 h-[2px] bg-white/5 w-[90%] m-auto' /> {/* this is a divider */}
 
-      <label htmlFor='flowAction' className='w-full py-1 text-secondary dark:text-secondary-dark'>
+      <Label htmlFor='flowAction'>
         Palabra Clave 👇
-        <input
+
+        <Input
           type='text'
           id='flowAction'
           name='action'
-          className=' text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-border-color/50 dark:focus-visible:border-border-color-dark'
           required
           autoComplete='off'
           value={action}
           onChange={handleChange}
         />
-      </label>
+      </Label>
 
-      <label htmlFor='flowTrigger' className='w-full py-1 text-secondary dark:text-secondary-dark'>
+      <Label htmlFor='flowTrigger'>
         <span>Respuesta del bot a
           <span className={`${action.length === 0 ? 'invisible' : 'visible font-bold'}`}> 👉 {action}</span>
         </span>
-        <textarea
+
+        <TextArea
           name='trigger'
-          id=''
-          className='w-full h-72  text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-border-color/50 dark:focus-visible:border-border-color-dark  resize-none'
+          id='flowTrigger'
           value={trigger}
           onChange={handleChange}
         />
-      </label>
+      </Label>
 
-      <div className='flex justify-start items-center gap-5'>
+      <footer className='flex justify-start items-center gap-5 sticky bottom-0 bg-bg dark:bg-bg-dark py-3'>
         <Button title='Guardar' />
         <ButtonLink title='salir' to='/chatbot' />
-      </div>
+      </footer>
 
-    </form>
+    </Form>
   )
 }

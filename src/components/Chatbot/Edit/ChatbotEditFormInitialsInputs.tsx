@@ -1,4 +1,8 @@
 import { Button } from '@/components/ui/Button'
+import { Form } from '@/components/ui/Form'
+import { Input } from '@/components/ui/Input'
+import { Label } from '@/components/ui/Label'
+import { TextArea } from '@/components/ui/TextArea'
 import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
 import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { toast } from 'sonner'
@@ -24,26 +28,26 @@ export function ChatbotEditFormInitialsInputs () {
   }
 
   return (
-    <form className='py-6 bg-bg dark:bg-bg-dark md:w-[600px]' onSubmit={handleSave}>
-      <label htmlFor='' className=' block px-2  w-full py-1 text-secondary dark:text-secondary-dark'>
+    <Form onSubmit={handleSave}>
+
+      <Label>
         Nombre del flujo
-        <input
+
+        <Input
           type='text'
-          className=' text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark/50 bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-border-color dark:border-border-color-dark'
           name='flowNameInput'
           defaultValue={flowName}
         />
-      </label>
+      </Label>
 
-      <label htmlFor='flowTrigger' className='w-full py-1 text-secondary dark:text-secondary-dark block px-2 '>
-        <span>Mensaje predeterminado</span>
-        <textarea
+      <Label>
+        Mensaje predeterminado
+
+        <TextArea
           name='defaultMessageInput'
-          id=''
-          className='w-full h-72  text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark/50 bg-form-input-bg dark:bg-form-input-bg-dark text-slate-12 focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-border-color dark:border-border-color-dark  resize-none'
           defaultValue={defaultValue}
         />
-      </label>
+      </Label>
 
       <Button
         title='Guardar'
@@ -51,6 +55,6 @@ export function ChatbotEditFormInitialsInputs () {
         style={{ display: 'block', margin: 'auto' }}
       />
 
-    </form>
+    </Form>
   )
 }

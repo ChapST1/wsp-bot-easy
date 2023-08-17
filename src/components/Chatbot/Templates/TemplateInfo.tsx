@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { AllFlow } from '@/types/allFlows'
 import { LightEffect } from '@/components/ui/LightEffect'
+import { Title } from '@/components/ui/Title'
 
 export function TemplateInfo ({ arrayFlows }: { arrayFlows: AllFlow[] }) {
   const { id } = useParams()
@@ -9,7 +10,7 @@ export function TemplateInfo ({ arrayFlows }: { arrayFlows: AllFlow[] }) {
   return (
     <div className='w-[90%] mt-5 bg-bg dark:bg-bg-dark py-4 px-6 border border-border-color dark:border-border-color-dark rounded-md  max-w-full  border-b-0 border-slate-5  md:w-[550px] relative overflow-hidden pt-12 '>
       <LightEffect />
-      <h3 className='text-primary dark:text-primary-dark text-center text-2xl pb-3 font-bold'>{flowName}</h3>
+      <Title>{flowName}</Title>
 
       <div>
         <p className='py-5 text-primary dark:text-primary-dark/90 font-semibold '>Mesaje predeterminado 👇</p>
@@ -17,7 +18,7 @@ export function TemplateInfo ({ arrayFlows }: { arrayFlows: AllFlow[] }) {
       </div>
 
       <div className=''>
-        <h3 className='text-primary dark:text-primary-dark/90 font-semibold py-2 mt-5'>Conversaciones 👇</h3>
+        <h4 className='text-primary dark:text-primary-dark/90 font-semibold py-2 mt-5'>Conversaciones 👇</h4>
         <div className='px-4'>
           {
             conversations.length > 0

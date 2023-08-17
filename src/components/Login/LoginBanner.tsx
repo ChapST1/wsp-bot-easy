@@ -1,11 +1,12 @@
 import { LightEffect } from '../ui/LightEffect'
+import { Title } from '../ui/Title'
 import { LoginSteps } from './LoginSteps'
 
 export function LoginBanner () {
   return (
-    <div className='w-full  bg-bg dark:bg-bg-dark shadow md:rounded-md p-8 md:p-14 md:pt-20 border border-white/10 border-b-0 relative overflow-hidden'>
+    <div className='w-full  bg-bg dark:bg-bg-dark shadow md:rounded-md p-8 md:p-14 md:pt-10 border border-white/10 border-b-0 relative overflow-hidden'>
       <LightEffect />
-      <h3 className='text-primary dark:text-primary-dark text-2xl text-center md:text-start md:text-3xl '>Inicia sesión con WhatsApp</h3>
+      <Title>Inicia sesión con WhatsApp</Title>
 
       <div className='flex  flex-wrap justify-center items-start  md:justify-between md:items-center'>
         <LoginSteps />
@@ -16,11 +17,11 @@ export function LoginBanner () {
         />
       </div>
 
-      <h2 className='text-primary dark:text-primary-dark text-2xl text-center py-7'>Tutorial</h2>
+      <Title position='center'>Tutorial</Title>
       <img
         src='images/login-tutorial.gif'
         alt='tutorial'
-        className='w-[550px] rounded-md block m-auto'
+        className='w-[550px] rounded-md block m-auto mt-4'
       />
     </div>
   )

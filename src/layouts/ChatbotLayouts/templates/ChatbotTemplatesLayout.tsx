@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom'
 import { TemplatesCard } from '@components/Chatbot/Templates/TemplatesCard'
 import { useGlobalFlowStore } from '@/hooks/templates/useGlobalFlowsStore'
 import { Error } from '@/components/ui/Error'
+import { Title } from '@/components/ui/Title'
 
 export function ChatbotTemplatesLayout () {
   const { allFlows } = useGlobalFlowStore()
@@ -10,9 +11,9 @@ export function ChatbotTemplatesLayout () {
 
   return (
     <div className='px-[20px]'>
-      <h3 className='text-primary dark:text-primary-dark text-center text-2xl py-4 pb-7'>Tienda de  Plantillas</h3>
+      <Title position='center'>Tienda de  Plantillas</Title>
 
-      <div className='grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))]  gap-7'>
+      <div className='grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))]  gap-7 mt-4'>
         {
             allFlows.map(({ flowName, id }) => {
               return (

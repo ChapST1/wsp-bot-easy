@@ -4,6 +4,10 @@ import { toast } from 'sonner'
 import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { Button } from '@components/ui/Button'
 import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
+import { Label } from '@/components/ui/Label'
+import { Input } from '@/components/ui/Input'
+import { TextArea } from '@/components/ui/TextArea'
+import { Form } from '@/components/ui/Form'
 
 interface ChatbotEditFormItemProps {
   trigger: Trigger
@@ -78,26 +82,23 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
 
   return (
     <>
-      <form className='block px-2 duration-200 border border-transparent hover:border-border-color dark:border-border-color-dark rounded-md py-4 group' onSubmit={handleSubmit}>
-        <label htmlFor='' className='w-full py-1 text-secondary dark:text-secondary-dark'>
+      <Form onSubmit={handleSubmit}>
+        <Label>
           Palabra clave
-          <input
+          <Input
             type='text'
-            className='text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark/50 bg-form-input-bg dark:bg-form-input-bg-dark  focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 h-8 rounded-[3px] px-2 text-sm relative w-full select-none appearance-none border outline-none focus-visible:border-white/10'
             name='actionInput'
             defaultValue={name}
           />
-        </label>
+        </Label>
 
-        <label htmlFor='flowTrigger' className='w-full py-1 text-secondary dark:text-secondary-dark'>
-          <span>Respuesta del chatbot</span>
-          <textarea
-            id=''
-            className='w-full h-72  text-primary dark:text-primary-dark py-5 my-3 border-border-color dark:border-border-color-dark/50 bg-form-input-bg dark:bg-form-input-bg-dark  focus-visible:ring-slate-7 ease-in-out duration-200 placeholder:text-slate-11 rounded-[3px] px-2 text-sm relative select-none appearance-none border outline-none focus-visible:border-white/10  resize-none'
+        <Label>
+          Respuesta del chatbot
+          <TextArea
             name='triggerInput'
             defaultValue={response}
           />
-        </label>
+        </Label>
 
         <div className='flex gap-3 justify-between items-center'>
           <Button
@@ -112,7 +113,7 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
           />
 
         </div>
-      </form>
+      </Form>
     </>
   )
 }
