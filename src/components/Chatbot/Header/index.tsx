@@ -4,7 +4,7 @@ import { HandleModeIcon } from './handleMode'
 
 export function Header () {
   return (
-    <header className='w-full h-[70px] z-50 fixed top-0 left-0 bg-bg/75 dark:bg-bg-dark/75 border-b border-border-color dark:border-border-color-dark flex items-center justify-between px-[20px] gap-2 md:gap-5 md:backdrop-blur-sm'>
+    <header className='w-full h-[70px] z-50 fixed top-0 left-0 bg-bg/90 dark:bg-bg-dark/90 border-b border-border-color dark:border-border-color-dark flex items-center justify-between px-[20px] gap-2 md:gap-5 md:backdrop-blur-sm'>
       <RobotIcon className='w-[50px]' />
       <Navigation />
       <div className='flex gap-1 items-center justify-center'>

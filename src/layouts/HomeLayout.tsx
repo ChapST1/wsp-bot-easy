@@ -1,8 +1,11 @@
 import { ButtonLink } from '@/components/ui/ButtonLink'
+import { useMode } from '@/hooks/handleMode/useMode'
 import { RobotIcon } from '@components/Icons'
 import { ImageBlurHero } from '@components/ui/ImageBlurHero'
 
 export function HomeLayout () {
+  useMode()
+
   return (
     <section className='h-screen flex items-center justify-center'>
       <ImageBlurHero />

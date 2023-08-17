@@ -10,7 +10,7 @@ export function ChatbotPlaygroundLayout () {
 
   return (
     <>
-      <div className={`${isActiveFullScreen && userAllFlows.length > 0 ? 'fixed md:w-full md:h-screen top-0 left-0 z-50 ' : ' relative md:w-[70%] md:h-[80vh] rounded-lg bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600 p-3 pb-10'} m-auto  flex items-center justify-center`}>
+      <div className={`${isActiveFullScreen && userAllFlows.length > 0 ? 'fixed md:w-full md:h-screen top-0 left-0 z-50 ' : ' md:mt-6 relative md:w-[70%] md:h-[80vh] rounded-lg bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600 p-3 pb-10'} m-auto  flex items-center justify-center`}>
         {userAllFlows.length > 0 && <Whatsapp />}
         {userAllFlows.length === 0 && <ErrorNoFlows />}
 

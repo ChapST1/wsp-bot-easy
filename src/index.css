@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 body{
     @apply bg-bg dark:bg-bg-dark
 }
