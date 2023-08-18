@@ -2,12 +2,19 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 import { useMode } from '@/hooks/handleMode/useMode'
 import { RobotIcon } from '@components/Icons'
 import { ImageBlurHero } from '@components/ui/ImageBlurHero'
+import { motion } from 'framer-motion'
 
 export function HomeLayout () {
   useMode()
 
   return (
-    <section className='h-screen flex items-center justify-center'>
+    <motion.section
+      initial={{ opacity: 0, translateY: '100%' }}
+      animate={{ opacity: 1, translateY: '0%' }}
+      exit={{ opacity: 0, translateY: '100%' }}
+      transition={{ duration: 0.3 }}
+      className='h-screen flex items-center justify-center'
+    >
       <ImageBlurHero />
 
       <div className='flex flex-col items-center justify-between gap-2'>
@@ -19,6 +26,6 @@ export function HomeLayout () {
 
         <ButtonLink title='Empezar' to='/login' />
       </div>
-    </section>
+    </motion.section>
   )
 }

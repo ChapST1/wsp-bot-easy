@@ -8,7 +8,7 @@ export function ErrorNoFlows () {
       <RobotIcon className='w-[100px]' />
       <Title>🥲En este momento no tienes flujos guardados🥲</Title>
       <div className='flex gap-3 justify-center'>
-        <ButtonLink title='Crear un flujo' to='/chatbot' />
+        <ButtonLink title='Crear un flujo' to='/chatbot/crear' />
         <ButtonLink title='Usar plantilla' to='/plantillas' />
       </div>
     </div>

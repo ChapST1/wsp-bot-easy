@@ -4,6 +4,8 @@ import { Button } from '@components/ui/Button'
 import { ButtonLink } from '@components/ui/ButtonLink'
 import { toast } from 'sonner'
 
+import { motion } from 'framer-motion'
+
 interface UserFlowCardProps {
   flowName: string
   id: string
@@ -18,7 +20,13 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
   }
 
   return (
-    <div className=' md:w-full p-4 gap-4  border border-border-color dark:border-border-color-dark rounded-md'>
+    <motion.div
+      initial={{ opacity: 0, translateY: '20px' }}
+      animate={{ opacity: 1, translateY: '0' }}
+      exit={{ opacity: 0, translateY: '20px' }}
+      transition={{ duration: 0.2 }}
+      className=' md:w-full p-4 gap-4  border border-border-color dark:border-border-color-dark rounded-md'
+    >
       <div className='flex flex-col justify-center gap-3 items-center '>
         <img
           src={`${API_DICEABEAR_URL}=${flowName}`}
@@ -52,6 +60,6 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
           onClick={handleDelete}
         />
       </div>
-    </div>
+    </motion.div>
   )
 }

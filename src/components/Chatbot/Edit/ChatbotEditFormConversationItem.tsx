@@ -9,6 +9,8 @@ import { Input } from '@/components/ui/Input'
 import { TextArea } from '@/components/ui/TextArea'
 import { Form } from '@/components/ui/Form'
 
+import { motion } from 'framer-motion'
+
 interface ChatbotEditFormItemProps {
   trigger: Trigger
 }
@@ -81,7 +83,12 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
   }
 
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      transition={{ duration: 0.2 }}
+    >
       <Form onSubmit={handleSubmit}>
         <Label>
           Palabra clave
@@ -114,6 +121,6 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
 
         </div>
       </Form>
-    </>
+    </motion.section>
   )
 }

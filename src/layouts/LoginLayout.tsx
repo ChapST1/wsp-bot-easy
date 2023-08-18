@@ -2,6 +2,8 @@ import { LoginHeader } from '@/components/Login/LoginHeader'
 import { useGlobalHandleModeStore } from '@/hooks/handleMode/useGlobalHandleModeStore'
 import { LoginBanner } from '@components/Login/LoginBanner'
 
+import { motion } from 'framer-motion'
+
 export function LoginLayout () {
   const { mode } = useGlobalHandleModeStore()
 
@@ -14,10 +16,16 @@ export function LoginLayout () {
         background: `${graddient}`
       }}
     >
-      <div className=' md:max-w-5xl m-auto p-2 md:p-0 '>
+      <motion.div
+        initial={{ opacity: 0, translateY: '45px' }}
+        animate={{ opacity: 1, translateY: '0' }}
+        exit={{ opacity: 0, translateY: '45px' }}
+        transition={{ duration: 0.3 }}
+        className=' md:max-w-5xl m-auto p-2 md:p-0 '
+      >
         <LoginHeader />
         <LoginBanner />
-      </div>
+      </motion.div>
     </section>
   )
 }
