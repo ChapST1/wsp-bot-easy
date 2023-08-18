@@ -1,5 +1,4 @@
 import { FormatMessage } from '@/components/ui/FormatMessage'
-import { formatMessage } from '@/utilities/formatMessages'
 import { MessageViewed, MessageWingLeftIcon, MessageWingRightIcon } from '@components/Icons'
 
 interface ChatbotPlaygroundContentMessageItemProps {
