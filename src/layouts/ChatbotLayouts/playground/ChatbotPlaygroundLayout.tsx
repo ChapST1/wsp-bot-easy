@@ -14,7 +14,7 @@ export function ChatbotPlaygroundLayout () {
         {userAllFlows.length > 0 && <Whatsapp />}
         {userAllFlows.length === 0 && <ErrorNoFlows />}
 
-        <AppleIcon className='absolute w-7 bottom-2' />
+        <AppleIcon className='absolute w-7 bottom-2 fill-white dark' />
       </div>
     </>
   )
