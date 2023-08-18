@@ -10,6 +10,7 @@ import { TextArea } from '@/components/ui/TextArea'
 import { Form } from '@/components/ui/Form'
 
 import { motion } from 'framer-motion'
+import { DELETE_CONVERSATION_SUCCESS_MESSAGE, EDIT_CONVERSATION_SUCCESS_MESSAGE } from '@/constants/sonnerMessages'
 
 interface ChatbotEditFormItemProps {
   trigger: Trigger
@@ -37,7 +38,7 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
     editFromUserFlows(id as string, newFlow as AllFlow)
 
     // se muestra un toast de éxito
-    toast.success('Se elimino la conversación')
+    toast.success(DELETE_CONVERSATION_SUCCESS_MESSAGE)
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -79,7 +80,7 @@ export function ChatbotEditFormItem ({ trigger }: ChatbotEditFormItemProps) {
     editFromUserFlows(id, newFlow as AllFlow)
 
     // se muestra un toast de éxito
-    toast.success('Se edito la conversación')
+    toast.success(EDIT_CONVERSATION_SUCCESS_MESSAGE)
   }
 
   return (

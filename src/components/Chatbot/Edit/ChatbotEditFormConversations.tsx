@@ -1,3 +1,4 @@
+import { ADD_CONVERSATION_SUCCESS_MESSAGE } from '@/constants/sonnerMessages'
 import { ChatbotEditFormListOfConversations } from './ChatbotEditFormListOfConversations'
 import { Button } from '@/components/ui/Button'
 import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
@@ -26,7 +27,7 @@ export function ChatboEditFormConversations () {
 
     editFromUserFlows(id, newFlow as AllFlow)
 
-    toast.success('Se agrego una nueva conversación 👇')
+    toast.success(ADD_CONVERSATION_SUCCESS_MESSAGE)
   }
 
   return (

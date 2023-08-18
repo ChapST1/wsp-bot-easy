@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/Label'
 import { Input } from '@/components/ui/Input'
 import { TextArea } from '@/components/ui/TextArea'
 import { Form } from '@/components/ui/Form'
+import { SAVE_FLOW_ACTION_AND_RESPONSE_SUCCESS_MESSAGE, SAVE_FLOW_ACTION_AND_RESPONSE_SUCCESS_MESSAGE_DESCRIPTION, SAVE_FLOW_SUCCESS_DESCRIPTION, SAVE_FLOW_SUCCESS_MESSAGE } from '@/constants/sonnerMessages'
 
 export function ChatbotCreateForm () {
   const { addNewUserFlow, userAllFlows } = useGlobalUserFlowsStore()
@@ -52,8 +53,8 @@ export function ChatbotCreateForm () {
     // si el flujo no existe en userAllFlows se crea toda la estructura o propiedades
     if (!flowIsInUsersAllFlows) {
       addNewUserFlow(createFlow)
-      toast.message('Guardado con exito!!', {
-        description: 'Recuerda que puedes seguir agregando mas acciones y respuesta a tu bot'
+      toast.message(SAVE_FLOW_SUCCESS_MESSAGE, {
+        description: SAVE_FLOW_SUCCESS_DESCRIPTION
       })
 
       // resetear los estados
@@ -89,8 +90,9 @@ export function ChatbotCreateForm () {
       setAction('')
       setTrigger('')
 
-      toast.message('La accion y respuesta fue agregada correctamente!', {
-        description: 'Recuerda que puedes seguir agregando mas acciones y respuesta a tu bot'
+      // notification
+      toast.message(SAVE_FLOW_ACTION_AND_RESPONSE_SUCCESS_MESSAGE, {
+        description: SAVE_FLOW_ACTION_AND_RESPONSE_SUCCESS_MESSAGE_DESCRIPTION
       })
     }
   }

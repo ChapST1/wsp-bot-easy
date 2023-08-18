@@ -5,6 +5,7 @@ import { ButtonLink } from '@components/ui/ButtonLink'
 import { toast } from 'sonner'
 
 import { motion } from 'framer-motion'
+import { DELETE_FLOW_MESSAGE } from '@/constants/sonnerMessages'
 
 interface UserFlowCardProps {
   flowName: string
@@ -16,7 +17,7 @@ export function UserFlowCard ({ flowName, id }: UserFlowCardProps) {
 
   const handleDelete = () => {
     deleteFromUserFlows(id)
-    toast.success('Chatbot eliminado de tus flujos')
+    toast.success(DELETE_FLOW_MESSAGE)
   }
 
   return (

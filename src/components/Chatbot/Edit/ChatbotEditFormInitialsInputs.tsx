@@ -3,6 +3,7 @@ import { Form } from '@/components/ui/Form'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
 import { TextArea } from '@/components/ui/TextArea'
+import { EDIT_CONVERSATION_SUCCESS_MESSAGE } from '@/constants/sonnerMessages'
 import { useFlowEditById } from '@/hooks/edit/useFlowEditById'
 import { useGlobalUserFlowsStore } from '@/hooks/user/useGlobalUserFlowsStore'
 import { toast } from 'sonner'
@@ -25,7 +26,7 @@ export function ChatbotEditFormInitialsInputs () {
 
     editFromUserFlows(id as string, newFlow as never)
 
-    toast.success('Flujo editado correctamente')
+    toast.success(EDIT_CONVERSATION_SUCCESS_MESSAGE)
   }
 
   return (
