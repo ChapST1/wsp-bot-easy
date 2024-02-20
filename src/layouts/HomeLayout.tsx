@@ -24,7 +24,7 @@ export function HomeLayout () {
           Una plataforma para crear chatbots para Whatsapp  de forma fácil y rápida
         </p>
 
-        <ButtonLink title='Empezar' to='/login' />
+        <ButtonLink title='Empezar' to='/bot' />
       </div>
     </motion.section>
   )
